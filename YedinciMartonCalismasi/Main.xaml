@@ -1,0 +1,225 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="727.2,1669.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Numerics</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="687.2,1604.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap:VirtualizedContainerService.HintSize="624.8,1516" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Türkiye'nin En Büyük Online Alışveriş Sitesi Hepsiburada.com" sap:VirtualizedContainerService.HintSize="562.4,1404" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="0e442735-0e4f-4998-add7-59401af4d868" Version="V2" WindowResize="Maximize">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Yap" sap:VirtualizedContainerService.HintSize="512,1164" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'I'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="449.6,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="0e442735-0e4f-4998-add7-59401af4d868" Text="Bluetooth Kulaklık[k(Enter)]" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.hepsiburada.com/" CVScreenId="6923e0fc-c13a-4fc6-b5f2-0bc2d1c33490" CvElementArea="535, 389, 471, 62" CvType="InputBox" DesignTimeRectangle="606, 395, 396, 51" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='theme-IYtZzqYPto8PhOx3ku3c' placeholder='Ürün, kategori veya marka ara' aaname='' /&gt;" Guid="2b4a7335-8241-4dc2-b5fc-ffe30091d4e5" InformativeScreenshot="9825fae8e299c87dc0d42d1448387dbd.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Türkiye&amp;apos;nin En Büyük Online Alışveriş Sitesi Hepsiburada.com' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                        <uix:Target DesignTimeRectangle="558, 408, 25, 25" FullSelectorArgument="&lt;webctrl tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='I' type='' class='searchBoxOld-tTG7JNOHj3NJJUdZrfNp' aaname='' /&gt;" Guid="3fe740e7-e8a7-4e40-8c38-926a79b8630c" SearchSteps="FuzzySelector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+                <uix:NTypeInto.VerifyOptions>
+                  <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionTypeIntoOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                  </uix:VerifyExecutionTypeIntoOptions>
+                </uix:NTypeInto.VerifyOptions>
+              </uix:NTypeInto>
+              <Sequence sap:VirtualizedContainerService.HintSize="449.6,345.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="387.2,224.8" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" Version="V3">
+                  <uix:NClick.VerifyOptions>
+                    <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                      <uix:VerifyExecutionOptions.Retry>
+                        <InArgument x:TypeArguments="x:Boolean" />
+                      </uix:VerifyExecutionOptions.Retry>
+                      <uix:VerifyExecutionOptions.Timeout>
+                        <InArgument x:TypeArguments="x:Double" />
+                      </uix:VerifyExecutionOptions.Timeout>
+                    </uix:VerifyExecutionOptions>
+                  </uix:NClick.VerifyOptions>
+                </uix:NClick>
+              </Sequence>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '4 yıldız ve üzeri'" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0e442735-0e4f-4998-add7-59401af4d868" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.hepsiburada.com/ara?q=Bluetooth+Kulakl%C4%B1k" CVScreenId="f48ca8f0-32bb-4b63-8382-0d48d5b3768d" CvTextArea="223, 351, 99, 15" CvTextArgument="4 yildiz ve uzeri" CvType="Text" DesignTimeRectangle="225, 351, 134, 19" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='4 yıldız ve üzeri' parentid='puan' tag='DIV' innertext='4 yıldız ve üzeri' visibleinnertext='4 yıldız ve üzeri' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='4 yıldız ve üzeri' parentid='puan' tag='DIV' innertext='4 yıldız ve üzeri' visibleinnertext='4 yıldız ve üzeri' type='' class='content-CjbQoEcUlPW8lzvdKEij content-FobJzhPUedTJvVkU3Xd1' check:text='4 yıldız ve üzeri' /&gt;" Guid="a7964a86-2c93-4bc4-b05d-09763b250ec3" InformativeScreenshot="ef5b03dd5ab563ace942ab88ed8c85c3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Bluetooth Kulaklık - Hepsiburada' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                        <uix:Target CVScreenId="f48ca8f0-32bb-4b63-8382-0d48d5b3768d" CvTextArea="164, 302, 143, 17" CvTextArgument="Degerlendirme Puani" CvType="Text" DesignTimeRectangle="165, 301, 170, 20" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='puan' tag='DIV' aaname='Değerlendirme Puanı' innertext='Değerlendirme Puanı' visibleinnertext='Değerlendirme Puanı' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='puan' tag='DIV' aaname='Değerlendirme Puanı' innertext='Değerlendirme Puanı' visibleinnertext='Değerlendirme Puanı' type='' class='moria-FilterBox-iBSEbD fpRa st2tzakmyfq FacetList-WiEDbuP6xXd_fikB2VDA' check:text='Değerlendirme Puanı' /&gt;" Guid="cdb5c078-18e4-4fee-b014-a530ff19b56d" SearchSteps="FuzzySelector, CV" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+                <uix:NClick.VerifyOptions>
+                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionOptions.Retry>
+                    <uix:VerifyExecutionOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionOptions.Timeout>
+                  </uix:VerifyExecutionOptions>
+                </uix:NClick.VerifyOptions>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Hepsiburada'" sap:VirtualizedContainerService.HintSize="449.6,218.4" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0e442735-0e4f-4998-add7-59401af4d868" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.hepsiburada.com/ara?q=Bluetooth%20Kulakl%C4%B1k&amp;puan=4-max" CVScreenId="f52234cc-f233-4acc-b736-5d2f85459906" CvTextArea="196, 806, 81, 17" CvTextArgument="Hepsiburada" CvType="Text" DesignTimeRectangle="198, 806, 147, 19" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Hepsiburada' parentid='satici' tag='DIV' innertext='Hepsiburada' visibleinnertext='Hepsiburada' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Hepsiburada' parentid='satici' tag='DIV' innertext='Hepsiburada' visibleinnertext='Hepsiburada' type='' class='content-CjbQoEcUlPW8lzvdKEij' check:text='Hepsiburada' /&gt;" Guid="0dd257f2-00f9-474e-b3a0-c0e4fb5a8349" InformativeScreenshot="05eab4897d57ac4f177ed81aaae1df82.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Bluetooth Kulaklık - Hepsiburada' /&gt;" SearchSteps="Selector, CV" Version="V3" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                        <uix:Target CVScreenId="f52234cc-f233-4acc-b736-5d2f85459906" CvTextArea="164, 697, 38, 15" CvTextArgument="Satici" CvType="Text" DesignTimeRectangle="165, 696, 170, 20" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='satici' tag='DIV' aaname='Satıcı' innertext='Satıcı' visibleinnertext='Satıcı' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='satici' tag='DIV' aaname='Satıcı' innertext='Satıcı' visibleinnertext='Satıcı' type='' class='moria-FilterBox-iBSEbD dOuF sqz26jowo7k FacetList-WiEDbuP6xXd_fikB2VDA' check:text='Satıcı' /&gt;" Guid="830cb4af-fe31-4661-a05f-7a991160afd8" SearchSteps="Selector, FuzzySelector, CV" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+                <uix:NClick.VerifyOptions>
+                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionOptions.Retry>
+                    <uix:VerifyExecutionOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionOptions.Timeout>
+                  </uix:VerifyExecutionOptions>
+                </uix:NClick.VerifyOptions>
+              </uix:NClick>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="1911, -9, 1938, 1038" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIgSURBVFhH7VdNaBNBGN2K0B4sIu3Rg21vHi2CIFLo3aNeemkk4E+82SJ6MNgfRRAaWwJBPFnIoYKoF00CorShiHhRQQw0Sn/2kKRiAypIk+d82Vl2Z2d2pLCbpZAHD2bnvcz3ZmdmyRgExI2jiBlZjBsmI0Km2arFarqL1xTGcEk1KQSfudoUNlltgzXa8dr9aFIAldA2dgKoA8QOABcOyv0hUA7gxrVjoqYiodm0mD6n9mgYTAAb6fNqj4b7JMClXuD2SeDKEdHr9dsBLh4Cbh4HLh+W/R7qA0ydAj6+AhoN3sGw9g6YGFD7KcDzaeDvH+uZ9oX5Bbg3KtZwUR+gUuYND+pVZ3ZubH7mDQ8au77Low9AMyjMWz/OzfFOjscJ2U+g0IUFoLgI/PrJOxm2N4B4t1iLUR8glxK1r8tcYMg/kP3V70Ciz/HfHbFmbyMz5mic+gAzp0WNAtl4nZH9T2+JfmJphYsML2YlXR9gclDUaAAbbx7KftU6v33ERYbVrKTrA3i/A/8LkDor+om0VDbst+ZisAGe3BD9xE95LjIsXZf0YAPU1oGr/Y4/OSx+Q+6ccTTOYAMQqt+Al/et4+s+hqWiOBZnsAHK73nDA/pwJU+IY3HuLQAds991izRDr582Ie2DH1vW804F+PCMnaYhcRwX5QAtdll/SpSaigp/vEd89qFPgPaxE4ACRHwxifxqFvXl1HVDjuB6bhj/AGPwshaAhoXaAAAAAElFTkSuQmCC" InformativeScreenshot="2d30a6a98fab84497464355f14324765.jpg" Selector="&lt;html app='chrome.exe' title='Türkiye&amp;apos;nin En Büyük Online Alışveriş Sitesi Hepsiburada.com' /&gt;" Title="Türkiye'nin En Büyük Online Alışveriş Sitesi Hepsiburada.com" Url="https://www.hepsiburada.com/" />
+        </uix:NApplicationCard.TargetApp>
+      </uix:NApplicationCard>
+    </Sequence>
+  </Sequence>
+</Activity>

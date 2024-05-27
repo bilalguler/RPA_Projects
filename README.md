@@ -6,4 +6,17 @@ Proje önerisi, eksik ve hatalarım için benimle ilitişime geçebilirsiniz. İ
 
 * [**LinkedIn Profil Linkim**](https://www.linkedin.com/in/bilal-guler/)
 
-* [**Bilal Güler Mail**](mailto:guleerbilal@gmail.com?subject=[GitHub])
+* [**E-mail Gönder**](mailto:guleerbilal@gmail.com?subject=[GitHub])
+
+---
+---
+
+# Welcome to My RPA Projects
+
+This repository will contain my RPA Projects that I have done to improve myself.
+
+You can contact me for project suggestions, missing and mistakes. My communication channels: 
+
+* [**My LinkedIn Profile**](https://www.linkedin.com/in/bilal-guler/)
+
+* [**Send Me E-mail**](mailto:guleerbilal@gmail.com?subject=[GitHub])
