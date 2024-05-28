@@ -1,3 +1,4 @@
+**[TR]**
 # RPA Projelerime Hoşgeldiniz
 
 Bu repositoryde kendimi geliştirmek adına yapmış olduğum RPA Projelerim yer alacaktır.
@@ -10,7 +11,8 @@ Proje önerisi, eksik ve hatalarım için benimle ilitişime geçebilirsiniz. İ
 
 ---
 ---
-
+---
+**[ENG]**
 # Welcome to My RPA Projects
 
 This repository will contain my RPA Projects that I have done to improve myself.
