@@ -12,6 +12,8 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "SuccessCount&Sequence_1",
+        "FailedCount&Sequence_1",
         "mail&Sequence_1",
         "ExtractDataTable&Sequence_1",
         "SheetName&Sequence_1",

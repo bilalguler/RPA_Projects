@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="727.2000000000002,3442.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="722.4,1654.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -54,6 +54,10 @@
       <x:String>UiPath.Excel.Model</x:String>
       <x:String>UiPath.Excel.Activities.Business</x:String>
       <x:String>System.Security</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.Core.Activities.OCR.Engines</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -119,23 +123,26 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1862.4,3377.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="732.8,1589.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="ID" />
       <Variable x:TypeArguments="x:String" Name="pswrd" />
-      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="Not_DataTable" />
+      <Variable x:TypeArguments="sd1:DataTable" Default="[New System.Data.DataTable]" Name="Not_DataTable" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Kullanıcı Bilgileri" sap:VirtualizedContainerService.HintSize="1800,461.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Kullanıcı Bilgileri" sap:VirtualizedContainerService.HintSize="670.4,56.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -157,267 +164,348 @@
       </Assign>
       <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="Kullanıcı Bilgileri Okundu." />
     </Sequence>
-    <Sequence DisplayName="Chrome İşlemleri" sap:VirtualizedContainerService.HintSize="1800,2827.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence DisplayName="Chrome İşlemleri" sap:VirtualizedContainerService.HintSize="670.4,1444" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: obs.yildiz.edu.tr/oibs/std/login.aspx" sap:VirtualizedContainerService.HintSize="1737.6,2715.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="178df064-598a-4244-8a80-b6b64529ba6d" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: obs.yildiz.edu.tr/oibs/std/login.aspx" sap:VirtualizedContainerService.HintSize="608,1332" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="178df064-598a-4244-8a80-b6b64529ba6d" Version="V2" WindowResize="Maximize">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Yap" sap:VirtualizedContainerService.HintSize="1704,2475.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence DisplayName="Yap" sap:VirtualizedContainerService.HintSize="574.4,1092" sap2010:WorkflowViewState.IdRef="Sequence_4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Giriş" sap:VirtualizedContainerService.HintSize="1641.6,1384" sap2010:WorkflowViewState.IdRef="Sequence_5">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="387.2,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="YTU OBS Girildi." />
-                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'E-Devlet İle Giriş'" sap:VirtualizedContainerService.HintSize="387.2,225.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="178df064-598a-4244-8a80-b6b64529ba6d" Version="V3">
-                  <uix:NClick.Target>
-                    <uix:TargetAnchorable BrowserURL="https://obs.yildiz.edu.tr/oibs/std/login.aspx" CVScreenId="54ef04cb-a584-46a1-a2aa-14ee1c3420fe" CvElementArea="186, 612, 262, 36" CvTextArea="273, 621, 114, 18" CvTextArgument="E-Devlet ile Giris" CvType="Button" DesignTimeRectangle="189, 615, 258, 32" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl id='btnEdevletLogin' tag='A' aaname=' E-Devlet İle Giriş' innertext=' E-Devlet İle Giriş' visibleinnertext=' E-Devlet İle Giriş' /&gt;" FuzzySelectorArgument="&lt;webctrl id='btnEdevletLogin' tag='A' aaname=' E-Devlet İle Giriş' innertext=' E-Devlet İle Giriş' visibleinnertext=' E-Devlet İle Giriş' type='' class='btn btn-default btn-xs' check:text='E-Devlet İle Giriş' /&gt;" Guid="028bee42-5c8d-488d-97d9-b151c4a80b9c" InformativeScreenshot="20c49f6463abcccb1c3420d5bcb24fbe.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='obs.yildiz.edu.tr/oibs/std/login.aspx' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive">
-                      <uix:TargetAnchorable.Anchors>
-                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                          <uix:Target CVScreenId="54ef04cb-a584-46a1-a2aa-14ee1c3420fe" CvTextArea="188, 666, 67, 16" CvTextArgument="Sifre Sifirla" CvType="Text" DesignTimeRectangle="189, 665, 258, 18" ElementType="Text" FullSelectorArgument="&lt;webctrl id='hypSifremiUnuttum' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='hypSifremiUnuttum' tag='A' type='' class='' aaname='Şifre Sıfırla' check:innerText='Şifre Sıfırla' /&gt;" Guid="50099d9d-f634-4910-9f08-0c6a755fb8f1" SearchSteps="FuzzySelector, CV" />
-                        </scg:List>
-                      </uix:TargetAnchorable.Anchors>
-                    </uix:TargetAnchorable>
-                  </uix:NClick.Target>
-                  <uix:NClick.VerifyOptions>
-                    <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                      <uix:VerifyExecutionOptions.Retry>
-                        <InArgument x:TypeArguments="x:Boolean" />
-                      </uix:VerifyExecutionOptions.Retry>
-                      <uix:VerifyExecutionOptions.Timeout>
-                        <InArgument x:TypeArguments="x:Double" />
-                      </uix:VerifyExecutionOptions.Timeout>
-                    </uix:VerifyExecutionOptions>
-                  </uix:NClick.VerifyOptions>
-                </uix:NClick>
-                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="387.2,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="E-Devlet İle Giriş Kısmına Geçildi." />
-                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'T.C. Kimlik No'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="178df064-598a-4244-8a80-b6b64529ba6d" Text="[ID]" Version="V3">
-                  <uix:NTypeInto.Target>
-                    <uix:TargetAnchorable BrowserURL="https://giris.turkiye.gov.tr/Giris/gir?oauthClientId=640cbd04-b79a-4457-8acf-323ac1d4075b&amp;continue=https%3A%2F%2Fgiris.turkiye.gov.tr%2FOAuth2AuthorizationServer%2FAuthorizationController%3Fresponse_type%3Dcode%26client_id%3D640cbd04-b79a-4457-8acf-323ac1d4075b%26state%3DOgrenci%257CHfz9k2y1mcQnvb6ejuEKLx6BXwpEZSlbBRNCJ2EZp1lWYAi4Lg1xqvB7GOP0AR08GhAXhu13%25252fpMBVmAovBhAok8okBcspFosyyGwDmAfUuGvLa3G0z60R4yG9ZCLkGPumOLrAtmFObfWbCEkOmkoX5xiz1UuqfOc36zsbQdWrIuKji5nyHQong%25253d%25253d%26scope%3DKimlik-Dogrula%253BAd-Soyad%26redirect_uri%3Dhttps%253A%252F%252Fobs.yildiz.edu.tr%252Frouter.aspx%26code_challenge_method%3DS256%26code_challenge%3DN7inDxXGw62MA3QEAmIl3avxA-mBdyoh1ZsEAnirrDs" DesignTimeRectangle="785, 570, 532, 56" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='tridField' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='tridField' tag='INPUT' type='number' class='form-control' aaname='T.C. Kimlik No                         ' /&gt;" Guid="c819a462-69f2-482a-896b-9567c6e93445" InformativeScreenshot="fdf024b8e03bda8c854e848cf81abd6c.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='e-Devlet Kapısı' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
-                      <uix:TargetAnchorable.Anchors>
-                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                          <uix:Target CVScreenId="34eb6e92-293a-400b-971f-14d34218f903" CvTextArea="598, 586, 122, 16" CvTextArgument="T.C. Kimlik No" CvType="Text" DesignTimeRectangle="600, 570, 179, 56" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' aaname='T.C. Kimlik No                         ' innertext='T.C. Kimlik No                         ' visibleinnertext='T.C. Kimlik No' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' aaname='T.C. Kimlik No                         ' innertext='T.C. Kimlik No                         ' visibleinnertext='T.C. Kimlik No' type='' class='enforced' check:text='T.C. Kimlik No' /&gt;" Guid="6f09345d-b5e6-410c-9771-92fad4b21897" SearchSteps="Selector, FuzzySelector, CV" />
-                        </scg:List>
-                      </uix:TargetAnchorable.Anchors>
-                    </uix:TargetAnchorable>
-                  </uix:NTypeInto.Target>
-                  <uix:NTypeInto.VerifyOptions>
-                    <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
-                      <uix:VerifyExecutionTypeIntoOptions.Retry>
-                        <InArgument x:TypeArguments="x:Boolean" />
-                      </uix:VerifyExecutionTypeIntoOptions.Retry>
-                      <uix:VerifyExecutionTypeIntoOptions.Timeout>
-                        <InArgument x:TypeArguments="x:Double" />
-                      </uix:VerifyExecutionTypeIntoOptions.Timeout>
-                    </uix:VerifyExecutionTypeIntoOptions>
-                  </uix:NTypeInto.VerifyOptions>
-                </uix:NTypeInto>
-                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'e-Devlet Şifresi'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="178df064-598a-4244-8a80-b6b64529ba6d" Text="[pswrd]" Version="V3">
-                  <uix:NTypeInto.Target>
-                    <uix:TargetAnchorable BrowserURL="https://giris.turkiye.gov.tr/Giris/gir?oauthClientId=640cbd04-b79a-4457-8acf-323ac1d4075b&amp;continue=https%3A%2F%2Fgiris.turkiye.gov.tr%2FOAuth2AuthorizationServer%2FAuthorizationController%3Fresponse_type%3Dcode%26client_id%3D640cbd04-b79a-4457-8acf-323ac1d4075b%26state%3DOgrenci%257CHfz9k2y1mcQnvb6ejuEKLx6BXwpEZSlbBRNCJ2EZp1lWYAi4Lg1xqvB7GOP0AR08GhAXhu13%25252fpMBVmAovBhAok8okBcspFosyyGwDmAfUuGvLa3G0z60R4yG9ZCLkGPumOLrAtmFObfWbCEkOmkoX5xiz1UuqfOc36zsbQdWrIuKji5nyHQong%25253d%25253d%26scope%3DKimlik-Dogrula%253BAd-Soyad%26redirect_uri%3Dhttps%253A%252F%252Fobs.yildiz.edu.tr%252Frouter.aspx%26code_challenge_method%3DS256%26code_challenge%3DN7inDxXGw62MA3QEAmIl3avxA-mBdyoh1ZsEAnirrDs" DesignTimeRectangle="785, 658, 532, 57" DesignTimeScaleFactor="1.25" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl id='egpField' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='egpField' tag='INPUT' type='password' class='form-control' aaname='e-Devlet Şifresi                         ' /&gt;" Guid="89daa28d-9aa7-4e73-978b-9e12543e5fbe" InformativeScreenshot="3ff2e1ae7bda536ff658dd0cb42f391c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='e-Devlet Kapısı' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
-                      <uix:TargetAnchorable.Anchors>
-                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                          <uix:Target CVScreenId="772156f6-8e33-4bd8-a97c-e2795752d090" CvTextArea="599, 672, 131, 21" CvTextArgument="e-Devlet Sifresi" CvType="Text" DesignTimeRectangle="600, 658, 179, 105" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='e-Devlet Şifresi                         ' tag='LABEL' innertext='e-Devlet Şifresi                         ' visibleinnertext='e-Devlet Şifresi' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='e-Devlet Şifresi                         ' tag='LABEL' innertext='e-Devlet Şifresi                         ' visibleinnertext='e-Devlet Şifresi' type='' class='enforced' check:text='e-Devlet Şifresi' /&gt;" Guid="acab9706-c377-4aa9-a152-720ccef0637e" SearchSteps="Selector, FuzzySelector, CV" />
-                        </scg:List>
-                      </uix:TargetAnchorable.Anchors>
-                    </uix:TargetAnchorable>
-                  </uix:NTypeInto.Target>
-                  <uix:NTypeInto.VerifyOptions>
-                    <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
-                      <uix:VerifyExecutionTypeIntoOptions.Retry>
-                        <InArgument x:TypeArguments="x:Boolean" />
-                      </uix:VerifyExecutionTypeIntoOptions.Retry>
-                      <uix:VerifyExecutionTypeIntoOptions.Timeout>
-                        <InArgument x:TypeArguments="x:Double" />
-                      </uix:VerifyExecutionTypeIntoOptions.Timeout>
-                    </uix:VerifyExecutionTypeIntoOptions>
-                  </uix:NTypeInto.VerifyOptions>
-                </uix:NTypeInto>
-                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Giriş Yap'" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="178df064-598a-4244-8a80-b6b64529ba6d" Version="V3">
-                  <uix:NClick.Target>
-                    <uix:TargetAnchorable BrowserURL="https://giris.turkiye.gov.tr/Giris/gir?oauthClientId=640cbd04-b79a-4457-8acf-323ac1d4075b&amp;continue=https%3A%2F%2Fgiris.turkiye.gov.tr%2FOAuth2AuthorizationServer%2FAuthorizationController%3Fresponse_type%3Dcode%26client_id%3D640cbd04-b79a-4457-8acf-323ac1d4075b%26state%3DOgrenci%257CGauJHE0Mkv9VsVhfadiyDTQ%25252fshjn5Q%25252fwBbkjALv5Tek2GCwAkNSIz7%25252bNPN5wbQ6FeH1XQKrazntYnbESkK2XbH1hUgL2DUwDXW1uV59BEdkCro5hbbKBKHVnuS%25252fbEz63nTGvV6qfwE5ze%25252fOFady3L%25252f1QGJ964MiG9Xt49GiZiB6Kji5nyHQong%25253d%25253d%26scope%3DKimlik-Dogrula%253BAd-Soyad%26redirect_uri%3Dhttps%253A%252F%252Fobs.yildiz.edu.tr%252Frouter.aspx%26code_challenge_method%3DS256%26code_challenge%3Df1vQKvPweTcOJYHR-yrguV4A0eLTNRb0f1-nfn9umIo" CVScreenId="6fe6248d-ae3d-4967-a6f0-3986ffd4da7b" CvElementArea="843, 858, 407, 61" CvTextArea="1003, 877, 90, 24" CvTextArgument="Giris Yap" CvType="Button" DesignTimeRectangle="848, 861, 400, 56" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' aaname='Giriş Yap                         ' visibleinnertext='Giriş Yap' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' aaname='Giriş Yap                         ' visibleinnertext='Giriş Yap' class='btn btn-send' check:text='Giriş Yap' /&gt;" Guid="fa343a20-779d-4c52-a419-fc2a94a505ad" InformativeScreenshot="2d07a235a75a002e64204aa7d22ea9e2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='e-Devlet Kapısı' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive" />
-                  </uix:NClick.Target>
-                  <uix:NClick.VerifyOptions>
-                    <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                      <uix:VerifyExecutionOptions.Retry>
-                        <InArgument x:TypeArguments="x:Boolean" />
-                      </uix:VerifyExecutionOptions.Retry>
-                      <uix:VerifyExecutionOptions.Timeout>
-                        <InArgument x:TypeArguments="x:Double" />
-                      </uix:VerifyExecutionOptions.Timeout>
-                    </uix:VerifyExecutionOptions>
-                  </uix:NClick.VerifyOptions>
-                </uix:NClick>
-              </Sequence>
-              <Sequence sap:VirtualizedContainerService.HintSize="1641.6,1003.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
+              <Sequence sap:VirtualizedContainerService.HintSize="512,900.8" sap2010:WorkflowViewState.IdRef="Sequence_26">
                 <Sequence.Variables>
-                  <Variable x:TypeArguments="x:String" Name="Control" />
+                  <Variable x:TypeArguments="ui:Image" Name="image" />
                 </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <uix:NCheckState DisplayName="Check App State 'T.C. Kimlik'" sap:VirtualizedContainerService.HintSize="1579.2,889.6" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="178df064-598a-4244-8a80-b6b64529ba6d" Version="V3">
-                  <uix:NCheckState.IfExists>
-                    <Sequence DisplayName="Hedef görünüyor" sap:VirtualizedContainerService.HintSize="449.6,202.4" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                <Sequence sap:VirtualizedContainerService.HintSize="449.6,780" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))" Name="captcha" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NTakeScreenshot DisplayName="Take Screenshot 'IMG imgCaptchaImg'" FileName="C:\Users\bilal\Documents\UiPath\RPA_Projects_Outputs\screenshot.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="387.2,215.2" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" SaveScreenshotTo="Image" ScopeIdentifier="178df064-598a-4244-8a80-b6b64529ba6d" Version="V3">
+                    <uix:NTakeScreenshot.Target>
+                      <uix:TargetAnchorable BrowserURL="https://obs.yildiz.edu.tr/oibs/std/login.aspx" DesignTimeRectangle="189, 533, 157, 22" DesignTimeScaleFactor="1.25" ElementType="Icon" FullSelectorArgument="&lt;webctrl id='imgCaptchaImg' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl id='imgCaptchaImg' tag='IMG' type='' class='' aaname='Güvenlik Kodu' /&gt;" Guid="459f03f1-ab79-4706-b3fd-d9c485129bf7" InformativeScreenshot="640add89de08734ecd832e209f0f8a88.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='obs.yildiz.edu.tr/oibs/std/login.aspx' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive" />
+                    </uix:NTakeScreenshot.Target>
+                  </uix:NTakeScreenshot>
+                  <ui:SaveImage DisplayName="Save Image" FileName="C:\Users\bilal\Documents\UiPath\RPA_Projects_Outputs\screenshot.png" sap:VirtualizedContainerService.HintSize="387.2,166.4" sap2010:WorkflowViewState.IdRef="SaveImage_1" Image="[image]" />
+                  <ui:LoadImage Image="{x:Null}" DisplayName="Load Image" FileName="C:\Users\bilal\Documents\UiPath\RPA_Projects_Outputs\screenshot.png" sap:VirtualizedContainerService.HintSize="387.2,117.6" sap2010:WorkflowViewState.IdRef="LoadImage_1" />
+                  <ui:GoogleOCR AllowedCharacters="{x:Null}" DeniedCharacters="{x:Null}" FilterRegion="{x:Null}" Invert="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Profile="{x:Null}" Scale="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="387.2,56.8" sap2010:WorkflowViewState.IdRef="GoogleOCR_1" Image="[image]" Language="eng" NoopExecution="False" Result="[captcha]" />
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="387.2,110.4" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[captcha]" />
+                </Sequence>
+              </Sequence>
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="512,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                <ui:CommentOut.Body>
+                  <Sequence DisplayName="Yok Sayılan Etkinlikler" sap:VirtualizedContainerService.HintSize="512,134.4" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Sequence DisplayName="Giriş" sap:VirtualizedContainerService.HintSize="449.6,48" sap2010:WorkflowViewState.IdRef="Sequence_5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="387.2,113.6" sap2010:WorkflowViewState.IdRef="WriteLine_16" Text="T.C Kimlilk Numaranız Yanlış." />
+                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="387.2,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="YTU OBS Girildi." />
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'E-Devlet İle Giriş'" sap:VirtualizedContainerService.HintSize="387.2,225.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="178df064-598a-4244-8a80-b6b64529ba6d" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://obs.yildiz.edu.tr/oibs/std/login.aspx" CVScreenId="54ef04cb-a584-46a1-a2aa-14ee1c3420fe" CvElementArea="186, 612, 262, 36" CvTextArea="273, 621, 114, 18" CvTextArgument="E-Devlet ile Giris" CvType="Button" DesignTimeRectangle="189, 615, 258, 32" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl id='btnEdevletLogin' tag='A' aaname=' E-Devlet İle Giriş' innertext=' E-Devlet İle Giriş' visibleinnertext=' E-Devlet İle Giriş' /&gt;" FuzzySelectorArgument="&lt;webctrl id='btnEdevletLogin' tag='A' aaname=' E-Devlet İle Giriş' innertext=' E-Devlet İle Giriş' visibleinnertext=' E-Devlet İle Giriş' type='' class='btn btn-default btn-xs' check:text='E-Devlet İle Giriş' /&gt;" Guid="028bee42-5c8d-488d-97d9-b151c4a80b9c" InformativeScreenshot="20c49f6463abcccb1c3420d5bcb24fbe.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='obs.yildiz.edu.tr/oibs/std/login.aspx' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target CVScreenId="54ef04cb-a584-46a1-a2aa-14ee1c3420fe" CvTextArea="188, 666, 67, 16" CvTextArgument="Sifre Sifirla" CvType="Text" DesignTimeRectangle="189, 665, 258, 18" ElementType="Text" FullSelectorArgument="&lt;webctrl id='hypSifremiUnuttum' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='hypSifremiUnuttum' tag='A' type='' class='' aaname='Şifre Sıfırla' check:innerText='Şifre Sıfırla' /&gt;" Guid="50099d9d-f634-4910-9f08-0c6a755fb8f1" SearchSteps="FuzzySelector, CV" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                        <uix:NClick.VerifyOptions>
+                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionOptions.Retry>
+                            <uix:VerifyExecutionOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionOptions.Timeout>
+                          </uix:VerifyExecutionOptions>
+                        </uix:NClick.VerifyOptions>
+                      </uix:NClick>
+                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="387.2,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="E-Devlet İle Giriş Kısmına Geçildi." />
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'T.C. Kimlik No'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="178df064-598a-4244-8a80-b6b64529ba6d" Text="[ID]" Version="V3">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="https://giris.turkiye.gov.tr/Giris/gir?oauthClientId=640cbd04-b79a-4457-8acf-323ac1d4075b&amp;continue=https%3A%2F%2Fgiris.turkiye.gov.tr%2FOAuth2AuthorizationServer%2FAuthorizationController%3Fresponse_type%3Dcode%26client_id%3D640cbd04-b79a-4457-8acf-323ac1d4075b%26state%3DOgrenci%257CHfz9k2y1mcQnvb6ejuEKLx6BXwpEZSlbBRNCJ2EZp1lWYAi4Lg1xqvB7GOP0AR08GhAXhu13%25252fpMBVmAovBhAok8okBcspFosyyGwDmAfUuGvLa3G0z60R4yG9ZCLkGPumOLrAtmFObfWbCEkOmkoX5xiz1UuqfOc36zsbQdWrIuKji5nyHQong%25253d%25253d%26scope%3DKimlik-Dogrula%253BAd-Soyad%26redirect_uri%3Dhttps%253A%252F%252Fobs.yildiz.edu.tr%252Frouter.aspx%26code_challenge_method%3DS256%26code_challenge%3DN7inDxXGw62MA3QEAmIl3avxA-mBdyoh1ZsEAnirrDs" DesignTimeRectangle="785, 570, 532, 56" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='tridField' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='tridField' tag='INPUT' type='number' class='form-control' aaname='T.C. Kimlik No                         ' /&gt;" Guid="c819a462-69f2-482a-896b-9567c6e93445" InformativeScreenshot="fdf024b8e03bda8c854e848cf81abd6c.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='e-Devlet Kapısı' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target CVScreenId="34eb6e92-293a-400b-971f-14d34218f903" CvTextArea="598, 586, 122, 16" CvTextArgument="T.C. Kimlik No" CvType="Text" DesignTimeRectangle="600, 570, 179, 56" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' aaname='T.C. Kimlik No                         ' innertext='T.C. Kimlik No                         ' visibleinnertext='T.C. Kimlik No' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' aaname='T.C. Kimlik No                         ' innertext='T.C. Kimlik No                         ' visibleinnertext='T.C. Kimlik No' type='' class='enforced' check:text='T.C. Kimlik No' /&gt;" Guid="6f09345d-b5e6-410c-9771-92fad4b21897" SearchSteps="Selector, FuzzySelector, CV" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'e-Devlet Şifresi'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="178df064-598a-4244-8a80-b6b64529ba6d" Text="[pswrd]" Version="V3">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="https://giris.turkiye.gov.tr/Giris/gir?oauthClientId=640cbd04-b79a-4457-8acf-323ac1d4075b&amp;continue=https%3A%2F%2Fgiris.turkiye.gov.tr%2FOAuth2AuthorizationServer%2FAuthorizationController%3Fresponse_type%3Dcode%26client_id%3D640cbd04-b79a-4457-8acf-323ac1d4075b%26state%3DOgrenci%257CHfz9k2y1mcQnvb6ejuEKLx6BXwpEZSlbBRNCJ2EZp1lWYAi4Lg1xqvB7GOP0AR08GhAXhu13%25252fpMBVmAovBhAok8okBcspFosyyGwDmAfUuGvLa3G0z60R4yG9ZCLkGPumOLrAtmFObfWbCEkOmkoX5xiz1UuqfOc36zsbQdWrIuKji5nyHQong%25253d%25253d%26scope%3DKimlik-Dogrula%253BAd-Soyad%26redirect_uri%3Dhttps%253A%252F%252Fobs.yildiz.edu.tr%252Frouter.aspx%26code_challenge_method%3DS256%26code_challenge%3DN7inDxXGw62MA3QEAmIl3avxA-mBdyoh1ZsEAnirrDs" DesignTimeRectangle="785, 658, 532, 57" DesignTimeScaleFactor="1.25" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl id='egpField' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='egpField' tag='INPUT' type='password' class='form-control' aaname='e-Devlet Şifresi                         ' /&gt;" Guid="89daa28d-9aa7-4e73-978b-9e12543e5fbe" InformativeScreenshot="3ff2e1ae7bda536ff658dd0cb42f391c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='e-Devlet Kapısı' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target CVScreenId="772156f6-8e33-4bd8-a97c-e2795752d090" CvTextArea="599, 672, 131, 21" CvTextArgument="e-Devlet Sifresi" CvType="Text" DesignTimeRectangle="600, 658, 179, 105" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='e-Devlet Şifresi                         ' tag='LABEL' innertext='e-Devlet Şifresi                         ' visibleinnertext='e-Devlet Şifresi' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='e-Devlet Şifresi                         ' tag='LABEL' innertext='e-Devlet Şifresi                         ' visibleinnertext='e-Devlet Şifresi' type='' class='enforced' check:text='e-Devlet Şifresi' /&gt;" Guid="acab9706-c377-4aa9-a152-720ccef0637e" SearchSteps="Selector, FuzzySelector, CV" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Giriş Yap'" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="178df064-598a-4244-8a80-b6b64529ba6d" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://giris.turkiye.gov.tr/Giris/gir?oauthClientId=640cbd04-b79a-4457-8acf-323ac1d4075b&amp;continue=https%3A%2F%2Fgiris.turkiye.gov.tr%2FOAuth2AuthorizationServer%2FAuthorizationController%3Fresponse_type%3Dcode%26client_id%3D640cbd04-b79a-4457-8acf-323ac1d4075b%26state%3DOgrenci%257CGauJHE0Mkv9VsVhfadiyDTQ%25252fshjn5Q%25252fwBbkjALv5Tek2GCwAkNSIz7%25252bNPN5wbQ6FeH1XQKrazntYnbESkK2XbH1hUgL2DUwDXW1uV59BEdkCro5hbbKBKHVnuS%25252fbEz63nTGvV6qfwE5ze%25252fOFady3L%25252f1QGJ964MiG9Xt49GiZiB6Kji5nyHQong%25253d%25253d%26scope%3DKimlik-Dogrula%253BAd-Soyad%26redirect_uri%3Dhttps%253A%252F%252Fobs.yildiz.edu.tr%252Frouter.aspx%26code_challenge_method%3DS256%26code_challenge%3Df1vQKvPweTcOJYHR-yrguV4A0eLTNRb0f1-nfn9umIo" CVScreenId="6fe6248d-ae3d-4967-a6f0-3986ffd4da7b" CvElementArea="843, 858, 407, 61" CvTextArea="1003, 877, 90, 24" CvTextArgument="Giris Yap" CvType="Button" DesignTimeRectangle="848, 861, 400, 56" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' aaname='Giriş Yap                         ' visibleinnertext='Giriş Yap' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' aaname='Giriş Yap                         ' visibleinnertext='Giriş Yap' class='btn btn-send' check:text='Giriş Yap' /&gt;" Guid="fa343a20-779d-4c52-a419-fc2a94a505ad" InformativeScreenshot="2d07a235a75a002e64204aa7d22ea9e2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='e-Devlet Kapısı' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive" />
+                        </uix:NClick.Target>
+                        <uix:NClick.VerifyOptions>
+                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionOptions.Retry>
+                            <uix:VerifyExecutionOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionOptions.Timeout>
+                          </uix:VerifyExecutionOptions>
+                        </uix:NClick.VerifyOptions>
+                      </uix:NClick>
                     </Sequence>
-                  </uix:NCheckState.IfExists>
-                  <uix:NCheckState.IfNotExists>
-                    <Sequence DisplayName="Hedef görünmüyor" sap:VirtualizedContainerService.HintSize="1076.8,648" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                  </Sequence>
+                </ui:CommentOut.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:CommentOut>
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="512,48" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                <ui:CommentOut.Body>
+                  <Sequence DisplayName="Yok Sayılan Etkinlikler" sap:VirtualizedContainerService.HintSize="512,134.4" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Sequence sap:VirtualizedContainerService.HintSize="449.6,48" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:String" Name="Control" />
+                      </Sequence.Variables>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <uix:NCheckState DisplayName="Check App State 'Kimlik no'" sap:VirtualizedContainerService.HintSize="1014.4,559.2" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="178df064-598a-4244-8a80-b6b64529ba6d" Version="V3">
+                      <uix:NCheckState DisplayName="Check App State 'T.C. Kimlik'" sap:VirtualizedContainerService.HintSize="1817.6,1840.8" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="178df064-598a-4244-8a80-b6b64529ba6d" Version="V3">
                         <uix:NCheckState.IfExists>
-                          <Sequence DisplayName="Hedef görünüyor" sap:VirtualizedContainerService.HintSize="449.6,205.6" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                          <Sequence DisplayName="Hedef görünüyor" sap:VirtualizedContainerService.HintSize="449.6,205.6" sap2010:WorkflowViewState.IdRef="Sequence_23">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="387.2,115.2" sap2010:WorkflowViewState.IdRef="WriteLine_9" Text="Şifreniz Hatalı Tekrar Deneyiniz." />
+                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="387.2,115.2" sap2010:WorkflowViewState.IdRef="WriteLine_16" Text="T.C Kimlilk Numaranız Yanlış." />
                           </Sequence>
                         </uix:NCheckState.IfExists>
                         <uix:NCheckState.IfNotExists>
-                          <Sequence DisplayName="Hedef görünmüyor" sap:VirtualizedContainerService.HintSize="512,316" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                          <Sequence DisplayName="Hedef görünmüyor" sap:VirtualizedContainerService.HintSize="1315.2,1597.6" sap2010:WorkflowViewState.IdRef="Sequence_24">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="449.6,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_17" Text="Giriş Yapıldı." />
-                            <Sequence DisplayName="Notlara Bakış" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="Sequence_22">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Ders ve Dönem İşlemleri'" sap:VirtualizedContainerService.HintSize="387.2,225.6" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="178df064-598a-4244-8a80-b6b64529ba6d" Version="V3">
-                                <uix:NClick.Target>
-                                  <uix:TargetAnchorable BrowserURL="https://obs.yildiz.edu.tr/oibs/std/start.aspx?gkm=0018333153666038800322023336035230332913446031112322403744138792322343334233237366723742734192" CVScreenId="d0f5af36-f661-4b21-bbd4-c2e45d7c0e09" CvTextArea="49, 458, 173, 20" CvTextArgument="Ders ve Donem islemleri" CvType="Text" DesignTimeRectangle="51, 457, 171, 22" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Ders ve Dönem İşlemleri                                         ' parentid='proMenu' tag='P' innertext='Ders ve Dönem İşlemleri                                         ' visibleinnertext='Ders ve Dönem İşlemleri' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Ders ve Dönem İşlemleri                                         ' parentid='proMenu' tag='P' innertext='Ders ve Dönem İşlemleri                                         ' visibleinnertext='Ders ve Dönem İşlemleri' type='' class='' check:text='Ders ve Dönem İşlemleri' /&gt;" Guid="17684d01-b117-46c0-88ee-ad9e4af345d2" InformativeScreenshot="93d420f7e0c755b39c1d7ddedc5a67c3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='obs.yildiz.edu.tr/oibs/std/start.aspx?gkm=0018333153666038800322023336035230332913446031112322403744138792322343334233237366723742734192' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive">
-                                    <uix:TargetAnchorable.Anchors>
-                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                        <uix:Target CVScreenId="d0f5af36-f661-4b21-bbd4-c2e45d7c0e09" CvTextArea="49, 458, 173, 20" CvTextArgument="Ders ve Donem islemleri" CvType="Text" DesignTimeRectangle="19, 452, 293, 32" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='                     Ders ve Dönem İşlemleri                    *' parentid='proMenu' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='                     Ders ve Dönem İşlemleri                    *' parentid='proMenu' tag='A' type='' class='nav-link' check:innerText='Ders ve Dönem İşlemleri' /&gt;" Guid="c7bb768a-9eb0-45cb-aeaf-40374172c4a5" SearchSteps="FuzzySelector, CV" />
-                                      </scg:List>
-                                    </uix:TargetAnchorable.Anchors>
-                                  </uix:TargetAnchorable>
-                                </uix:NClick.Target>
-                                <uix:NClick.VerifyOptions>
-                                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                                    <uix:VerifyExecutionOptions.Retry>
-                                      <InArgument x:TypeArguments="x:Boolean" />
-                                    </uix:VerifyExecutionOptions.Retry>
-                                    <uix:VerifyExecutionOptions.Timeout>
-                                      <InArgument x:TypeArguments="x:Double" />
-                                    </uix:VerifyExecutionOptions.Timeout>
-                                  </uix:VerifyExecutionOptions>
-                                </uix:NClick.VerifyOptions>
-                              </uix:NClick>
-                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Not Listesi'" sap:VirtualizedContainerService.HintSize="387.2,225.6" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="178df064-598a-4244-8a80-b6b64529ba6d" Version="V3">
-                                <uix:NClick.Target>
-                                  <uix:TargetAnchorable BrowserURL="https://obs.yildiz.edu.tr/oibs/std/start.aspx?gkm=0018333153666038800322023336035230332913446031112322403744138792322343334233237366723742734192" CVScreenId="b2a25eca-a2c1-42d1-861c-0562fbb6029f" CvTextArea="63, 606, 74, 15" CvTextArgument="Not Listesi" CvType="Text" DesignTimeRectangle="64, 603, 73, 22" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Not Listesi' parentid='proMenu' tag='P' innertext='Not Listesi' visibleinnertext='Not Listesi' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Not Listesi' parentid='proMenu' tag='P' innertext='Not Listesi' visibleinnertext='Not Listesi' type='' class='' check:text='Not Listesi' /&gt;" Guid="e71e3fb2-f1c8-4811-9824-3bca315373eb" InformativeScreenshot="fbdfb3a630ddb65e8ec63f8676fd0bce.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='obs.yildiz.edu.tr/oibs/std/start.aspx?gkm=0018333153666038800322023336035230332913446031112322403744138792322343334233237366723742734192' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive">
-                                    <uix:TargetAnchorable.Anchors>
-                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                        <uix:Target CVScreenId="b2a25eca-a2c1-42d1-861c-0562fbb6029f" CvElementArea="46, 606, 17, 16" CvTextArea="63, 606, 74, 15" CvTextArgument="Not Listesi" CvType="CheckBox" DesignTimeRectangle="39, 598, 259, 32" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Not Listesi' parentid='proMenu' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Not Listesi' parentid='proMenu' tag='A' type='' class='nav-link' check:innerText='Not Listesi' /&gt;" Guid="ffb239bf-1eb9-4ad9-bd17-e16f22f2203e" SearchSteps="FuzzySelector, CV" />
-                                      </scg:List>
-                                    </uix:TargetAnchorable.Anchors>
-                                  </uix:TargetAnchorable>
-                                </uix:NClick.Target>
-                                <uix:NClick.VerifyOptions>
-                                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                                    <uix:VerifyExecutionOptions.Retry>
-                                      <InArgument x:TypeArguments="x:Boolean" />
-                                    </uix:VerifyExecutionOptions.Retry>
-                                    <uix:VerifyExecutionOptions.Timeout>
-                                      <InArgument x:TypeArguments="x:Double" />
-                                    </uix:VerifyExecutionOptions.Timeout>
-                                  </uix:VerifyExecutionOptions>
-                                </uix:NClick.VerifyOptions>
-                              </uix:NClick>
-                              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="387.2,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="Not Listesi Girildi." />
-                              <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[Not_DataTable]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Şb' ReferenceIdx='0' Name='Şb' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Ders Kodu' ReferenceIdx='1' Name='Ders Kodu'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Ders Adı' ReferenceIdx='2' Name='Ders Adı'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='S.Durum' ReferenceIdx='3' Name='S.Durum'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Sınav Notları' ReferenceIdx='4' Name='Sınav Notları'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Ort' ReferenceIdx='5' Name='Ort'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Not' ReferenceIdx='6' Name='Not'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Durumu' ReferenceIdx='7' Name='Durumu'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-8' ReferenceIdx='8' Name='Column-8' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-8 Url' ReferenceIdx='9' Name='Column-8 Url' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Şb' attr='fulltext' /&gt;&lt;column name='Ders Kodu' attr='fulltext' /&gt;&lt;column name='Ders Adı' attr='fulltext' /&gt;&lt;column name='S.Durum' attr='fulltext' /&gt;&lt;column name='Sınav Notları' attr='fulltext' /&gt;&lt;column name='Ort' attr='fulltext' /&gt;&lt;column name='Not' attr='fulltext' /&gt;&lt;column name='Durumu' attr='fulltext' /&gt;&lt;column name='Column-8' attr='fulltext' name2='Column-8 Url' attr2='href' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="387.2,189.6" sap2010:WorkflowViewState.IdRef="NExtractData_3" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="178df064-598a-4244-8a80-b6b64529ba6d" Version="V3">
-                                <uix:NExtractData.Target>
-                                  <uix:TargetAnchorable BrowserURL="https://obs.yildiz.edu.tr/oibs/std/start.aspx?gkm=001933330333333334838760322163884036690333483110131115333153766531111322243732234388355753556034480" DesignTimeRectangle="323, 364, 1586, 263" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl id='IFRAME1' tag='IFRAME' /&gt;&lt;webctrl id='grd_not_listesi' tableRow='3' tag='TABLE' /&gt;" Guid="e8e42966-ec8a-46d4-816a-06a64ceabd05" InformativeScreenshot="10cf7b2f7dfba0a29b8e790243d06db5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='obs.yildiz.edu.tr/oibs/std/start.aspx?gkm=0018333153666038800322023336035230332913446031112322403744138792322343334233237366723742734192#' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
-                                </uix:NExtractData.Target>
-                              </uix:NExtractData>
-                              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="387.2,115.2" sap2010:WorkflowViewState.IdRef="WriteLine_15" Text="Not Tablosu Alındı." />
-                            </Sequence>
-                            <Sequence DisplayName="Excel İşlemleri" sap:VirtualizedContainerService.HintSize="449.6,48" sap2010:WorkflowViewState.IdRef="Sequence_21">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="529.6,684.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" KeepExcelFileOpen="True" ResizeWindow="Maximize" WorkbookPath="[&quot;C:\Users\&quot;+System.Environment.UserName+&quot;\Documents\UiPath\RPA_Projects_Outputs\YTU_OBS_Giris.xlsx&quot;]">
-                                <ueab:ExcelApplicationCard.Body>
-                                  <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
-                                    <ActivityAction.Argument>
-                                      <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
-                                    </ActivityAction.Argument>
-                                    <Sequence DisplayName="Yap" sap:VirtualizedContainerService.HintSize="496,392" sap2010:WorkflowViewState.IdRef="Sequence_20">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;Sayfa1&quot;)]" DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="433.6,192" sap2010:WorkflowViewState.IdRef="WriteRangeX_3" IgnoreEmptySource="False" Source="[Not_DataTable]" />
-                                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="WriteLine_14" Text="Not Listesi Tabloya Yazıldı." />
-                                    </Sequence>
-                                  </ActivityAction>
-                                </ueab:ExcelApplicationCard.Body>
-                              </ueab:ExcelApplicationCard>
-                            </Sequence>
+                            <uix:NCheckState DisplayName="Check App State 'Kimlik no'" sap:VirtualizedContainerService.HintSize="1252.8,1507.2" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="178df064-598a-4244-8a80-b6b64529ba6d" Version="V3">
+                              <uix:NCheckState.IfExists>
+                                <Sequence DisplayName="Hedef görünüyor" sap:VirtualizedContainerService.HintSize="449.6,205.6" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="387.2,115.2" sap2010:WorkflowViewState.IdRef="WriteLine_9" Text="Şifreniz Hatalı Tekrar Deneyiniz." />
+                                </Sequence>
+                              </uix:NCheckState.IfExists>
+                              <uix:NCheckState.IfNotExists>
+                                <Sequence DisplayName="Hedef görünmüyor" sap:VirtualizedContainerService.HintSize="750.4,1264" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="688,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_17" Text="Giriş Yapıldı." />
+                                  <Sequence DisplayName="Notlara Bakış" sap:VirtualizedContainerService.HintSize="688,56.8" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Ders ve Dönem İşlemleri'" sap:VirtualizedContainerService.HintSize="387.2,225.6" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="178df064-598a-4244-8a80-b6b64529ba6d" Version="V3">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://obs.yildiz.edu.tr/oibs/std/start.aspx?gkm=0018333153666038800322023336035230332913446031112322403744138792322343334233237366723742734192" CVScreenId="d0f5af36-f661-4b21-bbd4-c2e45d7c0e09" CvTextArea="49, 458, 173, 20" CvTextArgument="Ders ve Donem islemleri" CvType="Text" DesignTimeRectangle="51, 457, 171, 22" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Ders ve Dönem İşlemleri                                         ' parentid='proMenu' tag='P' innertext='Ders ve Dönem İşlemleri                                         ' visibleinnertext='Ders ve Dönem İşlemleri' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Ders ve Dönem İşlemleri                                         ' parentid='proMenu' tag='P' innertext='Ders ve Dönem İşlemleri                                         ' visibleinnertext='Ders ve Dönem İşlemleri' type='' class='' check:text='Ders ve Dönem İşlemleri' /&gt;" Guid="17684d01-b117-46c0-88ee-ad9e4af345d2" InformativeScreenshot="93d420f7e0c755b39c1d7ddedc5a67c3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='obs.yildiz.edu.tr/oibs/std/start.aspx?gkm=0018333153666038800322023336035230332913446031112322403744138792322343334233237366723742734192' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target CVScreenId="d0f5af36-f661-4b21-bbd4-c2e45d7c0e09" CvTextArea="49, 458, 173, 20" CvTextArgument="Ders ve Donem islemleri" CvType="Text" DesignTimeRectangle="19, 452, 293, 32" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='                     Ders ve Dönem İşlemleri                    *' parentid='proMenu' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='                     Ders ve Dönem İşlemleri                    *' parentid='proMenu' tag='A' type='' class='nav-link' check:innerText='Ders ve Dönem İşlemleri' /&gt;" Guid="c7bb768a-9eb0-45cb-aeaf-40374172c4a5" SearchSteps="FuzzySelector, CV" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NClick.Target>
+                                      <uix:NClick.VerifyOptions>
+                                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                          <uix:VerifyExecutionOptions.Retry>
+                                            <InArgument x:TypeArguments="x:Boolean" />
+                                          </uix:VerifyExecutionOptions.Retry>
+                                          <uix:VerifyExecutionOptions.Timeout>
+                                            <InArgument x:TypeArguments="x:Double" />
+                                          </uix:VerifyExecutionOptions.Timeout>
+                                        </uix:VerifyExecutionOptions>
+                                      </uix:NClick.VerifyOptions>
+                                    </uix:NClick>
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Not Listesi'" sap:VirtualizedContainerService.HintSize="387.2,225.6" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="178df064-598a-4244-8a80-b6b64529ba6d" Version="V3">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://obs.yildiz.edu.tr/oibs/std/start.aspx?gkm=0018333153666038800322023336035230332913446031112322403744138792322343334233237366723742734192" CVScreenId="b2a25eca-a2c1-42d1-861c-0562fbb6029f" CvTextArea="63, 606, 74, 15" CvTextArgument="Not Listesi" CvType="Text" DesignTimeRectangle="64, 603, 73, 22" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Not Listesi' parentid='proMenu' tag='P' innertext='Not Listesi' visibleinnertext='Not Listesi' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Not Listesi' parentid='proMenu' tag='P' innertext='Not Listesi' visibleinnertext='Not Listesi' type='' class='' check:text='Not Listesi' /&gt;" Guid="e71e3fb2-f1c8-4811-9824-3bca315373eb" InformativeScreenshot="fbdfb3a630ddb65e8ec63f8676fd0bce.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='obs.yildiz.edu.tr/oibs/std/start.aspx?gkm=0018333153666038800322023336035230332913446031112322403744138792322343334233237366723742734192' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target CVScreenId="b2a25eca-a2c1-42d1-861c-0562fbb6029f" CvElementArea="46, 606, 17, 16" CvTextArea="63, 606, 74, 15" CvTextArgument="Not Listesi" CvType="CheckBox" DesignTimeRectangle="39, 598, 259, 32" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Not Listesi' parentid='proMenu' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Not Listesi' parentid='proMenu' tag='A' type='' class='nav-link' check:innerText='Not Listesi' /&gt;" Guid="ffb239bf-1eb9-4ad9-bd17-e16f22f2203e" SearchSteps="FuzzySelector, CV" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NClick.Target>
+                                      <uix:NClick.VerifyOptions>
+                                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                          <uix:VerifyExecutionOptions.Retry>
+                                            <InArgument x:TypeArguments="x:Boolean" />
+                                          </uix:VerifyExecutionOptions.Retry>
+                                          <uix:VerifyExecutionOptions.Timeout>
+                                            <InArgument x:TypeArguments="x:Double" />
+                                          </uix:VerifyExecutionOptions.Timeout>
+                                        </uix:VerifyExecutionOptions>
+                                      </uix:NClick.VerifyOptions>
+                                    </uix:NClick>
+                                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="387.2,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="Not Listesi Girildi." />
+                                    <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[Not_DataTable]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Şb' ReferenceIdx='0' Name='Şb' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Ders Kodu' ReferenceIdx='1' Name='Ders Kodu'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Ders Adı' ReferenceIdx='2' Name='Ders Adı'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='S.Durum' ReferenceIdx='3' Name='S.Durum'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Sınav Notları' ReferenceIdx='4' Name='Sınav Notları'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Ort' ReferenceIdx='5' Name='Ort'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Not' ReferenceIdx='6' Name='Not'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Durumu' ReferenceIdx='7' Name='Durumu'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-8' ReferenceIdx='8' Name='Column-8' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-8 Url' ReferenceIdx='9' Name='Column-8 Url' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Şb' attr='fulltext' /&gt;&lt;column name='Ders Kodu' attr='fulltext' /&gt;&lt;column name='Ders Adı' attr='fulltext' /&gt;&lt;column name='S.Durum' attr='fulltext' /&gt;&lt;column name='Sınav Notları' attr='fulltext' /&gt;&lt;column name='Ort' attr='fulltext' /&gt;&lt;column name='Not' attr='fulltext' /&gt;&lt;column name='Durumu' attr='fulltext' /&gt;&lt;column name='Column-8' attr='fulltext' name2='Column-8 Url' attr2='href' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="387.2,189.6" sap2010:WorkflowViewState.IdRef="NExtractData_3" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="178df064-598a-4244-8a80-b6b64529ba6d" Version="V3">
+                                      <uix:NExtractData.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://obs.yildiz.edu.tr/oibs/std/start.aspx?gkm=001933330333333334838760322163884036690333483110131115333153766531111322243732234388355753556034480" DesignTimeRectangle="323, 364, 1586, 263" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl id='IFRAME1' tag='IFRAME' /&gt;&lt;webctrl id='grd_not_listesi' tableRow='3' tag='TABLE' /&gt;" Guid="e8e42966-ec8a-46d4-816a-06a64ceabd05" InformativeScreenshot="10cf7b2f7dfba0a29b8e790243d06db5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='obs.yildiz.edu.tr/oibs/std/start.aspx?gkm=0018333153666038800322023336035230332913446031112322403744138792322343334233237366723742734192#' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                                      </uix:NExtractData.Target>
+                                    </uix:NExtractData>
+                                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="387.2,115.2" sap2010:WorkflowViewState.IdRef="WriteLine_15" Text="Not Tablosu Alındı." />
+                                  </Sequence>
+                                  <Sequence DisplayName="Excel İşlemleri" sap:VirtualizedContainerService.HintSize="688,994.4" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="625.6,880.8" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+                                      <ueab:ExcelProcessScopeX.Body>
+                                        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                                          </ActivityAction.Argument>
+                                          <Sequence DisplayName="Yap" sap:VirtualizedContainerService.HintSize="592,771.2" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="529.6,684.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" KeepExcelFileOpen="True" ResizeWindow="Maximize" WorkbookPath="[&quot;C:\Users\&quot;+System.Environment.UserName+&quot;\Documents\UiPath\RPA_Projects_Outputs\YTU_OBS_Giris.xlsx&quot;]">
+                                              <ueab:ExcelApplicationCard.Body>
+                                                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                                                  <ActivityAction.Argument>
+                                                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                                                  </ActivityAction.Argument>
+                                                  <Sequence DisplayName="Yap" sap:VirtualizedContainerService.HintSize="496,392" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;Sayfa1&quot;)]" DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="433.6,192" sap2010:WorkflowViewState.IdRef="WriteRangeX_3" IgnoreEmptySource="False" Source="[Not_DataTable]" />
+                                                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="WriteLine_14" Text="Not Listesi Tabloya Yazıldı." />
+                                                  </Sequence>
+                                                </ActivityAction>
+                                              </ueab:ExcelApplicationCard.Body>
+                                            </ueab:ExcelApplicationCard>
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </ueab:ExcelProcessScopeX.Body>
+                                    </ueab:ExcelProcessScopeX>
+                                  </Sequence>
+                                </Sequence>
+                              </uix:NCheckState.IfNotExists>
+                              <uix:NCheckState.Target>
+                                <uix:TargetAnchorable BrowserURL="https://giris.turkiye.gov.tr/Giris/gir?oauthClientId=640cbd04-b79a-4457-8acf-323ac1d4075b&amp;continue=https%3A%2F%2Fgiris.turkiye.gov.tr%2FOAuth2AuthorizationServer%2FAuthorizationController%3Fresponse_type%3Dcode%26client_id%3D640cbd04-b79a-4457-8acf-323ac1d4075b%26state%3DOgrenci%257Cal1pSx82bcois3P7TX0xX6AHuKtJrlOTmn8B1MXTZJZTVeMcAxm%25252beNd1hvUZn4l%25252f4Ij4bvc5mZ5BO1LtNAbU5k6w9QP%25252f24pDUS7OAREN7e8Q9AEkNzsOO4ljE0n0CrVdh97lN0NEEENQ4grAULOPI8Dgq%25252fTthecf43WMlOlx1r%25252bKji5nyHQong%25253d%25253d%26scope%3DKimlik-Dogrula%253BAd-Soyad%26redirect_uri%3Dhttps%253A%252F%252Fobs.yildiz.edu.tr%252Frouter.aspx%26code_challenge_method%3DS256%26code_challenge%3DWq-mfkSESdKchbHI2fL0NSIx1MYW6fkZrpgBC2iWOYI" CVScreenId="8e4e42f8-6297-4c65-b0e7-08d2716af346" CvElementArea="570, 486, 809, 72" CvType="InputBox" DesignTimeRectangle="598, 490, 781, 66" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl isleaf='1' tag='P' aaname='Kimlik no veya şifre hatalıdır.                 ' innertext='Kimlik no veya şifre hatalıdır.                 ' visibleinnertext='Kimlik no veya şifre hatalıdır.' /&gt;" FuzzySelectorArgument="&lt;webctrl isleaf='1' tag='P' aaname='Kimlik no veya şifre hatalıdır.                 ' innertext='Kimlik no veya şifre hatalıdır.                 ' visibleinnertext='Kimlik no veya şifre hatalıdır.' type='' class='' check:text='Kimlik no veya şifre hatalıdır.' /&gt;" Guid="f9cf8451-841f-4742-9ccd-d67bccf12d12" InformativeScreenshot="70efa9457b949bd802cd723053eb8f86.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='e-Devlet Kapısı' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target CVScreenId="8e4e42f8-6297-4c65-b0e7-08d2716af346" CvElementArea="547, 505, 39, 39" CvType="Icon" DesignTimeRectangle="553, 506, 30, 34" FullSelectorArgument="&lt;webctrl tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='I' type='' class='edkicon-alert' aaname='' /&gt;" Guid="b675da64-9d89-46d2-9892-efabc3154de8" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACIAAAAmCAYAAACh1knUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAKuSURBVFhH7Ve7buJAFN3/yA/wD7Q0lFvSUdFtR0cqFGlFFbpIFHSRKNzRUSClQChFhJAQWgk3yAobYSA8HGKeZ8dmsGfM+CkieaUc6RSeuff6zMy1594f8k0CceC3ECe/hTj5nwpJZjGpNrDuKjhoOo472NiRZ22J7Z8OPqolvCYF/h4MJiRdxKqr8i/2AxG279ahpgXxBPQRkoIqyTiEEeDEbomNVMRQGN+mh5Ac5r0ljcZAU7FpNTD/nceIXW06h7fbB6xaMvYatWVw6D1ixMXn6SIkh8VApyEodAXragGK0N7JFN4qbWwdIY6DOt5cckcg5FKEsRq3AJ5M5i929TiQhDtzIWRUk3GkTgYOrXLAXXDjT0xbvJitlLuw44Vk69gyiemm/szXu0espLrJ+V1WaHOiY5d3ClZZ3oYTMn1mjLUOZj7HMWFWemiVhDYWkyWsF9SY4Phc5uZtIUkJG2pkYFPzWuGJoYQQDit95thlLJiFWkKGJDcskN2Y0nEvhhUi3xTwMaYOBJtaypqzhLz36CxBsKBRhCQwbqrUg6BXtcapkCLWUzoJHZ/3vLMbowiR7zv28UzbUOk4FVKFbn0tCrQM4+jBSEIyDWypD3Z9vNNxKoRNVJJEZycfRhLi8q64CYnN0URL1kj0Tlb+8903C7zzFenz+Tp+aOMnjOn4dRnghyZnyIVHDYzj0Su2kRvD5gj/iycXH5OLthBSzMxemEtv0cbkKy+9lweufGSEEGaZjCbwKwOCCwlZBhgcSQq1PsF4gV/h680ohZHJmJSKJkmAlah4ruQD7s5VimdKwWpMkHZCb0qY3f7iuznSBf4l7cSi2XdtJ7x21V2IyVg0WAzPLSeNHQxXbTkdNJvwJ3wOVLMJd8JowvcDowkv811gAIYT8oWMiZAE/gE3GRJlsJXXhwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, CV" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NCheckState.Target>
+                            </uix:NCheckState>
                           </Sequence>
                         </uix:NCheckState.IfNotExists>
                         <uix:NCheckState.Target>
-                          <uix:TargetAnchorable BrowserURL="https://giris.turkiye.gov.tr/Giris/gir?oauthClientId=640cbd04-b79a-4457-8acf-323ac1d4075b&amp;continue=https%3A%2F%2Fgiris.turkiye.gov.tr%2FOAuth2AuthorizationServer%2FAuthorizationController%3Fresponse_type%3Dcode%26client_id%3D640cbd04-b79a-4457-8acf-323ac1d4075b%26state%3DOgrenci%257Cal1pSx82bcois3P7TX0xX6AHuKtJrlOTmn8B1MXTZJZTVeMcAxm%25252beNd1hvUZn4l%25252f4Ij4bvc5mZ5BO1LtNAbU5k6w9QP%25252f24pDUS7OAREN7e8Q9AEkNzsOO4ljE0n0CrVdh97lN0NEEENQ4grAULOPI8Dgq%25252fTthecf43WMlOlx1r%25252bKji5nyHQong%25253d%25253d%26scope%3DKimlik-Dogrula%253BAd-Soyad%26redirect_uri%3Dhttps%253A%252F%252Fobs.yildiz.edu.tr%252Frouter.aspx%26code_challenge_method%3DS256%26code_challenge%3DWq-mfkSESdKchbHI2fL0NSIx1MYW6fkZrpgBC2iWOYI" CVScreenId="8e4e42f8-6297-4c65-b0e7-08d2716af346" CvElementArea="570, 486, 809, 72" CvType="InputBox" DesignTimeRectangle="598, 490, 781, 66" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl isleaf='1' tag='P' aaname='Kimlik no veya şifre hatalıdır.                 ' innertext='Kimlik no veya şifre hatalıdır.                 ' visibleinnertext='Kimlik no veya şifre hatalıdır.' /&gt;" FuzzySelectorArgument="&lt;webctrl isleaf='1' tag='P' aaname='Kimlik no veya şifre hatalıdır.                 ' innertext='Kimlik no veya şifre hatalıdır.                 ' visibleinnertext='Kimlik no veya şifre hatalıdır.' type='' class='' check:text='Kimlik no veya şifre hatalıdır.' /&gt;" Guid="f9cf8451-841f-4742-9ccd-d67bccf12d12" InformativeScreenshot="70efa9457b949bd802cd723053eb8f86.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='e-Devlet Kapısı' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                          <uix:TargetAnchorable BrowserURL="https://giris.turkiye.gov.tr/Giris/gir?oauthClientId=640cbd04-b79a-4457-8acf-323ac1d4075b&amp;continue=https%3A%2F%2Fgiris.turkiye.gov.tr%2FOAuth2AuthorizationServer%2FAuthorizationController%3Fresponse_type%3Dcode%26client_id%3D640cbd04-b79a-4457-8acf-323ac1d4075b%26state%3DOgrenci%257Cal1pSx82bcois3P7TX0xX6AHuKtJrlOTmn8B1MXTZJZTVeMcAxm%25252beNd1hvUZn4l%25252f4Ij4bvc5mZ5BO1LtNAbU5k6w9QP%25252f24pDUS7OAREN7e8Q9AEkNzsOO4ljE0n0CrVdh97lN0NEEENQ4grAULOPI8Dgq%25252fTthecf43WMlOlx1r%25252bKji5nyHQong%25253d%25253d%26scope%3DKimlik-Dogrula%253BAd-Soyad%26redirect_uri%3Dhttps%253A%252F%252Fobs.yildiz.edu.tr%252Frouter.aspx%26code_challenge_method%3DS256%26code_challenge%3DWq-mfkSESdKchbHI2fL0NSIx1MYW6fkZrpgBC2iWOYI" CVScreenId="2c3dee3c-2397-4547-9d18-671b99d3dee1" CvTextArea="783, 656, 281, 20" CvTextArgument="T.C. Kimlik numaranizI hatali girdiniz." CvType="Text" DesignTimeRectangle="785, 657, 532, 20" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl id='tck_error' tag='DIV' aaname='T.C. Kimlik numaranızı hatalı girdiniz.' innertext='T.C. Kimlik numaranızı hatalı girdiniz.' visibleinnertext='T.C. Kimlik numaranızı hatalı girdiniz.' /&gt;" FuzzySelectorArgument="&lt;webctrl id='tck_error' tag='DIV' aaname='T.C. Kimlik numaranızı hatalı girdiniz.' innertext='T.C. Kimlik numaranızı hatalı girdiniz.' visibleinnertext='T.C. Kimlik numaranızı hatalı girdiniz.' type='' class='form-note yg-input-error-msg' check:text='T.C. Kimlik numaranızı hatalı girdiniz.' /&gt;" Guid="3e0442b5-8c89-4bfd-8a51-77affd07be4c" InformativeScreenshot="4bd834181e69c040f6613dbd60a4381f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='e-Devlet Kapısı' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive">
                             <uix:TargetAnchorable.Anchors>
-                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                                <uix:Target CVScreenId="8e4e42f8-6297-4c65-b0e7-08d2716af346" CvElementArea="547, 505, 39, 39" CvType="Icon" DesignTimeRectangle="553, 506, 30, 34" FullSelectorArgument="&lt;webctrl tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='I' type='' class='edkicon-alert' aaname='' /&gt;" Guid="b675da64-9d89-46d2-9892-efabc3154de8" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACIAAAAmCAYAAACh1knUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAKuSURBVFhH7Ve7buJAFN3/yA/wD7Q0lFvSUdFtR0cqFGlFFbpIFHSRKNzRUSClQChFhJAQWgk3yAobYSA8HGKeZ8dmsGfM+CkieaUc6RSeuff6zMy1594f8k0CceC3ECe/hTj5nwpJZjGpNrDuKjhoOo472NiRZ22J7Z8OPqolvCYF/h4MJiRdxKqr8i/2AxG279ahpgXxBPQRkoIqyTiEEeDEbomNVMRQGN+mh5Ac5r0ljcZAU7FpNTD/nceIXW06h7fbB6xaMvYatWVw6D1ixMXn6SIkh8VApyEodAXragGK0N7JFN4qbWwdIY6DOt5cckcg5FKEsRq3AJ5M5i929TiQhDtzIWRUk3GkTgYOrXLAXXDjT0xbvJitlLuw44Vk69gyiemm/szXu0espLrJ+V1WaHOiY5d3ClZZ3oYTMn1mjLUOZj7HMWFWemiVhDYWkyWsF9SY4Phc5uZtIUkJG2pkYFPzWuGJoYQQDit95thlLJiFWkKGJDcskN2Y0nEvhhUi3xTwMaYOBJtaypqzhLz36CxBsKBRhCQwbqrUg6BXtcapkCLWUzoJHZ/3vLMbowiR7zv28UzbUOk4FVKFbn0tCrQM4+jBSEIyDWypD3Z9vNNxKoRNVJJEZycfRhLi8q64CYnN0URL1kj0Tlb+8903C7zzFenz+Tp+aOMnjOn4dRnghyZnyIVHDYzj0Su2kRvD5gj/iycXH5OLthBSzMxemEtv0cbkKy+9lweufGSEEGaZjCbwKwOCCwlZBhgcSQq1PsF4gV/h680ohZHJmJSKJkmAlah4ruQD7s5VimdKwWpMkHZCb0qY3f7iuznSBf4l7cSi2XdtJ7x21V2IyVg0WAzPLSeNHQxXbTkdNJvwJ3wOVLMJd8JowvcDowkv811gAIYT8oWMiZAE/gE3GRJlsJXXhwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, CV" />
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target CVScreenId="2c3dee3c-2397-4547-9d18-671b99d3dee1" CvTextArea="598, 608, 122, 16" CvTextArgument="T.C. Kimlik No" CvType="Text" DesignTimeRectangle="600, 593, 179, 84" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' aaname='T.C. Kimlik No                         ' innertext='T.C. Kimlik No                         ' visibleinnertext='T.C. Kimlik No' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' aaname='T.C. Kimlik No                         ' innertext='T.C. Kimlik No                         ' visibleinnertext='T.C. Kimlik No' type='' class='enforced' check:text='T.C. Kimlik No' /&gt;" Guid="321896a6-da9c-4b3e-b193-064d44eddcc8" SearchSteps="FuzzySelector, CV" />
                               </scg:List>
                             </uix:TargetAnchorable.Anchors>
                           </uix:TargetAnchorable>
                         </uix:NCheckState.Target>
                       </uix:NCheckState>
                     </Sequence>
-                  </uix:NCheckState.IfNotExists>
-                  <uix:NCheckState.Target>
-                    <uix:TargetAnchorable BrowserURL="https://giris.turkiye.gov.tr/Giris/gir?oauthClientId=640cbd04-b79a-4457-8acf-323ac1d4075b&amp;continue=https%3A%2F%2Fgiris.turkiye.gov.tr%2FOAuth2AuthorizationServer%2FAuthorizationController%3Fresponse_type%3Dcode%26client_id%3D640cbd04-b79a-4457-8acf-323ac1d4075b%26state%3DOgrenci%257Cal1pSx82bcois3P7TX0xX6AHuKtJrlOTmn8B1MXTZJZTVeMcAxm%25252beNd1hvUZn4l%25252f4Ij4bvc5mZ5BO1LtNAbU5k6w9QP%25252f24pDUS7OAREN7e8Q9AEkNzsOO4ljE0n0CrVdh97lN0NEEENQ4grAULOPI8Dgq%25252fTthecf43WMlOlx1r%25252bKji5nyHQong%25253d%25253d%26scope%3DKimlik-Dogrula%253BAd-Soyad%26redirect_uri%3Dhttps%253A%252F%252Fobs.yildiz.edu.tr%252Frouter.aspx%26code_challenge_method%3DS256%26code_challenge%3DWq-mfkSESdKchbHI2fL0NSIx1MYW6fkZrpgBC2iWOYI" CVScreenId="2c3dee3c-2397-4547-9d18-671b99d3dee1" CvTextArea="783, 656, 281, 20" CvTextArgument="T.C. Kimlik numaranizI hatali girdiniz." CvType="Text" DesignTimeRectangle="785, 657, 532, 20" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl id='tck_error' tag='DIV' aaname='T.C. Kimlik numaranızı hatalı girdiniz.' innertext='T.C. Kimlik numaranızı hatalı girdiniz.' visibleinnertext='T.C. Kimlik numaranızı hatalı girdiniz.' /&gt;" FuzzySelectorArgument="&lt;webctrl id='tck_error' tag='DIV' aaname='T.C. Kimlik numaranızı hatalı girdiniz.' innertext='T.C. Kimlik numaranızı hatalı girdiniz.' visibleinnertext='T.C. Kimlik numaranızı hatalı girdiniz.' type='' class='form-note yg-input-error-msg' check:text='T.C. Kimlik numaranızı hatalı girdiniz.' /&gt;" Guid="3e0442b5-8c89-4bfd-8a51-77affd07be4c" InformativeScreenshot="4bd834181e69c040f6613dbd60a4381f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='e-Devlet Kapısı' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive">
-                      <uix:TargetAnchorable.Anchors>
-                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                          <uix:Target CVScreenId="2c3dee3c-2397-4547-9d18-671b99d3dee1" CvTextArea="598, 608, 122, 16" CvTextArgument="T.C. Kimlik No" CvType="Text" DesignTimeRectangle="600, 593, 179, 84" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' aaname='T.C. Kimlik No                         ' innertext='T.C. Kimlik No                         ' visibleinnertext='T.C. Kimlik No' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' aaname='T.C. Kimlik No                         ' innertext='T.C. Kimlik No                         ' visibleinnertext='T.C. Kimlik No' type='' class='enforced' check:text='T.C. Kimlik No' /&gt;" Guid="321896a6-da9c-4b3e-b193-064d44eddcc8" SearchSteps="FuzzySelector, CV" />
-                        </scg:List>
-                      </uix:TargetAnchorable.Anchors>
-                    </uix:TargetAnchorable>
-                  </uix:NCheckState.Target>
-                </uix:NCheckState>
-              </Sequence>
+                  </Sequence>
+                </ui:CommentOut.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:CommentOut>
             </Sequence>
           </ActivityAction>
         </uix:NApplicationCard.Body>

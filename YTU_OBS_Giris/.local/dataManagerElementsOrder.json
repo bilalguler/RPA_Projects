@@ -12,6 +12,8 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "captcha&Sequence_27",
+        "image&Sequence_26",
         "Control&Sequence_11",
         "ID&Sequence_1",
         "pswrd&Sequence_1",
