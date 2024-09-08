@@ -1,0 +1,270 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="844,3061.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="750.4,2996.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="DataTable_AcikArttirma" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Bilgileri Alma" sap:VirtualizedContainerService.HintSize="688,1915.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: OGM | E-Satış" sap:VirtualizedContainerService.HintSize="449.6,1794.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="22434ce4-7aba-4e12-a5d4-df017cbd78ea" Version="V2" WindowResize="Maximize">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Yap" sap:VirtualizedContainerService.HintSize="416,1554.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="353.6,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="OGM e-satış girildi." />
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Açık Artırmalı Satışlar'" sap:VirtualizedContainerService.HintSize="353.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22434ce4-7aba-4e12-a5d4-df017cbd78ea" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://esatis.ogm.gov.tr/" DesignTimeRectangle="254, 313, 237, 50" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div' id='sub-menu' parentid='header' tag='DIV' visibleinnertext='Açık Artırmalı Satışlar&amp;#xA;Yardım&amp;#xA;İhale İlanları' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='sub-menu' tag='DIV' visibleinnertext='Açık Artırmalı Satışlar&amp;#xA;Yardım&amp;#xA;İhale İlanları' /&gt;&lt;webctrl parentid='sub-menu' tabindex='0' tag='DIV' visibleinnertext='Açık Artırmalı Satışlar' /&gt;" FuzzySelectorArgument="&lt;webctrl id='sub-menu' parentid='header' tag='DIV' visibleinnertext='Açık Artırmalı Satışlar&amp;#xA;Yardım&amp;#xA;İhale İlanları' /&gt;&lt;webctrl parentid='sub-menu' tag='DIV' visibleinnertext='Açık Artırmalı Satışlar&amp;#xA;Yardım&amp;#xA;İhale İlanları' /&gt;&lt;webctrl parentid='sub-menu' tabindex='0' tag='DIV' visibleinnertext='Açık Artırmalı Satışlar' type='' class='ui pointing dropdown item ihaleler' aaname='                     Açık Artırmalı Satışlar                                       ' check:text='Açık Artırmalı Satışlar &amp;#xA;                    &amp;#xA;                        &amp;#xA;                           ' /&gt;" Guid="e8924520-5be4-4901-b2ab-d41e7ebedfcd" InformativeScreenshot="fcd0b6dfc4e44c2bd9e81eeeb447e4f4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OGM | E-Satış' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="274, 177, 242, 113" ElementType="Icon" FullSelectorArgument="&lt;webctrl tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='IMG' type='' class='' aaname='OGM E-Satış' /&gt;" Guid="71868570-4610-42a9-9a28-39eb22eceee9" SearchSteps="FuzzySelector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+              </uix:NClick>
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="353.6,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="Açık arttırma satışları girildi." />
+              <uix:NSelectItem DisplayName="Select Item 'Tarih'" sap:VirtualizedContainerService.HintSize="353.6,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="Geçmiş 30 Gün İçerisinde Yapılan İhaleler" ScopeIdentifier="22434ce4-7aba-4e12-a5d4-df017cbd78ea" Version="V3">
+                <uix:NSelectItem.Items>
+                  <scg:List x:TypeArguments="x:String" Capacity="8">
+                    <x:String>Bugün Yapılacak İhaleler</x:String>
+                    <x:String>Yarın Yapılacak İhaleler</x:String>
+                    <x:String>Dün Yapılmış İhaleler</x:String>
+                    <x:String>İki Gün Önce Yapılmış İhaleler</x:String>
+                    <x:String>Geçmiş 15 Gün İçerisinde Yapılan İhaleler</x:String>
+                    <x:String>Geçmiş 30 Gün İçerisinde Yapılan İhaleler</x:String>
+                    <x:String>Gelecek 15 gün İçerisinde Yapılacak İhaleler</x:String>
+                    <x:String>Gelecek 30 gün İçerisinde Yapılacak İhaleler</x:String>
+                  </scg:List>
+                </uix:NSelectItem.Items>
+                <uix:NSelectItem.Target>
+                  <uix:TargetAnchorable BrowserURL="https://esatis.ogm.gov.tr/ihaleler" CVScreenId="3fb76abf-cd0f-4fc1-8e38-2f59a8af71cc" CvElementArea="270, 918, 294, 51" CvType="InputBox" DesignTimeRectangle="273, 921, 289, 47" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl idx='4' parentid='main' tabindex='0' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='main' tabindex='0' tag='DIV' class='ui fluid dropdown tarih-secim selection' aaname='' check:innerText='Hızlı Tarih Aralığı Seçim' /&gt;" Guid="461a7875-e969-4d97-8bdf-cdac11191aed" InformativeScreenshot="eb67c74133aff57b94401c6313f8049d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Açık Artırmalı Satışlar | E-Satış' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CVScreenId="3fb76abf-cd0f-4fc1-8e38-2f59a8af71cc" CvTextArea="270, 875, 43, 17" CvTextArgument="Tarih" CvType="Text" DesignTimeRectangle="273, 874, 289, 29" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='H4' aaname='Tarih' innertext='Tarih' visibleinnertext='Tarih' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H4' aaname='Tarih' innertext='Tarih' visibleinnertext='Tarih' type='' class='ui dividing header' check:text='Tarih' /&gt;" Guid="9ab8b9ce-3865-4b31-acba-b44b75ba4f0f" SearchSteps="Selector, FuzzySelector, CV" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NSelectItem.Target>
+              </uix:NSelectItem>
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="353.6,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="Tarih filtresi yapıldı." />
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Ara'" sap:VirtualizedContainerService.HintSize="353.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22434ce4-7aba-4e12-a5d4-df017cbd78ea" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://esatis.ogm.gov.tr/ihaleler" CVScreenId="4005c247-486f-41f1-b6ed-edcd097ef9f4" CvElementArea="415, 632, 146, 49" CvTextArea="473, 646, 30, 17" CvTextArgument="Ara" CvType="Button" DesignTimeRectangle="443, 647, 92, 18" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Ara' parentid='main' tag='DIV' innertext='Ara' visibleinnertext='Ara' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Ara' parentid='main' tag='DIV' innertext='Ara' visibleinnertext='Ara' type='' class='visible content' check:text='Ara' /&gt;" Guid="9672dd58-2a07-49d8-837d-80055d37f7c6" InformativeScreenshot="9e0c36ef1936369864a948066306fce5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Açık Artırmalı Satışlar | E-Satış' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CVScreenId="4005c247-486f-41f1-b6ed-edcd097ef9f4" CvElementArea="415, 632, 146, 49" CvTextArea="473, 646, 30, 17" CvTextArgument="Ara" CvType="Button" DesignTimeRectangle="417, 634, 145, 45" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='ui animated positive button' aaname='                         Ara                                              ' check:innerText='Ara' /&gt;" Guid="75771fac-560d-4a2d-aa5f-703f66e20e17" SearchSteps="FuzzySelector, CV" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+                <uix:NClick.VerifyOptions>
+                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionOptions.Retry>
+                    <uix:VerifyExecutionOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionOptions.Timeout>
+                  </uix:VerifyExecutionOptions>
+                </uix:NClick.VerifyOptions>
+              </uix:NClick>
+              <uix:NSelectItem DisplayName="Select Item 'Her sayfada 10'" sap:VirtualizedContainerService.HintSize="353.6,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="50" ScopeIdentifier="22434ce4-7aba-4e12-a5d4-df017cbd78ea" Version="V3">
+                <uix:NSelectItem.Items>
+                  <scg:List x:TypeArguments="x:String" Capacity="5">
+                    <x:String>5</x:String>
+                    <x:String>10</x:String>
+                    <x:String>20</x:String>
+                    <x:String>30</x:String>
+                    <x:String>50</x:String>
+                  </scg:List>
+                </uix:NSelectItem.Items>
+                <uix:NSelectItem.Target>
+                  <uix:TargetAnchorable BrowserURL="https://esatis.ogm.gov.tr/ihaleler?tarihsecim=2&amp;baslangic=26.04.2024&amp;bitis=26.05.2024&amp;_odunTuru=1&amp;_agacTuru=1" CVScreenId="243e9eb5-267d-46f9-8ad9-8cdb8ae094d0" CvElementArea="1135, 949, 21, 22" CvTextArea="1113, 950, 22, 16" CvTextArgument="10" CvType="ArrowButton" DesignTimeRectangle="1115, 948, 40, 25" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div' parentid='main' tabindex='0' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='main' tabindex='0' tag='DIV' class='ui inline dropdown record-count-per-page' aaname='                                                                                ' check:innerText='10' /&gt;" Guid="0341fa6a-016d-46b3-8004-fb3b45d96bbe" InformativeScreenshot="19d7415f33b250f23f5ece51a414c801.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Açık Artırmalı Satışlar | E-Satış' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CVScreenId="243e9eb5-267d-46f9-8ad9-8cdb8ae094d0" CvElementArea="1135, 949, 21, 22" CvTextArea="1014, 950, 247, 21" CvTextArgument="Her sayfada 10 sonuc goster" CvType="ArrowButton" DesignTimeRectangle="615, 948, 1048, 25" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' tag='SPAN' aaname='Her sayfada                                  sonuç göster             ' visibleinnertext='Her sayfada 10  sonuç göster' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='SPAN' aaname='Her sayfada                                  sonuç göster             ' visibleinnertext='Her sayfada 10  sonuç göster' class='' check:text='Her sayfada&amp;#xA;                &amp;#xA;                    10&amp;#xA;                    &amp;#xA;                    &amp;#xA;     ' /&gt;" Guid="cdad76f5-d723-44c3-bbac-eb22b8fb53f6" SearchSteps="Selector, FuzzySelector, CV" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NSelectItem.Target>
+              </uix:NSelectItem>
+              <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[DataTable_AcikArttirma]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='İsim'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Başlangıç Tarihi'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='Bitiş Tarihi'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column3' Name='Durum'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='fulltext'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='table' idx='1' /&gt;&lt;webctrl tag='tbody' idx='1' /&gt;&lt;webctrl tag='tr' idx='1' /&gt;&lt;webctrl tag='td' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='fulltext'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='table' idx='1' /&gt;&lt;webctrl tag='tbody' idx='1' /&gt;&lt;webctrl tag='tr' idx='1' /&gt;&lt;webctrl tag='td' idx='2' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column3' attr='fulltext'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='table' idx='1' /&gt;&lt;webctrl tag='tbody' idx='1' /&gt;&lt;webctrl tag='tr' idx='1' /&gt;&lt;webctrl tag='td' idx='3' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="353.6,189.6" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="Rows" MaximumResults="50" ScopeIdentifier="22434ce4-7aba-4e12-a5d4-df017cbd78ea" Version="V3">
+                <uix:NExtractData.Target>
+                  <uix:TargetAnchorable BrowserURL="https://esatis.ogm.gov.tr/ihaleler?tarihsecim=2&amp;baslangic=26.04.2024&amp;bitis=26.05.2024&amp;_odunTuru=1&amp;_agacTuru=1&amp;oge=50" DesignTimeRectangle="9, 399, 1899, 11001" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl id='main' tag='DIV' /&gt;" Guid="0440df3d-6252-42ee-810e-092883afc395" InformativeScreenshot="fbd9b06be0c6215f40c445a3a3c1f3f5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Açık Artırmalı Satışlar | E-Satış' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                </uix:NExtractData.Target>
+              </uix:NExtractData>
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="353.6,115.2" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="Tablo alındı." />
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="1911, -9, 1938, 1038" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="e03a3cfefea09f169a5aeaebf3ff7771.jpg" Selector="&lt;html app='chrome.exe' title='OGM | E-Satış' /&gt;" Title="OGM | E-Satış" Url="https://esatis.ogm.gov.tr/" />
+        </uix:NApplicationCard.TargetApp>
+      </uix:NApplicationCard>
+    </Sequence>
+    <Sequence sap:VirtualizedContainerService.HintSize="688,992.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="625.6,880.8" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+        <ueab:ExcelProcessScopeX.Body>
+          <ActivityAction x:TypeArguments="ui:IExcelProcess">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Yap" sap:VirtualizedContainerService.HintSize="592,771.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="529.6,684.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" KeepExcelFileOpen="True" ResizeWindow="Maximize" WorkbookPath="[&quot;C:\Users\&quot;+System.Environment.UserName+&quot;\Documents\UiPath\RPA_Projects_Outputs\BesinciMaratonCalismasi_AcikArttirma.xlsx&quot;]">
+                <ueab:ExcelApplicationCard.Body>
+                  <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,392" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;Acik Arttirma&quot;)]" DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="433.6,192" sap2010:WorkflowViewState.IdRef="WriteRangeX_1" IgnoreEmptySource="False" Source="[DataTable_AcikArttirma]" />
+                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="Tablo excele yazıldı. Process is over..." />
+                    </Sequence>
+                  </ActivityAction>
+                </ueab:ExcelApplicationCard.Body>
+              </ueab:ExcelApplicationCard>
+            </Sequence>
+          </ActivityAction>
+        </ueab:ExcelProcessScopeX.Body>
+      </ueab:ExcelProcessScopeX>
+    </Sequence>
+  </Sequence>
+</Activity>
