@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="A0rSGm-QakiahutCk-e4Gw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="sahibinden.com" CVScreenId="e613e3ae-80f7-42bb-b529-5230d03d8fe3" DesignTimeRectangle="305, 958, 46, 21" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='                             Konut' parentid='container' tag='A' uipath-html-title='Konut' visibleinnertext='Konut' /&gt;" Guid="85e8e80e-62e8-4166-973c-96b62b6b7ec7" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.sahibinden.com/' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="002a9c3a9d9cacf7828b3d28bcecc570.png" xmlns="">05hojv5rnx0yenRPa4DjTvg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

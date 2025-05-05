@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="4JqcO45WOEGhZqRmdyrWog" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="sahibinden.com/kategori/emlak-konut" CVScreenId="95e77c77-78cc-4b10-b242-057d7d21fb2f" DesignTimeRectangle="920, 330, 145, 32" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='searchForm' tag='DIV' parentclass='sahibindenSelect-holder' idx='4' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='searchForm' tag='DIV' parentclass='sahibindenSelect-holder' class='sahibindenSelect town activeSelect closed' aaname='' check:text='DazkırıİlçeBaşmakçıBayatBolvadinÇayÇobanlarDazkırıDinarEmirdağEvcilerHocalarİhsaniyeİscehisarKızılörenMerkezSandıklıSinanpaşaŞuhutSultandağı' /&gt;" Guid="902b6c80-3e06-465f-8a32-3eb27ad132af" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.sahibinden.com/kategori/*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V5" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="5a0a7fea29668544ff1a994438a84fe1.png" xmlns="">0bUhmlnF1_EKEzF5autWpHw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SelectItem</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

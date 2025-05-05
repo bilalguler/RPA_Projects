@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Konut",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "Q1nOvZOe7kunf07KsPBelQ",
+  "Reference": "Pmq0Y8tMSE6Fgrq_J4N_MQ/Q1nOvZOe7kunf07KsPBelQ",
+  "ParentRef": "Pmq0Y8tMSE6Fgrq_J4N_MQ/448cgT6Whkqpmd22vPhLhA",
+  "Created": "2025-01-12T09:56:08.2153175Z",
+  "Updated": "2025-01-12T09:56:08.2153175Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

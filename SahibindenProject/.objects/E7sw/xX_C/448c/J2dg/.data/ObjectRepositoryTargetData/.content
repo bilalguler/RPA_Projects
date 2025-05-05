@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="mRJlehTe602qHc0ZuozYpA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="sahibinden.com/kiralik/malatya-battalgazi" CVScreenId="fd493f42-a6b9-4b7b-b8b5-12158e3a7b55" CvTextArea="475, 508, 326, 19" CvTextArgument="Arama filtrelerine uygun ilan bulunamadı." CvType="Text" DesignTimeRectangle="475, 508, 326, 19" DesignTimeScaleFactor="1" ElementType="Text" Guid="c2044b7a-5889-4d2d-8318-3f4980d81dce" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Battalgazi Kiralık Rezidans, Villa, Müstakil Ev ve Daireler - sahibinden.com' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="fd493f42-a6b9-4b7b-b8b5-12158e3a7b55" DesignTimeRectangle="397, 500, 52, 52" FullSelectorArgument="&lt;webctrl class='warningIcon' parentid='searchResultsSearchForm' tag='SPAN' /&gt;" Guid="84102be1-38b2-4013-ab3c-a19d02d61952" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="15b2c920e24394f7fd87c9ae9d1f0cda.png" xmlns="">0VDZZSGd410Shnb6vfWUS9w</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

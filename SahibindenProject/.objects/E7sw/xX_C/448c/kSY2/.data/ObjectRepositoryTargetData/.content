@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="sB2V29aHDUC02q3Uo_lMTg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="sahibinden.com/kategori/emlak-konut" CVScreenId="d3eaded1-5f01-451b-8ff9-c92c9d11f28d" DesignTimeRectangle="765, 382, 145, 32" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl parentid='searchForm' tag='DIV' class='sahibindenSelect closed city' /&gt;" Guid="a201d21d-7ffd-4d74-a687-44319df9ead6" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.sahibinden.com/kategori/*' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="b9a9e1ce50458c00a2696b94cff019b9.png" xmlns="">0kDnsriXNEkivc5Zyx6IWJw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

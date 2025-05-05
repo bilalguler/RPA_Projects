@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="AfacVThHhEOQ4YFLjK_xow" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="sahibinden.com/kategori/emlak-konut" CVScreenId="091f8d24-9bf6-4b67-bd4c-b3ac4c367a77" DesignTimeRectangle="454, 330, 145, 32" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='searchForm' tag='DIV' parentclass='sahibindenSelect-holder' idx='1' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='searchForm' tag='DIV' parentclass='sahibindenSelect-holder' class='sahibindenSelect categoryArea activeSelect closed' aaname='' check:text='Turistik Günlük KiralıkSatılıkKiralıkTuristik Günlük KiralıkDevren Satılık Konut' /&gt;" Guid="584c9308-6c88-4d8e-8b57-0a400b3b3637" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.sahibinden.com/kategori/*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V5" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="38c67ce156d32882587586088d7265de.png" xmlns="">002-9wXhGyECzz3CPvfLnAA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SelectItem</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
