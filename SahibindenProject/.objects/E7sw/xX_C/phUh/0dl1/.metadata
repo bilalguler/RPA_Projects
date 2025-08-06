@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Ara",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "0dl10cvjpEOfxZ40gNmB1A",
+  "Reference": "Pmq0Y8tMSE6Fgrq_J4N_MQ/0dl10cvjpEOfxZ40gNmB1A",
+  "ParentRef": "Pmq0Y8tMSE6Fgrq_J4N_MQ/phUhm0Zxr0OtAxYLkkgTXw",
+  "Created": "2025-08-05T18:47:39.5499069Z",
+  "Updated": "2025-08-05T18:47:39.5499069Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

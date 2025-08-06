@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="HtjhkGuxMkqrhC5mUQKSJQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="sahibinden.com/satilik/ankara-akyurt" CVScreenId="50b794ed-80cf-4da1-8251-7e3fe038d6ee" DesignTimeRectangle="655, 593, 796, 21" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='searchResultsSearchForm' tag='P' aaname='                     Uygun ilan yayınlandığında size haber verebilmemiz için aramanızı kaydedebilirsiniz.' visibleinnertext='Uygun ilan yayınlandığında size haber verebilmemiz için aramanızı kaydedebilirsiniz.' /&gt;" Guid="b3967861-64e6-49de-b946-4f6eafaa655a" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.sahibinden.com/satilik/ankara-akyurt?price_min=5555&amp;amp;price_max=43444' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="fc8ff744236cacc01fe4ac0e5b75cf37.png" xmlns="">0G6hM1vqRG0uydGAKH3G-hg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

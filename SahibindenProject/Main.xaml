@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabf="clr-namespace:UiPath.Mail.Activities.Business.ForEachMail;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -136,7 +136,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1473.2,3105.6" sap2010:WorkflowViewState.IdRef="Sequence_19">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="962,2005.6" sap2010:WorkflowViewState.IdRef="Sequence_19">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_SahibindenIlanlar" />
       <Variable x:TypeArguments="x:String" Name="str_ilanTürü" />
@@ -154,600 +154,142 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Sequence - Gelen Mail Indirme" sap:VirtualizedContainerService.HintSize="1222.4,56.8" sap2010:WorkflowViewState.IdRef="Sequence_30">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="guleerbilal@gmail.com" DisplayName="Use Gmail" EmailAddress="guleerbilal@gmail.com" sap:VirtualizedContainerService.HintSize="568,987.2" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_3" Timeout="90" UseConnectionService="False">
-        <umab:GmailApplicationCard.Body>
-          <ActivityAction x:TypeArguments="um:IMailQuickHandle">
-            <ActivityAction.Argument>
-              <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Gmail" />
-            </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="534.4,782.4" sap2010:WorkflowViewState.IdRef="Sequence_16">
+    <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt_SahibindenIlanlar]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,120" sap2010:WorkflowViewState.IdRef="ReadRange_3" SheetName="Sheet1" WorkbookPath="input\SahibindenIlanlar 1.xlsx" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="478.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Read Data Table&quot;]" />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="WF_SahibindenKonutGiris - Invoke Workflow File (WF_SahibindenGiris.xaml)" sap:VirtualizedContainerService.HintSize="478.4,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="WF_SahibindenGiris.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="478.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Entered Sahibinden.com and Konut&quot;]" />
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_SahibindenIlanlar]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="478.4,816" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,634.4" sap2010:WorkflowViewState.IdRef="Sequence_40">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+              <ui:MultipleAssign.AssignOperations>
+                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[str_il]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[CurrentRow(0).ToString]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[str_ilce]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[CurrentRow(1).ToString]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[str_ilanTürü]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[CurrentRow(2).ToString]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[str_minTL]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[CurrentRow(3).ToString]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[str_maxTL]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[CurrentRow(4).ToString]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[str_ilanSayisi]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[CurrentRow(5).ToString]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                </scg:List>
+              </ui:MultipleAssign.AssignOperations>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <umab:ForEachEmailX DisplayName="For Each Email" sap:VirtualizedContainerService.HintSize="500.8,608.8" sap2010:WorkflowViewState.IdRef="ForEachEmailX_2" IncludeSubfolders="False" Mails="[Gmail.Folder(&quot;Inbox&quot;)]" NumberOfEmailsLimit="100" UnreadOnly="False" WithAttachmentsOnly="True">
-                <umab:ForEachEmailX.Body>
-                  <ActivityAction x:TypeArguments="snm:MailMessage, x:Int32">
-                    <ActivityAction.Argument1>
-                      <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="CurrentMail" />
-                    </ActivityAction.Argument1>
-                    <ActivityAction.Argument2>
-                      <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
-                    </ActivityAction.Argument2>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="467.2,312.8" sap2010:WorkflowViewState.IdRef="Sequence_17">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <umab:SaveMailAttachmentsX Attachments="{x:Null}" DisplayName="Save Email Attachments" ExcludeInlineAttachments="True" Filter="SahibindenIlanlar 1.xlsx" FolderPath="input" sap:VirtualizedContainerService.HintSize="433.6,252.8" sap2010:WorkflowViewState.IdRef="SaveMailAttachmentsX_3" Message="[CurrentMail]" OverwriteExisting="False" />
-                    </Sequence>
-                  </ActivityAction>
-                </umab:ForEachEmailX.Body>
-                <umab:ForEachEmailX.MailFilter>
-                  <umabf:MailFilterArgument LogicalOperator="And">
-                    <umabf:MailFilterArgument.Filters>
-                      <scg:List x:TypeArguments="umabf:SingleMailFilterArgument" Capacity="1">
-                        <umabf:SingleMailFilterArgument DateEqualsFilter="{x:Null}" Criteria="From" DateFilter="SevenDays" Operator="Contains" Value="ik@nativebs.com" />
-                      </scg:List>
-                    </umabf:MailFilterArgument.Filters>
-                  </umabf:MailFilterArgument>
-                </umab:ForEachEmailX.MailFilter>
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-              </umab:ForEachEmailX>
-              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="500.8,113.6" sap2010:WorkflowViewState.IdRef="WriteLine_10" Text="Mail indirildi." />
-            </Sequence>
-          </ActivityAction>
-        </umab:GmailApplicationCard.Body>
-        <umab:GmailApplicationCard.ClientId>
-          <InArgument x:TypeArguments="x:String">
-            <Literal x:TypeArguments="x:String" Value="" />
-          </InArgument>
-        </umab:GmailApplicationCard.ClientId>
-        <umab:GmailApplicationCard.ClientSecret>
-          <InArgument x:TypeArguments="x:String">
-            <Literal x:TypeArguments="x:String" Value="" />
-          </InArgument>
-        </umab:GmailApplicationCard.ClientSecret>
-      </umab:GmailApplicationCard>
-    </Sequence>
-    <Sequence DisplayName="Sequence - Excel İşlemleri" sap:VirtualizedContainerService.HintSize="1222.4,56.8" sap2010:WorkflowViewState.IdRef="Sequence_21">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt_SahibindenIlanlar]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="416,120" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Sheet1" WorkbookPath="input\SahibindenIlanlar 1.xlsx" />
-      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,113.6" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="Excel okundu." />
-    </Sequence>
-    <Sequence DisplayName="Sequence - Sahibinden Browser Islemleri" sap:VirtualizedContainerService.HintSize="1222.4,1725.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            </ui:MultipleAssign>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="WF_BilgileriDoldurma - Invoke Workflow File (WF_BilgileriDoldurma.xaml)" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="WF_BilgileriDoldurma.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="in_ilanSayisi">[str_ilanSayisi]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_MaxTL">[str_maxTL]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_MinTL">[str_minTL]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_ilanTuru">[str_ilanTürü]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_ilce">[str_ilce]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_il">[str_il]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="WF_VerileriCekme - Invoke Workflow File (WF_VerileriCekme.xaml)" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="WF_VerileriCekme.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="in_ilce">[str_ilce]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_il">[str_il]</InArgument>
+                <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_ilanListesiDT">[dt_ilanListesi]</OutArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[str_il + &quot;, &quot; +str_ilce + &quot; için işlemler yapıldı.&quot;]" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard CloseMode="Never" DisplayName="Browser" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1188.8,1633.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" IsIncognito="True" ScopeGuid="f3ba02a4-e84b-4168-af7b-20193d52f265" WindowResize="Maximize">
-        <uix:NApplicationCard.Body>
-          <ActivityAction x:TypeArguments="x:Object">
-            <ActivityAction.Argument>
-              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-            </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1155.2,1393.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Sequence - Site Kontrol" sap:VirtualizedContainerService.HintSize="1121.6,56.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <uix:NCheckState DisplayName="Check App State 'Konut'" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="f3ba02a4-e84b-4168-af7b-20193d52f265" Version="V4">
-                  <uix:NCheckState.IfExists>
-                    <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,176.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,115.2" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="Siteye Ulaşıldı." />
-                    </Sequence>
-                  </uix:NCheckState.IfExists>
-                  <uix:NCheckState.IfNotExists>
-                    <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,176.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <Throw Exception="[New SystemException(&quot;Siteye Ulaşılamadı.&quot;)]" sap:VirtualizedContainerService.HintSize="416,115.2" sap2010:WorkflowViewState.IdRef="Throw_1" />
-                    </Sequence>
-                  </uix:NCheckState.IfNotExists>
-                  <uix:NCheckState.Target>
-                    <uix:TargetAnchorable BrowserURL="sahibinden.com" CVScreenId="3f21c572-693d-4115-ac19-9dfab2aa91f3" ContentHash="XGiTCQS6KkGn1_5smBRtgw" DesignTimeRectangle="305, 458, 46, 21" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='                             Konut' parentid='container' tag='A' uipath-html-title='Konut' /&gt;" Guid="6569221b-d52e-4aba-aa84-b0ac4dfb0c8e" InformativeScreenshot="7d2939d2b0dde9503204c088eb09a0f6.png" Reference="Pmq0Y8tMSE6Fgrq_J4N_MQ/Q1nOvZOe7kunf07KsPBelQ" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.sahibinden.com/' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive" />
-                  </uix:NCheckState.Target>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </uix:NCheckState>
-                <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Tüm Çerezleri Kabul Et'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,218.4" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f3ba02a4-e84b-4168-af7b-20193d52f265" Timeout="2" Version="V4">
-                  <uix:NClick.Target>
-                    <uix:TargetAnchorable BrowserURL="sahibinden.com" CVScreenId="df9aface-c9c8-4df0-8006-c286b8cbb97f" ContentHash="B821x992U0G9PRgC5V4B0w" DesignTimeRectangle="1421, 954, 238, 50" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl id='onetrust-accept-btn-handler' tag='BUTTON' aaname='Tüm Çerezleri Kabul Et' visibleinnertext='Tüm Çerezleri Kabul Et' /&gt;" Guid="32c622bb-630f-4788-b7bb-d5fa1541195f" InformativeScreenshot="1897f32d890cc3c444a1a205c352fe50.png" Reference="Pmq0Y8tMSE6Fgrq_J4N_MQ/OCxqOHVU8UKoPl2sNJHWOw" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.sahibinden.com/' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive" />
-                  </uix:NClick.Target>
-                  <uix:NClick.VerifyOptions>
-                    <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                      <uix:VerifyExecutionOptions.Retry>
-                        <InArgument x:TypeArguments="x:Boolean" />
-                      </uix:VerifyExecutionOptions.Retry>
-                      <uix:VerifyExecutionOptions.Timeout>
-                        <InArgument x:TypeArguments="x:Double" />
-                      </uix:VerifyExecutionOptions.Timeout>
-                    </uix:VerifyExecutionOptions>
-                  </uix:NClick.VerifyOptions>
-                </uix:NClick>
-              </Sequence>
-              <Sequence DisplayName="Sequence - Konut Giriş" sap:VirtualizedContainerService.HintSize="1121.6,56.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Konut" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,225.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f3ba02a4-e84b-4168-af7b-20193d52f265" Version="V4">
-                  <uix:NClick.Target>
-                    <uix:TargetAnchorable BrowserURL="sahibinden.com" CVScreenId="e613e3ae-80f7-42bb-b529-5230d03d8fe3" ContentHash="A0rSGm-QakiahutCk-e4Gw" DesignTimeRectangle="305, 958, 46, 21" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='                             Konut' parentid='container' tag='A' uipath-html-title='Konut' visibleinnertext='Konut' /&gt;" Guid="85e8e80e-62e8-4166-973c-96b62b6b7ec7" InformativeScreenshot="002a9c3a9d9cacf7828b3d28bcecc570.png" Reference="Pmq0Y8tMSE6Fgrq_J4N_MQ/eZaYCLukv0OZNGFvgH3t8g" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.sahibinden.com/' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive" />
-                  </uix:NClick.Target>
-                  <uix:NClick.VerifyOptions>
-                    <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                      <uix:VerifyExecutionOptions.Retry>
-                        <InArgument x:TypeArguments="x:Boolean" />
-                      </uix:VerifyExecutionOptions.Retry>
-                      <uix:VerifyExecutionOptions.Timeout>
-                        <InArgument x:TypeArguments="x:Double" />
-                      </uix:VerifyExecutionOptions.Timeout>
-                    </uix:VerifyExecutionOptions>
-                  </uix:NClick.VerifyOptions>
-                </uix:NClick>
-                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,115.2" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="Konut'a girildi." />
-              </Sequence>
-              <Sequence DisplayName="Sequence - İşlemleri Yapma" sap:VirtualizedContainerService.HintSize="1121.6,1218.4" sap2010:WorkflowViewState.IdRef="Sequence_18">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_SahibindenIlanlar]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1088,1132" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
-                  <ui:ForEachRow.Body>
-                    <ActivityAction x:TypeArguments="sd:DataRow">
-                      <ActivityAction.Argument>
-                        <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
-                      </ActivityAction.Argument>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1086.4,957.6" sap2010:WorkflowViewState.IdRef="Sequence_22">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <Sequence DisplayName="Sequence - Multiple Assign" sap:VirtualizedContainerService.HintSize="1052.8,56.8" sap2010:WorkflowViewState.IdRef="Sequence_23">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,296" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
-                            <ui:MultipleAssign.AssignOperations>
-                              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
-                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
-                                  <ui:AssignOperation.To>
-                                    <OutArgument x:TypeArguments="x:String">[str_il]</OutArgument>
-                                  </ui:AssignOperation.To>
-                                  <ui:AssignOperation.Value>
-                                    <InArgument x:TypeArguments="x:String">[CurrentRow(0).ToString]</InArgument>
-                                  </ui:AssignOperation.Value>
-                                </ui:AssignOperation>
-                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
-                                  <ui:AssignOperation.To>
-                                    <OutArgument x:TypeArguments="x:String">[str_ilce]</OutArgument>
-                                  </ui:AssignOperation.To>
-                                  <ui:AssignOperation.Value>
-                                    <InArgument x:TypeArguments="x:String">[CurrentRow(1).ToString]</InArgument>
-                                  </ui:AssignOperation.Value>
-                                </ui:AssignOperation>
-                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
-                                  <ui:AssignOperation.To>
-                                    <OutArgument x:TypeArguments="x:String">[str_ilanTürü]</OutArgument>
-                                  </ui:AssignOperation.To>
-                                  <ui:AssignOperation.Value>
-                                    <InArgument x:TypeArguments="x:String">[CurrentRow(2).ToString]</InArgument>
-                                  </ui:AssignOperation.Value>
-                                </ui:AssignOperation>
-                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
-                                  <ui:AssignOperation.To>
-                                    <OutArgument x:TypeArguments="x:String">[str_minTL]</OutArgument>
-                                  </ui:AssignOperation.To>
-                                  <ui:AssignOperation.Value>
-                                    <InArgument x:TypeArguments="x:String">[CurrentRow(3).ToString]</InArgument>
-                                  </ui:AssignOperation.Value>
-                                </ui:AssignOperation>
-                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
-                                  <ui:AssignOperation.To>
-                                    <OutArgument x:TypeArguments="x:String">[str_maxTL]</OutArgument>
-                                  </ui:AssignOperation.To>
-                                  <ui:AssignOperation.Value>
-                                    <InArgument x:TypeArguments="x:String">[CurrentRow(4).ToString]</InArgument>
-                                  </ui:AssignOperation.Value>
-                                </ui:AssignOperation>
-                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
-                                  <ui:AssignOperation.To>
-                                    <OutArgument x:TypeArguments="x:String">[str_ilanSayisi]</OutArgument>
-                                  </ui:AssignOperation.To>
-                                  <ui:AssignOperation.Value>
-                                    <InArgument x:TypeArguments="x:String">[CurrentRow(5).ToString]</InArgument>
-                                  </ui:AssignOperation.Value>
-                                </ui:AssignOperation>
-                              </scg:List>
-                            </ui:MultipleAssign.AssignOperations>
-                          </ui:MultipleAssign>
-                        </Sequence>
-                        <Sequence DisplayName="Sequence Bilgi Doldurma" sap:VirtualizedContainerService.HintSize="1052.8,56.8" sap2010:WorkflowViewState.IdRef="Sequence_24">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <uix:NSelectItem DisplayName="Select Item - İlan Türü" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="[str_ilanTürü.Trim]" ScopeIdentifier="f3ba02a4-e84b-4168-af7b-20193d52f265" Version="V4">
-                            <uix:NSelectItem.Items>
-                              <scg:List x:TypeArguments="x:String" Capacity="4">
-                                <x:String>Satılık</x:String>
-                                <x:String>Kiralık</x:String>
-                                <x:String>Turistik Günlük Kiralık</x:String>
-                                <x:String>Devren Satılık Konut</x:String>
-                              </scg:List>
-                            </uix:NSelectItem.Items>
-                            <uix:NSelectItem.Target>
-                              <uix:TargetAnchorable BrowserURL="sahibinden.com/kategori/emlak-konut" CVScreenId="091f8d24-9bf6-4b67-bd4c-b3ac4c367a77" ContentHash="AfacVThHhEOQ4YFLjK_xow" DesignTimeRectangle="454, 330, 145, 32" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='searchForm' tag='DIV' parentclass='sahibindenSelect-holder' idx='1' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='searchForm' tag='DIV' parentclass='sahibindenSelect-holder' class='sahibindenSelect categoryArea activeSelect closed' aaname='' check:text='Turistik Günlük KiralıkSatılıkKiralıkTuristik Günlük KiralıkDevren Satılık Konut' /&gt;" Guid="584c9308-6c88-4d8e-8b57-0a400b3b3637" ImageBase64="" InformativeScreenshot="38c67ce156d32882587586088d7265de.png" Reference="Pmq0Y8tMSE6Fgrq_J4N_MQ/Y49rhu_zlUCNSkNVi7k1Ug" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.sahibinden.com/kategori/*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V5" Visibility="Interactive" />
-                            </uix:NSelectItem.Target>
-                          </uix:NSelectItem>
-                          <uix:NSelectItem DisplayName="Select Item - İl Seçme" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="[str_il.Trim]" ScopeIdentifier="f3ba02a4-e84b-4168-af7b-20193d52f265" Version="V4">
-                            <uix:NSelectItem.Items>
-                              <scg:List x:TypeArguments="x:String" Capacity="50">
-                                <x:String>İl</x:String>
-                                <x:String>İstanbul</x:String>
-                                <x:String>Ankara</x:String>
-                                <x:String>İzmir</x:String>
-                                <x:String>Adana</x:String>
-                                <x:String>Adıyaman</x:String>
-                                <x:String>Afyonkarahisar</x:String>
-                                <x:String>Ağrı</x:String>
-                                <x:String>Aksaray</x:String>
-                                <x:String>Amasya</x:String>
-                                <x:String>Antalya</x:String>
-                                <x:String>Ardahan</x:String>
-                                <x:String>Artvin</x:String>
-                                <x:String>Aydın</x:String>
-                                <x:String>Balıkesir</x:String>
-                                <x:String>Bartın</x:String>
-                                <x:String>Batman</x:String>
-                                <x:String>Bayburt</x:String>
-                                <x:String>Bilecik</x:String>
-                                <x:String>Bingöl</x:String>
-                                <x:String>Bitlis</x:String>
-                                <x:String>Bolu</x:String>
-                                <x:String>Burdur</x:String>
-                                <x:String>Bursa</x:String>
-                                <x:String>Çanakkale</x:String>
-                                <x:String>Çankırı</x:String>
-                                <x:String>Çorum</x:String>
-                                <x:String>Denizli</x:String>
-                                <x:String>Diyarbakır</x:String>
-                                <x:String>Düzce</x:String>
-                                <x:String>Edirne</x:String>
-                                <x:String>Elazığ</x:String>
-                                <x:String>Erzincan</x:String>
-                                <x:String>Erzurum</x:String>
-                                <x:String>Eskişehir</x:String>
-                                <x:String>Gaziantep</x:String>
-                                <x:String>Giresun</x:String>
-                                <x:String>Gümüşhane</x:String>
-                                <x:String>Hakkari</x:String>
-                                <x:String>Hatay</x:String>
-                                <x:String>Iğdır</x:String>
-                                <x:String>Isparta</x:String>
-                                <x:String>Kahramanmaraş</x:String>
-                                <x:String>Karabük</x:String>
-                                <x:String>Karaman</x:String>
-                                <x:String>Kars</x:String>
-                                <x:String>Kastamonu</x:String>
-                                <x:String>Kayseri</x:String>
-                                <x:String>Kırıkkale</x:String>
-                                <x:String>Kırklareli</x:String>
-                              </scg:List>
-                            </uix:NSelectItem.Items>
-                            <uix:NSelectItem.Target>
-                              <uix:TargetAnchorable BrowserURL="sahibinden.com/kategori/emlak-konut" CVScreenId="d3eaded1-5f01-451b-8ff9-c92c9d11f28d" ContentHash="sB2V29aHDUC02q3Uo_lMTg" DesignTimeRectangle="765, 382, 145, 32" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl parentid='searchForm' tag='DIV' class='sahibindenSelect closed city' /&gt;" Guid="a201d21d-7ffd-4d74-a687-44319df9ead6" InformativeScreenshot="b9a9e1ce50458c00a2696b94cff019b9.png" Reference="Pmq0Y8tMSE6Fgrq_J4N_MQ/kSY2sQmA6E-GHlHoM4Xb2A" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.sahibinden.com/kategori/*' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive" />
-                            </uix:NSelectItem.Target>
-                          </uix:NSelectItem>
-                          <uix:NSelectItem DisplayName="Select Item - İlçe Seçme" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_3" Item="[str_ilce.Trim]" ScopeIdentifier="f3ba02a4-e84b-4168-af7b-20193d52f265" Version="V4">
-                            <uix:NSelectItem.Items>
-                              <scg:List x:TypeArguments="x:String" Capacity="19">
-                                <x:String>İlçe</x:String>
-                                <x:String>Başmakçı</x:String>
-                                <x:String>Bayat</x:String>
-                                <x:String>Bolvadin</x:String>
-                                <x:String>Çay</x:String>
-                                <x:String>Çobanlar</x:String>
-                                <x:String>Dazkırı</x:String>
-                                <x:String>Dinar</x:String>
-                                <x:String>Emirdağ</x:String>
-                                <x:String>Evciler</x:String>
-                                <x:String>Hocalar</x:String>
-                                <x:String>İhsaniye</x:String>
-                                <x:String>İscehisar</x:String>
-                                <x:String>Kızılören</x:String>
-                                <x:String>Merkez</x:String>
-                                <x:String>Sandıklı</x:String>
-                                <x:String>Sinanpaşa</x:String>
-                                <x:String>Şuhut</x:String>
-                                <x:String>Sultandağı</x:String>
-                              </scg:List>
-                            </uix:NSelectItem.Items>
-                            <uix:NSelectItem.Target>
-                              <uix:TargetAnchorable BrowserURL="sahibinden.com/kategori/emlak-konut" CVScreenId="95e77c77-78cc-4b10-b242-057d7d21fb2f" ContentHash="4JqcO45WOEGhZqRmdyrWog" DesignTimeRectangle="920, 330, 145, 32" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='searchForm' tag='DIV' parentclass='sahibindenSelect-holder' idx='4' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='searchForm' tag='DIV' parentclass='sahibindenSelect-holder' class='sahibindenSelect town activeSelect closed' aaname='' check:text='DazkırıİlçeBaşmakçıBayatBolvadinÇayÇobanlarDazkırıDinarEmirdağEvcilerHocalarİhsaniyeİscehisarKızılörenMerkezSandıklıSinanpaşaŞuhutSultandağı' /&gt;" Guid="902b6c80-3e06-465f-8a32-3eb27ad132af" ImageBase64="" InformativeScreenshot="5a0a7fea29668544ff1a994438a84fe1.png" Reference="Pmq0Y8tMSE6Fgrq_J4N_MQ/D4C5m78mek6GdM-mCD6QJg" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.sahibinden.com/kategori/*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V5" Visibility="Interactive" />
-                            </uix:NSelectItem.Target>
-                          </uix:NSelectItem>
-                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into - Min Tutar" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="f3ba02a4-e84b-4168-af7b-20193d52f265" Text="[str_minTL.Trim]" Version="V4">
-                            <uix:NTypeInto.Target>
-                              <uix:TargetAnchorable BrowserURL="sahibinden.com/kategori/emlak-konut" CVScreenId="92d097ff-793c-4f82-aa4d-58518420b552" ContentHash="RUuh3yDfhUyZjQoCWH376w" DesignTimeRectangle="454, 432, 77, 32" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='minPrice' tag='INPUT' placeholder='Min TL' type='text' /&gt;" Guid="c3be1f57-9f62-4300-876e-65dc4a4435f3" InformativeScreenshot="3e6549e9e07f4f349e2810e119c4a4f7.png" Reference="Pmq0Y8tMSE6Fgrq_J4N_MQ/rMJO7PjfVU2DqPZiHblTJg" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.sahibinden.com/kategori/*' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive" />
-                            </uix:NTypeInto.Target>
-                          </uix:NTypeInto>
-                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into Maks Tutar" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="f3ba02a4-e84b-4168-af7b-20193d52f265" Text="[str_maxTL.Trim]" Version="V4">
-                            <uix:NTypeInto.Target>
-                              <uix:TargetAnchorable BrowserURL="sahibinden.com/kategori/emlak-konut" CVScreenId="14001bdf-d1d3-42cd-8a24-5ecec7f1c2dc" ContentHash="JJDA62qlpUq3ksjpZs4Gyg" DesignTimeRectangle="546, 432, 77, 32" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='maxPrice' tag='INPUT' placeholder='Max TL' type='text' /&gt;" Guid="6cfb4fd1-5d83-4155-8cc7-c26fe4c5749c" InformativeScreenshot="a4a978871f1ac4f0e8221af064a97237.png" IsResponsive="True" Reference="Pmq0Y8tMSE6Fgrq_J4N_MQ/-GPQ9LonNkWqMKTHtzM_fQ" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.sahibinden.com/kategori/*' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
-                                <uix:TargetAnchorable.Anchors>
-                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                    <uix:Target DesignTimeRectangle="531, 432, 15, 32" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='splitter' parentid='searchForm' tag='SPAN' type='' aaname=' &amp;#x9;                                            - &amp;#x9;                                        ' check:innerText='-' /&gt;" Guid="b431bcaf-5ea2-4549-bced-f0789a9e5074" SearchSteps="FuzzySelector" />
-                                  </scg:List>
-                                </uix:TargetAnchorable.Anchors>
-                              </uix:TargetAnchorable>
-                            </uix:NTypeInto.Target>
-                          </uix:NTypeInto>
-                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Ara" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,225.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f3ba02a4-e84b-4168-af7b-20193d52f265" Version="V4">
-                            <uix:NClick.Target>
-                              <uix:TargetAnchorable BrowserURL="sahibinden.com/kategori/emlak-konut" CVScreenId="8ac4c58b-4ea3-487f-95fe-ade846f35455" ContentHash="5whwx-5lR0mESB0_uZ6SMQ" DesignTimeRectangle="1015, 432, 95, 32" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='searchForm' tag='A' aaname='Ara' visibleinnertext='Ara' /&gt;" Guid="129320f7-fe2d-4243-8911-234d3da7ac79" InformativeScreenshot="2c491a374618cfef51de69aea8b27ce0.png" Reference="Pmq0Y8tMSE6Fgrq_J4N_MQ/qCGmT6Q93ECcbqamjLkVjA" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.sahibinden.com/kategori/*' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive" />
-                            </uix:NClick.Target>
-                            <uix:NClick.VerifyOptions>
-                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                                <uix:VerifyExecutionOptions.Retry>
-                                  <InArgument x:TypeArguments="x:Boolean" />
-                                </uix:VerifyExecutionOptions.Retry>
-                                <uix:VerifyExecutionOptions.Timeout>
-                                  <InArgument x:TypeArguments="x:Double" />
-                                </uix:VerifyExecutionOptions.Timeout>
-                              </uix:VerifyExecutionOptions>
-                            </uix:NClick.VerifyOptions>
-                          </uix:NClick>
-                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,113.6" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="İstenilen işlemler yapılıp, arama yapıldı." />
-                        </Sequence>
-                        <Sequence DisplayName="Sequence -  Verileri çekme ve Excele Yazma" sap:VirtualizedContainerService.HintSize="1052.8,444.8" sap2010:WorkflowViewState.IdRef="Sequence_31">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <uix:NCheckState DisplayName="Check App State 'Arama filtrelerine uygu…'" sap:VirtualizedContainerService.HintSize="1019.2,352.8" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="f3ba02a4-e84b-4168-af7b-20193d52f265" Version="V4">
-                            <uix:NCheckState.IfExists>
-                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="483.2,111.2" sap2010:WorkflowViewState.IdRef="Sequence_27">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <Sequence DisplayName="Sequence - İstenilen Sonuç Yok" sap:VirtualizedContainerService.HintSize="449.6,49.6" sap2010:WorkflowViewState.IdRef="Sequence_29">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[str_il + &quot;, &quot; + str_ilce + &quot; istenilen sonuç yok.&quot;]" />
-                                  <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="A1" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="416,140.8" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="[str_il + &quot;, &quot; + str_ilce]" Text="İstenilen Sonuç Bulunamadı." WorkbookPath="C:\Users\bilal\Desktop\Sahibinden_IlanListesi.xlsx" />
-                                </Sequence>
-                              </Sequence>
-                            </uix:NCheckState.IfExists>
-                            <uix:NCheckState.IfNotExists>
-                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="483.2,111.2" sap2010:WorkflowViewState.IdRef="Sequence_28">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <Sequence DisplayName="Sequence - Tablo Çekme, Excel Yazma" sap:VirtualizedContainerService.HintSize="449.6,49.6" sap2010:WorkflowViewState.IdRef="Sequence_26">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dt_ilanListesi]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-0' ReferenceIdx='0' Name='Column-0' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-0 Src' ReferenceIdx='1' Name='Column-0 Src' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-0 Alt Text' ReferenceIdx='2' Name='Column-0 Alt Text' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-0 Url' ReferenceIdx='3' Name='Column-0 Url' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='İlan Başlığı' ReferenceIdx='4' Name='İlan Başlığı'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='İlan Başlığı Src' ReferenceIdx='5' Name='İlan Başlığı Src' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='İlan Başlığı Alt Text' ReferenceIdx='6' Name='İlan Başlığı Alt Text' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='İlan Başlığı Url' ReferenceIdx='7' Name='İlan Başlığı Url' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='m² (Brüt)' ReferenceIdx='8' Name='m² (Brüt)'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Oda Sayısı' ReferenceIdx='9' Name='Oda Sayısı'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Fiyat' ReferenceIdx='10' Name='Fiyat'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='İlan Tarihi' ReferenceIdx='11' Name='İlan Tarihi'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Semt / Mahalle' ReferenceIdx='12' Name='Semt / Mahalle'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-7' ReferenceIdx='13' Name='Column-7' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-7 Url' ReferenceIdx='14' Name='Link'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Column-0' attr='fulltext' name2='Column-0 Src' attr2='src' name3='Column-0 Alt Text' attr3='alt' name4='Column-0 Url' attr4='href' /&gt;&lt;column name='İlan Başlığı' attr='fulltext' name2='İlan Başlığı Src' attr2='src' name3='İlan Başlığı Alt Text' attr3='alt' name4='İlan Başlığı Url' attr4='href' /&gt;&lt;column name='m² (Brüt)' attr='fulltext' /&gt;&lt;column name='Oda Sayısı' attr='fulltext' /&gt;&lt;column name='Fiyat' attr='fulltext' /&gt;&lt;column name='İlan Tarihi' attr='fulltext' /&gt;&lt;column name='Semt / Mahalle' attr='fulltext' /&gt;&lt;column name='Column-7' attr='fulltext' name2='Column-7 Url' attr2='href' /&gt;&lt;/extract-table&gt;" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="Rows" MaximumResults="[CInt(str_ilanSayisi)]" ScopeIdentifier="f3ba02a4-e84b-4168-af7b-20193d52f265" Version="V4">
-                                    <uix:NExtractData.Target>
-                                      <uix:TargetAnchorable BrowserURL="https://www.sahibinden.com/kiralik-daire/adiyaman-kahta?price_min=10000&amp;price_max=50000" DesignTimeRectangle="361, 517, 934, 2129" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl id='searchResultsTable' tag='TABLE' /&gt;" Guid="fe10c339-3915-4575-826e-e6ee3f3086d1" InformativeScreenshot="065306b134e273c1dbeaae333c86e36e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Kahta Kiralık Daire Fiyatları ve Kiralık Ev İlanları - sahibinden.com' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive" />
-                                    </uix:NExtractData.Target>
-                                  </uix:NExtractData>
-                                  <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="False" DataTable="[dt_ilanListesi]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="416,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="[str_il + &quot;, &quot; + str_ilce]" WorkbookPath="C:\Users\bilal\Desktop\Sahibinden_IlanListesi.xlsx" />
-                                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,115.2" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="[str_il + &quot;, &quot; + str_ilce + &quot; istenilen sonuçexcele yazıldı.&quot;]" />
-                                </Sequence>
-                              </Sequence>
-                            </uix:NCheckState.IfNotExists>
-                            <uix:NCheckState.Target>
-                              <uix:TargetAnchorable BrowserURL="sahibinden.com/kiralik/malatya-battalgazi" CVScreenId="fd493f42-a6b9-4b7b-b8b5-12158e3a7b55" ContentHash="mRJlehTe602qHc0ZuozYpA" CvTextArea="475, 508, 326, 19" CvTextArgument="Arama filtrelerine uygun ilan bulunamadı." CvType="Text" DesignTimeRectangle="475, 508, 326, 19" DesignTimeScaleFactor="1" ElementType="Text" Guid="c2044b7a-5889-4d2d-8318-3f4980d81dce" InformativeScreenshot="15b2c920e24394f7fd87c9ae9d1f0cda.png" Reference="Pmq0Y8tMSE6Fgrq_J4N_MQ/J2dgcQ458UiMtsJyQSJhcw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Battalgazi Kiralık Rezidans, Villa, Müstakil Ev ve Daireler - sahibinden.com' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V5" Visibility="Interactive">
-                                <uix:TargetAnchorable.Anchors>
-                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                    <uix:Target CVScreenId="fd493f42-a6b9-4b7b-b8b5-12158e3a7b55" DesignTimeRectangle="397, 500, 52, 52" FullSelectorArgument="&lt;webctrl class='warningIcon' parentid='searchResultsSearchForm' tag='SPAN' /&gt;" Guid="84102be1-38b2-4013-ab3c-a19d02d61952" SearchSteps="Selector" />
-                                  </scg:List>
-                                </uix:TargetAnchorable.Anchors>
-                              </uix:TargetAnchorable>
-                            </uix:NCheckState.Target>
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                          </uix:NCheckState>
-                        </Sequence>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Konut Geri Dönme" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="1052.8,225.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f3ba02a4-e84b-4168-af7b-20193d52f265" Version="V4">
-                          <uix:NClick.Target>
-                            <uix:TargetAnchorable BrowserURL="sahibinden.com/kiralik-daire/adiyaman-kahta" CVScreenId="d8092a35-a613-48b1-9e7d-a392d110a24c" ContentHash="95lg4bJUYE-XV6mCPL9DuA" DesignTimeRectangle="269, 352, 31, 14" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Konut' parentid='searchContainer' tag='SPAN' visibleinnertext='Konut' idx='1' /&gt;" Guid="cedf8ce6-3540-4488-ba3b-cf3534968195" InformativeScreenshot="c838851708d3ae953823fe8978c1a9dc.png" Reference="Pmq0Y8tMSE6Fgrq_J4N_MQ/WRr1UAbloUW_TFTgbCdAZg" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.sahibinden.com/*' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
-                              <uix:TargetAnchorable.Anchors>
-                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                  <uix:Target CVScreenId="d8092a35-a613-48b1-9e7d-a392d110a24c" DesignTimeRectangle="217, 352, 32, 14" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Emlak' parentid='searchContainer' tag='SPAN' visibleinnertext='Emlak' idx='1' /&gt;" Guid="66d21fc8-f80c-4071-967a-702e94a1e0c3" SearchSteps="Selector" />
-                                </scg:List>
-                              </uix:TargetAnchorable.Anchors>
-                            </uix:TargetAnchorable>
-                          </uix:NClick.Target>
-                          <uix:NClick.VerifyOptions>
-                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                              <uix:VerifyExecutionOptions.Retry>
-                                <InArgument x:TypeArguments="x:Boolean" />
-                              </uix:VerifyExecutionOptions.Retry>
-                              <uix:VerifyExecutionOptions.Timeout>
-                                <InArgument x:TypeArguments="x:Double" />
-                              </uix:VerifyExecutionOptions.Timeout>
-                            </uix:VerifyExecutionOptions>
-                          </uix:NClick.VerifyOptions>
-                        </uix:NClick>
-                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="1052.8,113.6" sap2010:WorkflowViewState.IdRef="WriteLine_9" Text="Aramaya devam etmek için Konut'a geri dönüldü." />
-                      </Sequence>
-                    </ActivityAction>
-                  </ui:ForEachRow.Body>
-                </ui:ForEachRow>
-              </Sequence>
-            </Sequence>
-          </ActivityAction>
-        </uix:NApplicationCard.Body>
-        <uix:NApplicationCard.TargetApp>
-          <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" ContentHash="O3WyBy0EpUKgl5xvcMtTpg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFUSURBVDhPrZLPK4NxHMffD9uyZzcOFI3iso0/YVm0cpI4UDhYrZX8HS7SDmpOlIvi4uAkrlxoGoWsaUor+/VIK/aDt7770pM9sz3i8KqnV5/P6/n27Qs+gX8BteK3/H+gnAXXw+CYH/S4waFBcGoC3N81LhsDGhiYBwGwpxsMBcC5GdDhkG5tpUngJQ1aLHL4YE/34u8D/eCwt1ngEbTZZGDUB54cgeWccenHgCASBu1tMiJQVdDnBVeXwecHEwFBLglub4JLIdDt0mMeF/iabhAopMDbKHh3IS/0y+9s6ZHjwwaBq1M5ZLWCiZjurz+94OasQUAwOy0HO9rB4AK4GAS7OqWbHP8+WzdQyYMbEfmQ+pwt7HUq9I/Iyy1lTQTeNVC7tzARUxk/VxmPqkxe2llItRqW6wYqObCYVljKKNVv8Q6KGaXq3vImAuIEgnqu1gs+AEFVlaRXeHt2AAAAAElFTkSuQmCC" InformativeScreenshot="c89d4692ad83ea83e7faf01812767338.jpg" Reference="Pmq0Y8tMSE6Fgrq_J4N_MQ/448cgT6Whkqpmd22vPhLhA" Selector="&lt;html app='chrome.exe' title='sahibinden.com - Türkiye&amp;apos;nin Online İlan ve Alışveriş Sitesi' /&gt;" Url="https://www.sahibinden.com/" Version="V2" />
-        </uix:NApplicationCard.TargetApp>
-      </uix:NApplicationCard>
-    </Sequence>
-    <Sequence DisplayName="Sequence- Mail Assign ve Gönderme" sap:VirtualizedContainerService.HintSize="1222.4,1243.2" sap2010:WorkflowViewState.IdRef="Sequence_32">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Sequence - Mail Assign" sap:VirtualizedContainerService.HintSize="534.4,263.2" sap2010:WorkflowViewState.IdRef="Sequence_33">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-        <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,171.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
-          <ui:MultipleAssign.AssignOperations>
-            <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
-                <ui:AssignOperation.To>
-                  <OutArgument x:TypeArguments="x:String">[str_MailTo]</OutArgument>
-                </ui:AssignOperation.To>
-                <ui:AssignOperation.Value>
-                  <InArgument x:TypeArguments="x:String">
-                    <Literal x:TypeArguments="x:String" Value="" />
-                  </InArgument>
-                </ui:AssignOperation.Value>
-              </ui:AssignOperation>
-              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
-                <ui:AssignOperation.To>
-                  <OutArgument x:TypeArguments="x:String">[str_MailCc]</OutArgument>
-                </ui:AssignOperation.To>
-                <ui:AssignOperation.Value>
-                  <InArgument x:TypeArguments="x:String">
-                    <Literal x:TypeArguments="x:String" Value="" />
-                  </InArgument>
-                </ui:AssignOperation.Value>
-              </ui:AssignOperation>
-            </scg:List>
-          </ui:MultipleAssign.AssignOperations>
-        </ui:MultipleAssign>
-      </Sequence>
-      <Sequence DisplayName="Sequence - Send Mail" sap:VirtualizedContainerService.HintSize="534.4,783.2" sap2010:WorkflowViewState.IdRef="Sequence_34">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-        <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="guleerbilal@gmail.com" DisplayName="Use Gmail" EmailAddress="guleerbilal@gmail.com" sap:VirtualizedContainerService.HintSize="500.8,691.2" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_4" Timeout="90" UseConnectionService="False">
-          <umab:GmailApplicationCard.Body>
-            <ActivityAction x:TypeArguments="um:IMailQuickHandle">
-              <ActivityAction.Argument>
-                <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Gmail" />
-              </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="467.2,486.4" sap2010:WorkflowViewState.IdRef="Sequence_35">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Gmail]" Cc="[str_MailCc]" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="433.6,426.4" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="Sahibinden İlan Listesi" To="[str_MailTo]" UseDocumentAsBody="False">
-                  <umab:SendMailX.Files>
-                    <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
-                      <InArgument x:TypeArguments="x:String">C:\Users\bilal\Desktop\Sahibinden_IlanListesi.xlsx</InArgument>
-                    </scg:List>
-                  </umab:SendMailX.Files>
-                  <umab:SendMailX.HtmlBodyFromFile>
-                    <umabh:HtmlContentArgument HtmlBody="{x:Null}" FilePath=".data/HtmlContent1.html">
-                      <umabh:HtmlContentArgument.RuntimeImages>
-                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-                      </umabh:HtmlContentArgument.RuntimeImages>
-                      <umabh:HtmlContentArgument.ValueMappings>
-                        <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
-                      </umabh:HtmlContentArgument.ValueMappings>
-                    </umabh:HtmlContentArgument>
-                  </umab:SendMailX.HtmlBodyFromFile>
-                </umab:SendMailX>
-              </Sequence>
-            </ActivityAction>
-          </umab:GmailApplicationCard.Body>
-          <umab:GmailApplicationCard.ClientId>
-            <InArgument x:TypeArguments="x:String">
-              <Literal x:TypeArguments="x:String" Value="" />
-            </InArgument>
-          </umab:GmailApplicationCard.ClientId>
-          <umab:GmailApplicationCard.ClientSecret>
-            <InArgument x:TypeArguments="x:String">
-              <Literal x:TypeArguments="x:String" Value="" />
-            </InArgument>
-          </umab:GmailApplicationCard.ClientSecret>
-        </umab:GmailApplicationCard>
-      </Sequence>
-      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="534.4,113.6" sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="Mail gönderildi." />
-    </Sequence>
+    </ui:ForEachRow>
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_15">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[str_MailTo]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">guleerbilal@gmail.com</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_16">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[str_MailCc]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">bilal_glr@hotmail.com</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+    </ui:MultipleAssign>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="WF_MailGonder - Invoke Workflow File (WF_MailGonder.xaml)" sap:VirtualizedContainerService.HintSize="478.4,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="WF_MailGonder.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_MailTo">[str_MailTo]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_MailCc">[str_MailCc]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="478.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Mail gönderildi.&quot;]" />
   </Sequence>
 </Activity>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="p5zS9uIPwkaplNvH_YUPTw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="sahibinden.com/kategori/emlak-konut" CVScreenId="d3d2a52f-f4a9-4e28-9b84-23851976b686" DesignTimeRectangle="636, 419, 145, 23" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='searchForm' tag='SPAN' aaname='Satılık' /&gt;" Guid="b269c420-b9b7-442d-a7f7-4d18ddba5917" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.sahibinden.com/kategori/emlak-konut' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="d3d2a52f-f4a9-4e28-9b84-23851976b686" DesignTimeRectangle="614, 344, 138, 37" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Konut' parentid='container' tag='A' visibleinnertext='Konut' /&gt;" Guid="d5bfa63f-18b5-4383-a37f-05345b678f7a" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="cb0996f79b4d1dfc81077a8d18e8a871.png" xmlns="">05Rz6DD6p1E2TaCnUr3_WDg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SelectItem</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,353 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="WF_BilgileriDoldurma" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_ilanSayisi" Type="InArgument(x:String)" />
+    <x:Property Name="in_MaxTL" Type="InArgument(x:String)" />
+    <x:Property Name="in_MinTL" Type="InArgument(x:String)" />
+    <x:Property Name="in_ilanTuru" Type="InArgument(x:String)" />
+    <x:Property Name="in_ilce" Type="InArgument(x:String)" />
+    <x:Property Name="in_il" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.Mail.Activities.Business.ForEachMail</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.Mail.Activities.Utils</x:String>
+      <x:String>UiPath.Mail.Activities.Business.HtmlEditor</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.MetadataLoadContext</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="962,1563.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome Konut Fiyatları ve Emlak İlanları sahi" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="483.2,1540" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" IsIncognito="True" OpenMode="Never" ScopeGuid="a2fbd57f-748e-49a8-aefb-2e04f7b416de" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,1300" sap2010:WorkflowViewState.IdRef="Sequence_37">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NSelectItem DisplayName="Select Item 'Satılık'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="[in_ilanTuru.Trim]" ScopeIdentifier="a2fbd57f-748e-49a8-aefb-2e04f7b416de" Version="V4">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="50">
+                  <x:String>Satılık</x:String>
+                  <x:String>Kiralık</x:String>
+                  <x:String>Turistik Günlük Kiralık</x:String>
+                  <x:String>Devren Satılık Konut</x:String>
+                  <x:String>Giriş Yap</x:String>
+                  <x:String>Hesap Aç</x:String>
+                  <x:String>Ücretsiz* İlan Ver</x:String>
+                  <x:String xml:space="preserve">Satılık
+							(637.820)</x:String>
+                  <x:String xml:space="preserve">Kiralık
+							(174.974)</x:String>
+                  <x:String xml:space="preserve">Turistik Günlük Kiralık
+							(6.526)</x:String>
+                  <x:String xml:space="preserve">Devren Satılık Konut
+							(810)</x:String>
+                  <x:String>Konut</x:String>
+                  <x:String>Akasya merkez...</x:String>
+                  <x:String>2+1 amerikan ...</x:String>
+                  <x:String>SAHİBİNDEN SA...</x:String>
+                  <x:String>Deniz manzaralı</x:String>
+                  <x:String>SATILIK 3+1 T...</x:String>
+                  <x:String>sahibinden 0 ...</x:String>
+                  <x:String>ALANYA TATİL ...</x:String>
+                  <x:String>Liman Mahalle...</x:String>
+                  <x:String>Çekirge Ana C...</x:String>
+                  <x:String>2+1 KAPALI MU...</x:String>
+                  <x:String>GAZİ MAHALLES...</x:String>
+                  <x:String>MARMARA ADASI...</x:String>
+                  <x:String>SAHİBİNDEN 3+...</x:String>
+                  <x:String>NEZİROGLU FUL...</x:String>
+                  <x:String>Sahibinden ac...</x:String>
+                  <x:String>CUHALALLİ DA ...</x:String>
+                  <x:String>SAHİBİNDEN TO...</x:String>
+                  <x:String>Macun da 2+1 ...</x:String>
+                  <x:String>MEMURA EŞYALI...</x:String>
+                  <x:String>HIRKA-İ ŞERİF...</x:String>
+                  <x:String>SAHİBİNDEN 2+...</x:String>
+                  <x:String>Sahibinden,De...</x:String>
+                  <x:String>TERMİNAL MAH....</x:String>
+                  <x:String>Sitede Sıfır ...</x:String>
+                  <x:String>doğa ile ic i...</x:String>
+                  <x:String>SAHİBİNDEN Kİ...</x:String>
+                  <x:String>Bu fırsat kaç...</x:String>
+                  <x:String>ÇİLİMLİ MERKE...</x:String>
+                  <x:String>HAZIR KİRACIL...</x:String>
+                  <x:String>Işık rezidanc...</x:String>
+                  <x:String>GENİŞ EŞYALI ...</x:String>
+                  <x:String>sahibinden</x:String>
+                  <x:String>DENİZE 100M M...</x:String>
+                  <x:String>Sahibinden Sa...</x:String>
+                  <x:String>3+1 TADİLAT G...</x:String>
+                  <x:String>3+1 110 M2 FE...</x:String>
+                  <x:String>METROYA YÜRÜM...</x:String>
+                  <x:String>Fethiye, Tuzl...</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="sahibinden.com/kategori/emlak-konut" CVScreenId="d3d2a52f-f4a9-4e28-9b84-23851976b686" ContentHash="p5zS9uIPwkaplNvH_YUPTw" DesignTimeRectangle="636, 419, 145, 23" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='searchForm' tag='SPAN' aaname='Satılık' /&gt;" Guid="b269c420-b9b7-442d-a7f7-4d18ddba5917" ImageBase64="" InformativeScreenshot="cb0996f79b4d1dfc81077a8d18e8a871.png" Reference="Pmq0Y8tMSE6Fgrq_J4N_MQ/UugdzUqMc0iGld-nxSo68A" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.sahibinden.com/kategori/emlak-konut' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="d3d2a52f-f4a9-4e28-9b84-23851976b686" DesignTimeRectangle="614, 344, 138, 37" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Konut' parentid='container' tag='A' visibleinnertext='Konut' /&gt;" Guid="d5bfa63f-18b5-4383-a37f-05345b678f7a" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NSelectItem DisplayName="Select Item 'İl'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="[in_il.Trim]" ScopeIdentifier="a2fbd57f-748e-49a8-aefb-2e04f7b416de" Version="V4">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="50">
+                  <x:String>İl</x:String>
+                  <x:String>İstanbul</x:String>
+                  <x:String>Ankara</x:String>
+                  <x:String>İzmir</x:String>
+                  <x:String>Adana</x:String>
+                  <x:String>Adıyaman</x:String>
+                  <x:String>Afyonkarahisar</x:String>
+                  <x:String>Ağrı</x:String>
+                  <x:String>Aksaray</x:String>
+                  <x:String>Amasya</x:String>
+                  <x:String>Antalya</x:String>
+                  <x:String>Ardahan</x:String>
+                  <x:String>Artvin</x:String>
+                  <x:String>Aydın</x:String>
+                  <x:String>Balıkesir</x:String>
+                  <x:String>Bartın</x:String>
+                  <x:String>Batman</x:String>
+                  <x:String>Bayburt</x:String>
+                  <x:String>Bilecik</x:String>
+                  <x:String>Bingöl</x:String>
+                  <x:String>Bitlis</x:String>
+                  <x:String>Bolu</x:String>
+                  <x:String>Burdur</x:String>
+                  <x:String>Bursa</x:String>
+                  <x:String>Çanakkale</x:String>
+                  <x:String>Çankırı</x:String>
+                  <x:String>Çorum</x:String>
+                  <x:String>Denizli</x:String>
+                  <x:String>Diyarbakır</x:String>
+                  <x:String>Düzce</x:String>
+                  <x:String>Edirne</x:String>
+                  <x:String>Elazığ</x:String>
+                  <x:String>Erzincan</x:String>
+                  <x:String>Erzurum</x:String>
+                  <x:String>Eskişehir</x:String>
+                  <x:String>Gaziantep</x:String>
+                  <x:String>Giresun</x:String>
+                  <x:String>Gümüşhane</x:String>
+                  <x:String>Hakkari</x:String>
+                  <x:String>Hatay</x:String>
+                  <x:String>Iğdır</x:String>
+                  <x:String>Isparta</x:String>
+                  <x:String>Kahramanmaraş</x:String>
+                  <x:String>Karabük</x:String>
+                  <x:String>Karaman</x:String>
+                  <x:String>Kars</x:String>
+                  <x:String>Kastamonu</x:String>
+                  <x:String>Kayseri</x:String>
+                  <x:String>Kırıkkale</x:String>
+                  <x:String>Kırklareli</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="sahibinden.com/kategori/emlak-konut" CVScreenId="c4f27077-2411-4156-9105-cf025f44d9f9" ContentHash="E7LDGcTrXEOWNF213UTgwg" DesignTimeRectangle="1024, 419, 146, 23" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='İl' parentid='searchForm' tag='SPAN' visibleinnertext='İl' /&gt;" Guid="b0833329-f628-4c49-b3ec-221ea5702d2e" ImageBase64="" InformativeScreenshot="5a5391ee1ca295593f6ad206861ab197.png" Reference="Pmq0Y8tMSE6Fgrq_J4N_MQ/YfD48ravEEKIexUzwXJ2mQ" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.sahibinden.com/kategori/emlak-konut' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive" />
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NSelectItem DisplayName="Select Item 'İlçe'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_3" Item="[in_ilce.Trim]" ScopeIdentifier="a2fbd57f-748e-49a8-aefb-2e04f7b416de" Version="V4">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="40">
+                  <x:String>İlçe</x:String>
+                  <x:String>Adalar</x:String>
+                  <x:String>Arnavutköy</x:String>
+                  <x:String>Ataşehir</x:String>
+                  <x:String>Avcılar</x:String>
+                  <x:String>Bağcılar</x:String>
+                  <x:String>Bahçelievler</x:String>
+                  <x:String>Bakırköy</x:String>
+                  <x:String>Başakşehir</x:String>
+                  <x:String>Bayrampaşa</x:String>
+                  <x:String>Beşiktaş</x:String>
+                  <x:String>Beykoz</x:String>
+                  <x:String>Beylikdüzü</x:String>
+                  <x:String>Beyoğlu</x:String>
+                  <x:String>Büyükçekmece</x:String>
+                  <x:String>Çatalca</x:String>
+                  <x:String>Çekmeköy</x:String>
+                  <x:String>Esenler</x:String>
+                  <x:String>Esenyurt</x:String>
+                  <x:String>Eyüpsultan</x:String>
+                  <x:String>Fatih</x:String>
+                  <x:String>Gaziosmanpaşa</x:String>
+                  <x:String>Güngören</x:String>
+                  <x:String>Kadıköy</x:String>
+                  <x:String>Kağıthane</x:String>
+                  <x:String>Kartal</x:String>
+                  <x:String>Küçükçekmece</x:String>
+                  <x:String>Maltepe</x:String>
+                  <x:String>Pendik</x:String>
+                  <x:String>Sancaktepe</x:String>
+                  <x:String>Sarıyer</x:String>
+                  <x:String>Şile</x:String>
+                  <x:String>Silivri</x:String>
+                  <x:String>Şişli</x:String>
+                  <x:String>Sultanbeyli</x:String>
+                  <x:String>Sultangazi</x:String>
+                  <x:String>Tuzla</x:String>
+                  <x:String>Ümraniye</x:String>
+                  <x:String>Üsküdar</x:String>
+                  <x:String>Zeytinburnu</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="sahibinden.com/kategori/emlak-konut" CVScreenId="699261ef-864d-4571-8594-6ecb2ed52e75" ContentHash="q0hSDN0r-USeXhXl7F1t-w" DesignTimeRectangle="1218, 419, 145, 23" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='İlçe' parentid='searchForm' tag='SPAN' visibleinnertext='İlçe' /&gt;" Guid="f4c5d888-685c-4ab2-84b2-c6e76dbaf1d4" ImageBase64="" InformativeScreenshot="28065ca0249846b1a316deeea7a51ae2.png" Reference="Pmq0Y8tMSE6Fgrq_J4N_MQ/Xuyjn6cPRk2Ufb965shJag" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.sahibinden.com/kategori/emlak-konut' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive" />
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT minPrice'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="a2fbd57f-748e-49a8-aefb-2e04f7b416de" Text="[in_MinTL.Trim]" Version="V4">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="sahibinden.com/kategori/emlak-konut" CVScreenId="ba7e1411-30c0-4ff5-be54-5803e4c83232" ContentHash="dYDpxEUpK0-wlqTsXelJKA" DesignTimeRectangle="627, 473, 96, 40" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='minPrice' tag='INPUT' placeholder='Min TL' type='text' /&gt;" Guid="3a83ac51-100f-453f-99f2-7a798070fd92" InformativeScreenshot="454a35152d7caa42126e8d61273a4aa2.png" Reference="Pmq0Y8tMSE6Fgrq_J4N_MQ/aIbNkbdzVUqsB8SG_gP2JQ" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.sahibinden.com/kategori/emlak-konut' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Label'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="a2fbd57f-748e-49a8-aefb-2e04f7b416de" Text="[in_MaxTL.Trim]" Version="V4">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="sahibinden.com/kategori/emlak-konut" CVScreenId="b1a37fcf-5069-4cac-a6cc-66e28bbf0a55" ContentHash="8gVB-tsptEKfOXkcLCbwGQ" DesignTimeRectangle="743, 473, 95, 40" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='maxPrice' tag='INPUT' placeholder='Max TL' type='text' /&gt;" Guid="50d93ebf-8f8b-4387-a2a0-a753d98f94f0" InformativeScreenshot="94da32229ddb949c0d8304d5fd359a6c.png" IsResponsive="True" Reference="Pmq0Y8tMSE6Fgrq_J4N_MQ/LTtGbBj5r0SY1hmjm-eRuA" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.sahibinden.com/kategori/emlak-konut' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="723, 473, 20, 40" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='splitter' parentid='searchForm' tag='SPAN' type='' aaname=' &amp;#x9;                                            - &amp;#x9;                                        ' check:innerText='-' /&gt;" Guid="2736f069-9d43-4e5d-a9a8-ec2d338850a3" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;&quot;]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" ContentHash="rrXQtaEnl0y_BTQ6pYCBXA" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFUSURBVDhPrZLPK4NxHMffD9uyZzcOFI3iso0/YVm0cpI4UDhYrZX8HS7SDmpOlIvi4uAkrlxoGoWsaUor+/VIK/aDt7770pM9sz3i8KqnV5/P6/n27Qs+gX8BteK3/H+gnAXXw+CYH/S4waFBcGoC3N81LhsDGhiYBwGwpxsMBcC5GdDhkG5tpUngJQ1aLHL4YE/34u8D/eCwt1ngEbTZZGDUB54cgeWccenHgCASBu1tMiJQVdDnBVeXwecHEwFBLglub4JLIdDt0mMeF/iabhAopMDbKHh3IS/0y+9s6ZHjwwaBq1M5ZLWCiZjurz+94OasQUAwOy0HO9rB4AK4GAS7OqWbHP8+WzdQyYMbEfmQ+pwt7HUq9I/Iyy1lTQTeNVC7tzARUxk/VxmPqkxe2llItRqW6wYqObCYVljKKNVv8Q6KGaXq3vImAuIEgnqu1gs+AEFVlaRXeHt2AAAAAElFTkSuQmCC" InformativeScreenshot="89fde3efce763152ddc64010e660d6f3.jpg" Reference="Pmq0Y8tMSE6Fgrq_J4N_MQ/phUhm0Zxr0OtAxYLkkgTXw" Selector="&lt;html app='chrome.exe' title='Konut Fiyatları ve Emlak İlanları sahibinden.com&amp;apos;da' /&gt;" Url="https://www.sahibinden.com/kategori/emlak-konut" Version="V2" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

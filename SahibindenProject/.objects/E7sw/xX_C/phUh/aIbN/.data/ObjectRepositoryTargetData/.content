@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="dYDpxEUpK0-wlqTsXelJKA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="sahibinden.com/kategori/emlak-konut" CVScreenId="ba7e1411-30c0-4ff5-be54-5803e4c83232" DesignTimeRectangle="627, 473, 96, 40" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='minPrice' tag='INPUT' placeholder='Min TL' type='text' /&gt;" Guid="3a83ac51-100f-453f-99f2-7a798070fd92" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.sahibinden.com/kategori/emlak-konut' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="454a35152d7caa42126e8d61273a4aa2.png" xmlns="">0GwZrJCzYJE2ZWp7izKfanw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

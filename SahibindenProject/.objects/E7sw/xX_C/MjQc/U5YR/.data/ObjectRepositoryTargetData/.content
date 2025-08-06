@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="VhoaoW7MvUG_a-DRJ5FwNQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="sahibinden.com/satilik/ankara-akyurt" CVScreenId="7af74090-01cb-4538-8bf6-b8597ea9d35b" DesignTimeRectangle="395, 374, 39, 17" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Konut' parentid='searchContainer' tag='SPAN' innertext='Konut' visibleinnertext='Konut' idx='1' /&gt;" Guid="c3f21308-eda5-4562-b41d-f8168e2e1b72" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.sahibinden.com/*' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="7af74090-01cb-4538-8bf6-b8597ea9d35b" DesignTimeRectangle="245, 374, 61, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='searchContainer' tag='SPAN' aaname='Anasayfa' visibleinnertext='Anasayfa' /&gt;" Guid="622ade00-6d8a-4a67-8c73-96eb2ef927bf" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="5b4e5e0d9358fe21dd6713e702762db2.png" xmlns="">0oFzh8Qx4WkeGGbNHvDeCPg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

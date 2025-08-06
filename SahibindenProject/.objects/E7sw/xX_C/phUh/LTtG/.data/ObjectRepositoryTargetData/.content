@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="8gVB-tsptEKfOXkcLCbwGQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="sahibinden.com/kategori/emlak-konut" CVScreenId="b1a37fcf-5069-4cac-a6cc-66e28bbf0a55" DesignTimeRectangle="743, 473, 95, 40" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='maxPrice' tag='INPUT' placeholder='Max TL' type='text' /&gt;" Guid="50d93ebf-8f8b-4387-a2a0-a753d98f94f0" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.sahibinden.com/kategori/emlak-konut' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="723, 473, 20, 40" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='splitter' parentid='searchForm' tag='SPAN' type='' aaname=' &amp;#x9;                                            - &amp;#x9;                                        ' check:innerText='-' /&gt;" Guid="2736f069-9d43-4e5d-a9a8-ec2d338850a3" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="94da32229ddb949c0d8304d5fd359a6c.png" xmlns="">0IPUrWjqIT0uyWaf8KfvbHw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

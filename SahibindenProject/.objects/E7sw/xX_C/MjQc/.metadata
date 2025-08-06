@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome Adalar Satılık Ev Fiyatları sahibinden",
+  "Type": "Screen",
+  "Id": "MjQctNFwdEy4xuuv7PNabQ",
+  "Reference": "Pmq0Y8tMSE6Fgrq_J4N_MQ/MjQctNFwdEy4xuuv7PNabQ",
+  "ParentRef": "Pmq0Y8tMSE6Fgrq_J4N_MQ/xX_C-EDz30qkMOflq0gkBQ",
+  "Created": "2025-08-05T18:49:49.02141Z",
+  "Updated": "2025-08-05T18:49:49.02141Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

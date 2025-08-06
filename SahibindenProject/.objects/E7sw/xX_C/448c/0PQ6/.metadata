@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Tüm Çerezleri Kabul Et(1)",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "0PQ6T6JqsEa-kaVFkF6Bvw",
+  "Reference": "Pmq0Y8tMSE6Fgrq_J4N_MQ/0PQ6T6JqsEa-kaVFkF6Bvw",
+  "ParentRef": "Pmq0Y8tMSE6Fgrq_J4N_MQ/448cgT6Whkqpmd22vPhLhA",
+  "Created": "2025-08-05T17:55:15.9163787Z",
+  "Updated": "2025-08-05T17:55:15.9163787Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

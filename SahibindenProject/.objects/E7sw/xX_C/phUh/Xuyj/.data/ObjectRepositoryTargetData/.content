@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="q0hSDN0r-USeXhXl7F1t-w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="sahibinden.com/kategori/emlak-konut" CVScreenId="699261ef-864d-4571-8594-6ecb2ed52e75" DesignTimeRectangle="1218, 419, 145, 23" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='İlçe' parentid='searchForm' tag='SPAN' visibleinnertext='İlçe' /&gt;" Guid="f4c5d888-685c-4ab2-84b2-c6e76dbaf1d4" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.sahibinden.com/kategori/emlak-konut' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="28065ca0249846b1a316deeea7a51ae2.png" xmlns="">0aqofd7KYxkSB4Az6qVlL3A</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SelectItem</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

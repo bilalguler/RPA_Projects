@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="UAZEWpnhLUK8ocbow_1VkQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="-9, -9, 1938, 1038" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFUSURBVDhPrZLPK4NxHMffD9uyZzcOFI3iso0/YVm0cpI4UDhYrZX8HS7SDmpOlIvi4uAkrlxoGoWsaUor+/VIK/aDt7770pM9sz3i8KqnV5/P6/n27Qs+gX8BteK3/H+gnAXXw+CYH/S4waFBcGoC3N81LhsDGhiYBwGwpxsMBcC5GdDhkG5tpUngJQ1aLHL4YE/34u8D/eCwt1ngEbTZZGDUB54cgeWccenHgCASBu1tMiJQVdDnBVeXwecHEwFBLglub4JLIdDt0mMeF/iabhAopMDbKHh3IS/0y+9s6ZHjwwaBq1M5ZLWCiZjurz+94OasQUAwOy0HO9rB4AK4GAS7OqWbHP8+WzdQyYMbEfmQ+pwt7HUq9I/Iyy1lTQTeNVC7tzARUxk/VxmPqkxe2llItRqW6wYqObCYVljKKNVv8Q6KGaXq3vImAuIEgnqu1gs+AEFVlaRXeHt2AAAAAElFTkSuQmCC" Selector="&lt;html app='chrome.exe' title='Konut Fiyatları ve Emlak İlanları sahibinden.com&amp;apos;da' /&gt;" Url="https://www.sahibinden.com/kategori/emlak-konut" Version="V2">
+      <imageRef attrName="InformativeScreenshot" originalValue="f72423d32df7f7b7d53e8198c7f09ce7.jpg" xmlns="">03ZyoTv3AaE2QG5hw6WEzPA</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

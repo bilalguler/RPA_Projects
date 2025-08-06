@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Uygun ilan yayınlandığı…",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "IgAge9QJB0arhA0lxdpzXw",
+  "Reference": "Pmq0Y8tMSE6Fgrq_J4N_MQ/IgAge9QJB0arhA0lxdpzXw",
+  "ParentRef": "Pmq0Y8tMSE6Fgrq_J4N_MQ/MjQctNFwdEy4xuuv7PNabQ",
+  "Created": "2025-08-05T19:30:03.8954526Z",
+  "Updated": "2025-08-05T19:30:03.8954526Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

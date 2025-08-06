@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="26YdFK1jXEaJlGJLd5N-bg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="sahibinden.com" CVScreenId="523cad92-2e18-49a7-86f3-edd6fd99a130" CvElementArea="1420, 952, 240, 53" CvTextArea="1455, 971, 170, 15" CvTextArgument="Tüm Çerezleri Kabul Et" CvType="Button" DesignTimeRectangle="1422, 954, 237, 50" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl id='onetrust-accept-btn-handler' tag='BUTTON' /&gt;" Guid="e91681c5-29f8-472b-9c15-f91205498fab" ScopeSelectorArgument="&lt;html app='chrome.exe' title='sahibinden.com - Türkiye&amp;apos;nin Online İlan ve Alışveriş Sitesi' /&gt;" SearchSteps="Selector, CV" Version="V5" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="59c3b348cd47b019f937ee83a2330292.png" xmlns="">0dVc2lMCbhEWLtVh1B_WbBA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

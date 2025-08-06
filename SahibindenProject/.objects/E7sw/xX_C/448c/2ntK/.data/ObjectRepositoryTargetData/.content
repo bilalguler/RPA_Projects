@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="q8qLmm-n1UuHxvMyM9A0WA" Reference="Pmq0Y8tMSE6Fgrq_J4N_MQ/2ntK8zjvFU-BPDsDtNf1Pw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="sahibinden.com" CVScreenId="0a3a4726-4b55-4b5e-81ba-639f42318677" DesignTimeRectangle="306, 959, 46, 21" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='                             Konut' parentid='container' tag='A' uipath-html-title='Konut' visibleinnertext='Konut' /&gt;" Guid="b92eaee2-2515-469b-85f5-c101ce2531af" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.sahibinden.com/' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="0a3a4726-4b55-4b5e-81ba-639f42318677" DesignTimeRectangle="306, 926, 50, 21" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='                     Emlak' parentid='container' tag='A' uipath-html-title='Emlak' /&gt;" Guid="60e74560-4c7f-4d66-99c1-39683dc2311a" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="00d2fe553ce92f11fce6350f505cf49c.png" xmlns="">0a70sOVqi_kaIgqRu2VhfNg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
