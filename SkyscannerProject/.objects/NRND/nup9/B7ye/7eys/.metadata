@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Uygula",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "7eysqGPmfk--2-f-UJ31nQ",
+  "Reference": "WTQXVpPjm0mFyyzCZ7CMww/7eysqGPmfk--2-f-UJ31nQ",
+  "ParentRef": "WTQXVpPjm0mFyyzCZ7CMww/B7yeLhTJN0iQPAMOzmmtmA",
+  "Created": "2025-08-03T08:11:20.7675019Z",
+  "Updated": "2025-08-03T08:11:20.7675019Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

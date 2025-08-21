@@ -101,7 +101,7 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="512,1473.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="962,1259.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_ExcelTranslate" />
       <Variable x:TypeArguments="x:Int32" Name="index">
@@ -120,27 +120,22 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_ExcelTranslate]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="449.6,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sayfa1" WorkbookPath="Translate.xlsx" />
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[index]" DataTable="[dt_ExcelTranslate]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="449.6,1264.8" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_ExcelTranslate]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="451.2,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sayfa1" WorkbookPath="Translate.xlsx" />
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[index]" DataTable="[dt_ExcelTranslate]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="451.2,1116" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,1076" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,943.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="353.6,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="[CurrentRow(&quot;Türkçe&quot;).ToString]" />
-            <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACqVXy3LbNhT9FQxX6YykynYyzXhnyY6jxo5Vy0oWnSwg8oqERQEMHnYkTz6nX9If6wFFKQTo1J3pwmPi4D7PvQCunpJ3gsrMjJW0XEjSyelTMiOu04IvStptJqd/fuklE1k5ewCeko98TclpslYZlfV3LzkXpir5ptm59jtMNltkUi0qK5TE1l1BLCe441Y8EDubsNoMU5pNzplVzBkasLtCGMZTiAi7YRktuSut8dsW+juNR2GLelmIvCBj2VfHSy+uFob0A2VMOYvAe6xQj/RAusc4y8RySZqkbYykXLIFMUMlpRYqC268ooRPI/TBBoKRGbPwImQ+YDP4Tgt87qyY2kzBkY9YVwjbeAs+tJ32ACzcbSrPjLEaaljPlLY3OvO0H3mO6gw/8dJ5qbyy/deqfzw8ft0fvukfnUDhQrp1m30vc/Kmb51eqP7w6PgNZNr64d73XqAYG/+54+9f6gqKHMV7Sq4Uz0abJtrk1GpHvWSqjGiqO9VizfUG7pJb+uo8g3upun+uVMob0T8cQRDNZa7JFiqbco34rCfEK7QCFr797uib7fTZHgw7DKDvFJTVai5NyVHYF0pw3EryP8Q+UpnP8RBhyWXueN49CFetjSDIWUWpWG7YXrMTMIAXYj5p9cS+fmdLLVYcNuroDui64FqkIab5IoaMQdSGQnBLesHFPZciwEeuzGGUyxAlmeMQhpgyMpYbc8vLGNtSWgTIZxytEDlHGBF0SXodWbrURKsAuZB5GSvOqq6xC2NVJ9gRN1/x0YampE0s9k7Ijr13uGqipCa6kwEYS2Nrl+4eB8KGVL6nhabHEBIyC4XGWkEvMvfeyWfKdabX1El3gtJ0MJkpiQMSwb9zcBh3zCUpnceSH/iWr8K0PxRrtHEoJCXPeIgpTbEtpzNwyF7hA6W/F7+E2xudb7YBdMVVuMbT4VD9yPAVtw8xdo0+zbnZRGBKIOQ52Q3+1iGqZK46jF776haiqx+dMlQo4vcjVfERO3d4jkIhpR/JV4G9GqnV+u+/ypCkm0yEPE+dvMeNEGIIO+rVKTeFDcmc4kpyuUOY8KX5VkSu2vu7bx5J3CqUMSbo1plOv81K9cBXHajbwzNYjDg6KxddJzNcbh3sETlECPmGi6UKEbm442tRhgiVSD2ECh5pOb2Krc83eeHCwzFfaYxpcbBznYXm59tFdPd9EmT9KBa10RjzS429/MBfSD8RzjFV3WCM0iKj//f0755P+L2px6PuZPnjGXz+2W+9ks9OAEX4kkJmwD4XmPuYcVWFHqSs15rPMEqW5Y/nV2AIqRWFbAZOXlVaVbg+LSzUjvy8yssKozLZl99pTwhmx+R0yUsDQm7JVEqC/Iag/Xrsasc/421H125mQi/stWqxZmr6AvrnUiwFqENImO4xkFqB8h2cT6SxXKZ0GLhAPdrCv2i1l6PBcDCEE/wwkBiKlf5AG8BOwFDRb/5xobMVhM6aGb3Jf58ASru4h3JcT2y8t7baTXz13QBWEPKYpwUhVbVyVd2gPqYDPtLqEc03sbRu8KbZEFnzE2XK0xXGqHYWv4VZNKHMxRTxs0uS+OnRRC/griXZNnJyPDh6e0jnJ234b+neVPVPndrcGE/ZMxzczO6A+bCw+rWtfBgfTxOSWF/zb1MsZ2IL6Hg4hCVuRrC6QteNC0h74po6+6MzKlW6qin6/g+NeBF78A0AAA==" ConnectionId="5a978db5-f08f-4a7e-9c68-2279769843ca" DisplayName="Translate" sap:VirtualizedContainerService.HintSize="353.6,288.8" sap2010:WorkflowViewState.IdRef="ConnectorActivity_4" UiPathActivityTypeId="44a6e8db-407e-373a-b4eb-84997a6c83fd">
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="[CurrentRow(&quot;Türkçe&quot;).ToString]" />
+            <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACo1W23LbNhD9FQ6fkhnVVduZpvWbJd9UX6SxrOSh44cVuSJhggCzAKxQHn9Ov6Q/liVFKQKoNH3QiDjY69kFFq/xpUCZmrFWFoRCik9f4zkCJTksJW4349O/nwbxRFXO7oHX+B5KjE9j0cCP+MXGg/hcmEpC3e3sQDQJicoKrTowsjpaYmQJlJFgMT1hsce6apSMJaEyXs812SmlTUQfWiMiY/3Xt0H8gJ+dIEzjU0sOB9sMbnUCnYuRTuv4bbCPUILKHGTYC/D2YMMLcl5hIlZ1tNPsBczAD2L+YxBfKFe2TH0E6Rq5sxWJAthGG90eLXMgkfgYwTKEjOGoDfrgBmkJ4hmU8PCRkxkbBeWjqDKQgaQ2KpQbgwUZYhtMcg/5hNL4yDmHEUBXSGVg6YoQCw+5UJkMFedV39iFsboX7AjMZ/44hGZIJhS7FKpn75JQBUlNqJcBM5aE1q7cMxD3mwde45Jw7UNCpb7QmDTrBeaunTpSrjMqsZfuhEvTw1SqFR+QAP4LmMOwY65QUxZK3sAGCj/tm7zkNvaFlIIUfEwThrYcpcxh9I4/uPTP4r2/XVNWbzzoFrS/FjZ3XP3A8C3YlxC74z7NwNQBmCATcky25l/po1plusfoXVPdXPT1g1PGFQr4vccqPGLnzgZddq9pjU0VoncjXZT//iN9kqap8HmeOfXMN4KPcdhBr87A5NYnc8ZXkssch8m+CDYicHW4v/2GQOJBcxlDgh6c6fXbXOoXKHpQv4fnbDHg6Ewu+07mfLn1sDXnECDYNFwolYvAxSOUQvoISk7dh3IItBwVofVFneXOPxyLgnh8hsEuKPXNLzbL4O77KNCq/sU+znkYN9jTweyLbzWko/ocV+Ck3Y2/C9VM6oVBmr4gkUhxtzPTRnQTbUaiBGra93+OT/Y7dfboxP82Bo+P/YMpefQFkPuTlGVOok85EkbGVRX3IKaDyLKUbgOI1kLKb+NXWKRWUSieyo0YVBXpiq9PyxZaR5GmCGTFTxi0P5jTv20JQcN8rkAaJuQBTaUVk98RtFuPXev4e7xt6WLrE3PHvbDTasW2Om9PTP9CiZVg6jgkfnWVFatz+fbOJ8pYUAnO+AYqkXNl6rktmonWevnlZHgyZCf8YFOYWE03WDPsBBvKf+r+QFBasNBZYsWLsHWX/y4BLu3ymZXDevLGtbXVHdpcc8hN/9imY8aQ5Mip6sJVbYM2Me3xEek1N9/EYtnhXbNxZN3TcQZJwc+owyw++Fl0oSzEjOOPrlCdTaIuesHuDiQPjfw+PPlzn813uvC/sp1WTS9trY15kh2hYDp/ZKyJilc/HyrvX4+nMSpe38GXGS/nYsPQr8MhWwIzYqsFN904Z+mGt67MzckZSZ0ULUNvXwHZYFcJhwsAAA==" ConnectionId="5a978db5-f08f-4a7e-9c68-2279769843ca" DisplayName="Translate" sap:VirtualizedContainerService.HintSize="416,236.8" sap2010:WorkflowViewState.IdRef="ConnectorActivity_4" UiPathActivityTypeId="44a6e8db-407e-373a-b4eb-84997a6c83fd">
               <isactr:ConnectorActivity.FieldObjects>
-                <isactr:FieldObject Name="modelName" Type="FieldArgument">
-                  <isactr:FieldObject.Value>
-                    <InArgument x:TypeArguments="x:String">gpt-35-turbo-0125</InArgument>
-                  </isactr:FieldObject.Value>
-                </isactr:FieldObject>
                 <isactr:FieldObject Name="inputText" Type="FieldArgument">
                   <isactr:FieldObject.Value>
                     <InArgument x:TypeArguments="x:String">[CurrentRow("Türkçe").ToString]</InArgument>
@@ -158,14 +153,9 @@
                 </isactr:FieldObject>
               </isactr:ConnectorActivity.FieldObjects>
             </isactr:ConnectorActivity>
-            <ui:WriteCell Cell="[&quot;B&quot; + (dt_ExcelTranslate.Rows.IndexOf(CurrentRow) + 2).ToString()]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="353.6,148" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="Sayfa1" Text="[str_Translate1]" WorkbookPath="Translate.xlsx" />
-            <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACqVXy3LbNhT9FQxX6YykynYyzXhnyY6jxo5Vy0oWnSwg8oqERQEMHnYkTz6nX9If6wFFKQTo1J3pwmPi4D7PvQCunpJ3gsrMjJW0XEjSyelTMiOu04IvStptJqd/fuklE1k5ewCeko98TclpslYZlfV3LzkXpir5ptm59jtMNltkUi0qK5TE1l1BLCe441Y8EDubsNoMU5pNzplVzBkasLtCGMZTiAi7YRktuSut8dsW+juNR2GLelmIvCBj2VfHSy+uFob0A2VMOYvAe6xQj/RAusc4y8RySZqkbYykXLIFMUMlpRYqC268ooRPI/TBBoKRGbPwImQ+YDP4Tgt87qyY2kzBkY9YVwjbeAs+tJ32ACzcbSrPjLEaaljPlLY3OvO0H3mO6gw/8dJ5qbyy/deqfzw8ft0fvukfnUDhQrp1m30vc/Kmb51eqP7w6PgNZNr64d73XqAYG/+54+9f6gqKHMV7Sq4Uz0abJtrk1GpHvWSqjGiqO9VizfUG7pJb+uo8g3upun+uVMob0T8cQRDNZa7JFiqbco34rCfEK7QCFr797uib7fTZHgw7DKDvFJTVai5NyVHYF0pw3EryP8Q+UpnP8RBhyWXueN49CFetjSDIWUWpWG7YXrMTMIAXYj5p9cS+fmdLLVYcNuroDui64FqkIab5IoaMQdSGQnBLesHFPZciwEeuzGGUyxAlmeMQhpgyMpYbc8vLGNtSWgTIZxytEDlHGBF0SXodWbrURKsAuZB5GSvOqq6xC2NVJ9gRN1/x0YampE0s9k7Ijr13uGqipCa6kwEYS2Nrl+4eB8KGVL6nhabHEBIyC4XGWkEvMvfeyWfKdabX1El3gtJ0MJkpiQMSwb9zcBh3zCUpnceSH/iWr8K0PxRrtHEoJCXPeIgpTbEtpzNwyF7hA6W/F7+E2xudb7YBdMVVuMbT4VD9yPAVtw8xdo0+zbnZRGBKIOQ52Q3+1iGqZK46jF776haiqx+dMlQo4vcjVfERO3d4jkIhpR/JV4G9GqnV+u+/ypCkm0yEPE+dvMeNEGIIO+rVKTeFDcmc4kpyuUOY8KX5VkSu2vu7bx5J3CqUMSbo1plOv81K9cBXHajbwzNYjDg6KxddJzNcbh3sETlECPmGi6UKEbm442tRhgiVSD2ECh5pOb2Krc83eeHCwzFfaYxpcbBznYXm59tFdPd9EmT9KBa10RjzS429/MBfSD8RzjFV3WCM0iKj//f0755P+L2px6PuZPnjGXz+2W+9ks9OAEX4kkJmwD4XmPuYcVWFHqSs15rPMEqW5Y/nV2AIqRWFbAZOXlVaVbg+LSzUjvy8yssKozLZl99pTwhmx+R0yUsDQm7JVEqC/Iag/Xrsasc/421H125mQi/stWqxZmr6AvrnUiwFqENImO4xkFqB8h2cT6SxXKZ0GLhAPdrCv2i1l6PBcDCEE/wwkBiKlf5AG8BOwFDRb/5xobMVhM6aGb3Jf58ASru4h3JcT2y8t7baTXz13QBWEPKYpwUhVbVyVd2gPqYDPtLqEc03sbRu8KbZEFnzE2XK0xXGqHYWv4VZNKHMxRTxs0uS+OnRRC/griXZNnJyPDh6e0jnJ234b+neVPVPndrcGE/ZMxzczO6A+bCw+rWtfBgfTxOSWF/zb1MsZ2IL6Hg4hCVuRrC6QteNC0h74po6+6MzKlW6qin6/g+NeBF78A0AAA==" ConnectionId="5a978db5-f08f-4a7e-9c68-2279769843ca" DisplayName="Translate" sap:VirtualizedContainerService.HintSize="353.6,288.8" sap2010:WorkflowViewState.IdRef="ConnectorActivity_5" UiPathActivityTypeId="44a6e8db-407e-373a-b4eb-84997a6c83fd">
+            <ui:WriteCell Cell="[&quot;B&quot; + (dt_ExcelTranslate.Rows.IndexOf(CurrentRow) + 2).ToString()]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="416,148" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="Sayfa1" Text="[str_Translate1]" WorkbookPath="Translate.xlsx" />
+            <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACo1W23LbNhD9FQ6fkhnVVduZpvWbJd9UX6SxrOSh44cVuSJhggCzAKxQHn9Ov6Q/liVFKQKoNH3QiDjY69kFFq/xpUCZmrFWFoRCik9f4zkCJTksJW4349O/nwbxRFXO7oHX+B5KjE9j0cCP+MXGg/hcmEpC3e3sQDQJicoKrTowsjpaYmQJlJFgMT1hsce6apSMJaEyXs812SmlTUQfWiMiY/3Xt0H8gJ+dIEzjU0sOB9sMbnUCnYuRTuv4bbCPUILKHGTYC/D2YMMLcl5hIlZ1tNPsBczAD2L+YxBfKFe2TH0E6Rq5sxWJAthGG90eLXMgkfgYwTKEjOGoDfrgBmkJ4hmU8PCRkxkbBeWjqDKQgaQ2KpQbgwUZYhtMcg/5hNL4yDmHEUBXSGVg6YoQCw+5UJkMFedV39iFsboX7AjMZ/44hGZIJhS7FKpn75JQBUlNqJcBM5aE1q7cMxD3mwde45Jw7UNCpb7QmDTrBeaunTpSrjMqsZfuhEvTw1SqFR+QAP4LmMOwY65QUxZK3sAGCj/tm7zkNvaFlIIUfEwThrYcpcxh9I4/uPTP4r2/XVNWbzzoFrS/FjZ3XP3A8C3YlxC74z7NwNQBmCATcky25l/po1plusfoXVPdXPT1g1PGFQr4vccqPGLnzgZddq9pjU0VoncjXZT//iN9kqap8HmeOfXMN4KPcdhBr87A5NYnc8ZXkssch8m+CDYicHW4v/2GQOJBcxlDgh6c6fXbXOoXKHpQv4fnbDHg6Ewu+07mfLn1sDXnECDYNFwolYvAxSOUQvoISk7dh3IItBwVofVFneXOPxyLgnh8hsEuKPXNLzbL4O77KNCq/sU+znkYN9jTweyLbzWko/ocV+Ck3Y2/C9VM6oVBmr4gkUhxtzPTRnQTbUaiBGra93+OT/Y7dfboxP82Bo+P/YMpefQFkPuTlGVOok85EkbGVRX3IKaDyLKUbgOI1kLKb+NXWKRWUSieyo0YVBXpiq9PyxZaR5GmCGTFTxi0P5jTv20JQcN8rkAaJuQBTaUVk98RtFuPXev4e7xt6WLrE3PHvbDTasW2Om9PTP9CiZVg6jgkfnWVFatz+fbOJ8pYUAnO+AYqkXNl6rktmonWevnlZHgyZCf8YFOYWE03WDPsBBvKf+r+QFBasNBZYsWLsHWX/y4BLu3ymZXDevLGtbXVHdpcc8hN/9imY8aQ5Mip6sJVbYM2Me3xEek1N9/EYtnhXbNxZN3TcQZJwc+owyw++Fl0oSzEjOOPrlCdTaIuesHuDiQPjfw+PPlzn813uvC/sp1WTS9trY15kh2hYDp/ZKyJilc/HyrvX4+nMSpe38GXGS/nYsPQr8MhWwIzYqsFN904Z+mGt67MzckZSZ0ULUNvXwHZYFcJhwsAAA==" ConnectionId="5a978db5-f08f-4a7e-9c68-2279769843ca" DisplayName="Translate" sap:VirtualizedContainerService.HintSize="416,236.8" sap2010:WorkflowViewState.IdRef="ConnectorActivity_5" UiPathActivityTypeId="44a6e8db-407e-373a-b4eb-84997a6c83fd">
               <isactr:ConnectorActivity.FieldObjects>
-                <isactr:FieldObject Name="modelName" Type="FieldArgument">
-                  <isactr:FieldObject.Value>
-                    <InArgument x:TypeArguments="x:String">gpt-35-turbo-0125</InArgument>
-                  </isactr:FieldObject.Value>
-                </isactr:FieldObject>
                 <isactr:FieldObject Name="inputText" Type="FieldArgument">
                   <isactr:FieldObject.Value>
                     <InArgument x:TypeArguments="x:String">[CurrentRow("Türkçe").ToString]</InArgument>
@@ -183,7 +173,7 @@
                 </isactr:FieldObject>
               </isactr:ConnectorActivity.FieldObjects>
             </isactr:ConnectorActivity>
-            <ui:WriteCell Cell="[&quot;C&quot; + (dt_ExcelTranslate.Rows.IndexOf(CurrentRow) + 2).ToString()]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="353.6,139.2" sap2010:WorkflowViewState.IdRef="WriteCell_3" SheetName="Sayfa1" Text="[str_Translate2]" WorkbookPath="Translate.xlsx" />
+            <ui:WriteCell Cell="[&quot;C&quot; + (dt_ExcelTranslate.Rows.IndexOf(CurrentRow) + 2).ToString()]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="416,139.2" sap2010:WorkflowViewState.IdRef="WriteCell_3" SheetName="Sayfa1" Text="[str_Translate2]" WorkbookPath="Translate.xlsx" />
           </Sequence>
         </ActivityAction>
       </ui:ForEachRow.Body>

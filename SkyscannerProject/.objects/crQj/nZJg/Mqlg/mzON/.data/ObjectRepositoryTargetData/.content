@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="0jD63XEJ90mj9ohYg_hIig" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="skyscanner.com.tr/ucak-bileti" CVScreenId="b88ad0a3-9941-49b8-8f0c-2639b7b67d4e" DesignTimeRectangle="1368, 786, 220, 30" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='* yetişkin, Ekonomi' parentid='SearchControlsWrapper' tag='SPAN' /&gt;" Guid="70893b78-3da5-4009-a26a-f21cbfa30ee2" ScopeSelectorArgument="&lt;html app='chrome.exe' title='En Ucuz Uçak Biletleri ve Rezervasyon Teklifleri | Skyscanner' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="1348, 744, 260, 90" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Yolcular ve kabin sınıfı1 yetişkin, Ekonomi' parentid='SearchControlsWrapper' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Yolcular ve kabin sınıfı1 yetişkin, Ekonomi' parentid='SearchControlsWrapper' tag='BUTTON' type='button' class='SearchControlButton_SearchControlBtn__ODQ1N SearchControlButton_Traveller__ZWNmN' check:innerText='Yolcular ve kabin sınıfı&amp;#xA;1 yetişkin, Ekonomi' /&gt;" Guid="342437c4-f86b-4719-acea-7597b8e07e6e" SearchSteps="Selector, FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="74ab8b78a51be990718595a820f3f482.png" xmlns="">0sCXyS6SKrkyG9W-rQ4O5dA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

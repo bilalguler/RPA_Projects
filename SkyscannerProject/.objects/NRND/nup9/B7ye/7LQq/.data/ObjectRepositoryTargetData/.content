@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="8Eu2iCkRVkO9p7Oeh7L8Bg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="newtab" CVScreenId="0f6e35c9-fa44-44ff-afea-f8702ba6b931" DesignTimeRectangle="747, 402, 289, 45" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='depart-calendar__bpk_calendar_nav_select' tag='SELECT' name='months' /&gt;" Guid="027a38e8-74b9-4210-83ad-dfe2e6fadc9f" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' idx='2' url='https://www.skyscanner.com.tr/ucak-bileti' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="86a87c95093ad5df6481f4913372093c.png" xmlns="">0MkY-ted810uLZZS_Q5yabA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SelectItem</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

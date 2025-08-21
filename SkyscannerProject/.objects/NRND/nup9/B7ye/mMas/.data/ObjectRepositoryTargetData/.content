@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="f-fgZvAH0Ea61Vs08YfSeg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="skyscanner.com.tr/tasima/ucak-bileti/ista/cov/250815" CVScreenId="8fc73077-206a-4140-978e-2522c3532739" DesignTimeRectangle="1220, 218, 30, 30" DesignTimeScaleFactor="1.25" ElementType="Icon" FullSelectorArgument="&lt;webctrl parentid='login-modal' tag='svg' /&gt;" Guid="ac90f4f5-7ffb-4ce5-aeaf-e111c1f2f9e8" ScopeSelectorArgument="&lt;html app='chrome.exe' title='İstanbul kalkışlı ucuz yurt içi uçuşlar' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="0e987fab5be2e9a58d4c29000ba5379f.png" xmlns="">0XcjL4_GXo06dOs5Sm5-8tQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

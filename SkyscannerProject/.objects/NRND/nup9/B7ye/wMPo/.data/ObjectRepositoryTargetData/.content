@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="UGTE2X7OX02baIbDdp-cUA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="skyscanner.com.tr/ucak-bileti" CVScreenId="20c215b8-0b26-41b4-85ea-aec8b40da080" DesignTimeRectangle="245, 577, 344, 30" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='originInput-input' tag='INPUT' /&gt;" Guid="b9a5e1f7-e362-4523-8c95-f5a22058793b" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='En Ucuz Uçak Biletleri ve Rezervasyon Teklifleri | Skyscanner' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="225, 535, 424, 90" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='originInput-label' tag='LABEL' type='' class='AutoSuggest_label__ODRkN OriginSearchControlGroup_DesktopOriginLabel__NDNlZ' aaname='' check:innerText='Kalkış:' /&gt;" Guid="dabfbee4-5027-455c-9470-5ad0044df9c3" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="7206d925933f30cb0785684963892e42.png" xmlns="">0HZMEAc5pOES2I5Ur6DVUyA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SelectItem</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

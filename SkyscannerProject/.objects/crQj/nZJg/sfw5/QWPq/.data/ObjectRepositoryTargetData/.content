@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="c9gj_wzir0iyrO-36BgWCA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="skyscanner.com.tr/tasima/ucak-bileti/ista/cov/251015" DesignTimeRectangle="9, 66, 49, 43" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;ctrl name='* kalkışlı ucuz yurt içi uçuşlar - Google Chrome (Gizli m*' role='pane' /&gt;&lt;ctrl name='Geri' role='push button' text='Geri' /&gt;" Guid="99aa1d2d-cd4d-47bc-b225-2b62d5728bc9" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='* kalkışlı ucuz yurt içi uçuşlar - Google Chrome' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="0e622616-2232-4ca9-b636-9ee12e2cc9da" DesignTimeRectangle="105, 66, 43, 43" ElementType="Button" FullSelectorArgument="&lt;ctrl name='* kalkışlı ucuz yurt içi uçuşlar - Google Chrome (Gizli m*' role='pane' /&gt;&lt;ctrl name='Yeniden Yükle' role='push button' text='Yeniden Yükle' /&gt;" Guid="4a08adfc-81e7-499f-b4a3-ae72e66feb4e" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="3d3e2c1323d8ea3f60557ef3ea952448.png" xmlns="">0pdr4YLPrM0KvzpYEfGTlvg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

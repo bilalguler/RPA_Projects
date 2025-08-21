@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="o8i1zP_FDUe7ip8mril1wQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="skyscanner.com.tr/ucak-bileti" CVScreenId="cadc44c2-246b-4df8-98b8-dd3c1a0afeb5" DesignTimeRectangle="1464, 645, 50, 45" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='children-nudger' tag='INPUT' type='number' /&gt;" Guid="8d3c73cd-633b-432b-8335-f3208aced6b1" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.skyscanner.com.tr/ucak-bileti' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="1148, 645, 118, 60" ElementType="Text" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;label' tag='LABEL' innertext='Çocuklar0-17 yaş arası' visibleinnertext='Çocuklar&amp;#xA;0-17 yaş arası' /&gt;" Guid="eba40359-9168-48fe-8c90-112852eda19a" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="31dfcc6c51a56f3ff24c0475bd528e32.png" xmlns="">08Y4RzsZxo0Ong5d39D2L6Q</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

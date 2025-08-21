@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome İstanbul kalkışlı ucuz yurt içi uçuşla(1)",
+  "Type": "Screen",
+  "Id": "sfw59o-RQU2M0FiWAgX0MQ",
+  "Reference": "WTQXVpPjm0mFyyzCZ7CMww/sfw59o-RQU2M0FiWAgX0MQ",
+  "ParentRef": "WTQXVpPjm0mFyyzCZ7CMww/nZJgAuRfL0ClOQDs2VBGmA",
+  "Created": "2025-08-20T13:29:39.2133436Z",
+  "Updated": "2025-08-20T13:29:39.2133436Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

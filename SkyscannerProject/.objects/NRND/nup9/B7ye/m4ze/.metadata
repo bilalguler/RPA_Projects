@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Yolcular ve kabin sınıfı",
+  "Type": "Element",
+  "Id": "m4zeY2JTo0muDMGdq8J4KA",
+  "Reference": "WTQXVpPjm0mFyyzCZ7CMww/m4zeY2JTo0muDMGdq8J4KA",
+  "ParentRef": "WTQXVpPjm0mFyyzCZ7CMww/B7yeLhTJN0iQPAMOzmmtmA",
+  "Created": "2025-01-12T08:26:28.6408065Z",
+  "Updated": "2025-01-12T08:26:28.6408065Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

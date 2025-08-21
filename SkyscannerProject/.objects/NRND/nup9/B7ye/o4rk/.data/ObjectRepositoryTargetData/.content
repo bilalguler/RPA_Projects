@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="ZcYIWZKUf0euxJmQIoJfZQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="skyscanner.com.tr/ucak-bileti" CVScreenId="9ec19fa2-545e-46a1-bf51-e808dade2a99" DesignTimeRectangle="780, 708, 224, 25" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl parentid='depart-fsc-datepicker-button' tag='SPAN' class='DateInput_DateInput*' /&gt;" Guid="bef5a56f-58d6-4347-983e-823ed332115c" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.skyscanner.com.tr/*' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="9ec19fa2-545e-46a1-bf51-e808dade2a99" DesignTimeRectangle="778, 678, 226, 25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Kalkış' parentid='flights-search-controls-root' tag='LABEL' visibleinnertext='Kalkış' /&gt;" Guid="f4d16973-098a-4826-ad8e-67ddb6ee5cfb" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="62dfe55f9d246b0bc819c00d88946dc9.png" xmlns="">0GIZNQCOObUe_dYMrWLawnQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

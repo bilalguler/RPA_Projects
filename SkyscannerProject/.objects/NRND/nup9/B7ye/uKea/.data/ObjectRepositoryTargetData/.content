@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="YVJ9Gubjgk6IWil1WDM6Lw" Reference="WTQXVpPjm0mFyyzCZ7CMww/uKeainEae06muYMnYVrU3Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="skyscanner.com.tr/ucak-bileti" CVScreenId="e8a6d990-8804-487c-a786-7e58fa480f70" DesignTimeRectangle="1103, 623, 220, 30" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='25.08.2025' parentid='SearchControlsWrapper' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='SearchControlsWrapper' tag='SPAN' type='' class='BpkText_bpk-text__ZjI3M BpkText_bpk-text--body-default__ODg2M SearchControlButton_value__ZGNiZ' /&gt;" Guid="bd10cf31-df08-48e4-9e64-ce2c64072d01" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='En Ucuz Uçak Biletleri ve Rezervasyon Teklifleri | Skyscanner' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="1083, 581, 260, 90" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Kalkış*' parentid='SearchControlsWrapper' tag='BUTTON' innertext='Kalkış*' visibleinnertext='Kalkış*' /&gt;" Guid="1eec582f-9ec6-4de3-bb3e-f4179a569b34" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="f240070e5f625c6431e4cd73528ceca9.png" xmlns="">0U3ZBiQrz3EeAH__IQtoFhQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

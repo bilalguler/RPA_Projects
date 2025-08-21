@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Button 'Ara'",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "6PG_MVeH8kO9SW4Hbz5nAw",
+  "Reference": "WTQXVpPjm0mFyyzCZ7CMww/6PG_MVeH8kO9SW4Hbz5nAw",
+  "ParentRef": "WTQXVpPjm0mFyyzCZ7CMww/B7yeLhTJN0iQPAMOzmmtmA",
+  "Created": "2025-08-03T08:36:08.706354Z",
+  "Updated": "2025-08-03T08:36:08.706354Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

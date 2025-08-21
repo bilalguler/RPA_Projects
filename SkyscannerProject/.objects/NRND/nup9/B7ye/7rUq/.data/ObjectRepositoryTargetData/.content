@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Yj44rL78AUSPmX7SBuQ8eg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="skyscanner.com.tr/ucak-bileti" CVScreenId="2142d523-0557-4176-a96a-62673ca59405" DesignTimeRectangle="1471, 506, 30, 30" DesignTimeScaleFactor="1.25" ElementType="Icon" FullSelectorArgument="&lt;webctrl class='BpkIcon_bpk-icon--rtl-support__OTJmO' idx='2' parentid='SearchControlsWrapper' tag='svg' /&gt;" Guid="a9c2c829-9a3d-4ebb-ab1f-4ced2f1fe675" ScopeSelectorArgument="&lt;html app='chrome.exe' title='En Ucuz Uçak Biletleri ve Rezervasyon Teklifleri | Skyscanner' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="17897ee832836aaea0ce1cd807af80e8.png" xmlns="">0NjYbZ5xRNEuTGuox0cBtiw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

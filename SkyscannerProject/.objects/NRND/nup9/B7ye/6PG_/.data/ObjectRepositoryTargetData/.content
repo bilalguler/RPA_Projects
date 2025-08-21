@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="seR-xkiaZEWbbPSICBSqYQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="skyscanner.com.tr/ucak-bileti" CVScreenId="72606177-89bf-4eae-8ab3-3eb29500af0e" CvElementArea="1619, 512, 78, 98" CvTextArea="1640, 552, 35, 17" CvTextArgument="Ara" CvType="Button" DesignTimeRectangle="1623, 517, 72, 90" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Ara' parentid='SearchControlsWrapper' tag='BUTTON' /&gt;" Guid="acfddbf5-1034-4257-8d83-abe7b5ecd64a" ScopeSelectorArgument="&lt;html app='chrome.exe' title='En Ucuz Uçak Biletleri ve Rezervasyon Teklifleri | Skyscanner' /&gt;" SearchSteps="Selector, CV" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="1348, 517, 260, 90" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Yolcular ve kabin sınıfı3 yolcu, Ekonomi' parentid='SearchControlsWrapper' tag='BUTTON' /&gt;" Guid="08cae5d7-52c4-4976-aa2d-cd455c0d70a5" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="85741dcda239f28bb182355cf0b20455.png" xmlns="">0vcSiAL1JDEyilDPGfnXgKw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

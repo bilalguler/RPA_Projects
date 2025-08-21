@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="q3LOnKJNxkSqstkQgaxgUw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="skyscanner.com.tr/ucak-bileti" DesignTimeRectangle="225, 694, 151, 40" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl aria-role='button' tag='BUTTON' uipath-html-title='Yolculuk türünü seçin' /&gt;" Guid="ed3d8e7e-e515-43b6-8305-e992fd7dc364" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.skyscanner.com.tr/ucak-bileti' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="245, 701, 91, 25" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='popoverContainer-TripTypeTopLevel' tag='SPAN' aaname='Gidiş Dönüş' innertext='Gidiş Dönüş' visibleinnertext='Gidiş Dönüş' /&gt;" Guid="56c8b78c-cd30-412e-862f-d92336b34513" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="d282d20e3243e6b2004dd1b2458eab67.png" xmlns="">0j3DT-v_L10eUH1X4LanGiQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SelectItem</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

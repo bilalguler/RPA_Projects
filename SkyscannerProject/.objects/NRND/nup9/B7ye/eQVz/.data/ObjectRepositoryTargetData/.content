@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="WK3SgCQ0i0eWnmHNNlzC3A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="skyscanner.com.tr/ucak-bileti" CVScreenId="eb172fc2-2ddc-4ce2-90e2-1d37cf01a70c" DesignTimeRectangle="9, 225, 0, 0" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tag='BUTTON' type='button' aaname='{0}' innertext='{0}' /&gt;&quot;, str_UcusGun)]" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl tag='BUTTON' type='button' aaname='{0}' innertext='{0}' class='BpkButton_bpk-button__ZGRmN BpkButton_bpk-button--link-on-dark__MmI0Z LoginButton_MobileLoginButton--unifiedHeader__MmE0Y' /&gt;&quot;, str_UcusGun)]" Guid="34a804c4-097f-458b-a891-4c489d3546be" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.skyscanner.com.tr/*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="eb172fc2-2ddc-4ce2-90e2-1d37cf01a70c" CvTextArea="881, 715, 20, 17" CvTextArgument="17" CvType="Text" DesignTimeRectangle="883, 713, 17, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='17' parentid='depart-fsc-datepicker-popover' tag='SPAN' type='' class='' check:innerText='17' /&gt;" Guid="de9010bb-52e5-4825-a63d-c0cd0d0276bc" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="ef4eb998e965a013d723dd677a211b3b.png" xmlns="">06d4CVNgQHkG41o8aXRNMmw</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData Name="str_UcusGun" />
+    </scg:List>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

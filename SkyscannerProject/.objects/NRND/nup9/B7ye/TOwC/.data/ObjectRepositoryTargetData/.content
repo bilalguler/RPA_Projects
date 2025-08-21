@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="-Yy1JWJEQUeVi39qtLjYPA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="skyscanner.com.tr/tasima/ucak-bileti/ista/cov/250815" CVScreenId="641f4e68-84a7-45a4-ba44-b4693a15e527" DesignTimeRectangle="700, 349, 520, 50" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='login-modal' tag='H2' aaname='Yeni fiyat uyarısı oluşturun' visibleinnertext='Yeni fiyat uyarısı oluşturun' /&gt;" Guid="cbc1b1f4-4e7e-4939-87db-9012319c1b62" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.skyscanner.com.tr/tasima/ucak-bileti/ista/cov/250815/?adultsv2=4&amp;amp;cabinclass=economy&amp;amp;childrenv2=&amp;amp;inboundaltsenabled=false&amp;amp;outboundaltsenabled=false&amp;amp;preferdirects=false&amp;amp;ref=home&amp;amp;rtn=0&amp;amp;referrerID=16313f01-0a9b-4512-9e8d-1a872ebfc85e' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="641f4e68-84a7-45a4-ba44-b4693a15e527" DesignTimeRectangle="700, 264, 293, 48" ElementType="Icon" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;svg&amp;gt;path' parentid='login-modal' tag='path' parentclass='bpk-logo_bpk-logo__OTU4O bpk-logo_bpk-logo__inline__MTY1N LoginIntro_login-intro__logo-light__ZjNlZ' /&gt;" Guid="21a0bc15-588b-41e0-a0df-4d7aff687f87" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="5c00636b210eff78796422edea3617bb.png" xmlns="">0A8Lo12uhsUy38j6swwLHDA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Kalkış(2)",
+  "Type": "Element",
+  "Id": "uKeainEae06muYMnYVrU3Q",
+  "Reference": "WTQXVpPjm0mFyyzCZ7CMww/uKeainEae06muYMnYVrU3Q",
+  "ParentRef": "WTQXVpPjm0mFyyzCZ7CMww/B7yeLhTJN0iQPAMOzmmtmA",
+  "Created": "2025-01-12T08:13:06.3753252Z",
+  "Updated": "2025-01-12T08:13:06.3753252Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

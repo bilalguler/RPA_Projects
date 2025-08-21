@@ -1,0 +1,484 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="WF_KisiSayisiBelirleme" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_YetiskinSayisi" Type="InOutArgument(x:String)" />
+    <x:Property Name="in_CocukSayisi" Type="InOutArgument(x:String)" />
+    <x:Property Name="in_KisiSayisi" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="868,1900" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="str_CocukCount" />
+      <Variable x:TypeArguments="x:String" Name="str_YetiskinCount" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome En Ucuz Uçak Biletleri ve Rezervasyon" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="590,1711" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="2fb75513-0db8-4790-ad09-426ea4159bd4" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="556,1461" sap2010:WorkflowViewState.IdRef="Sequence_72">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <If Condition="[in_YetiskinSayisi.Contains(&quot;-&quot;)]" DisplayName="Kisi Sayisi Belirleme - If" sap:VirtualizedContainerService.HintSize="522,1181" sap2010:WorkflowViewState.IdRef="If_5">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="520,25" sap2010:WorkflowViewState.IdRef="Sequence_81">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence DisplayName="Sequence - Cocuk Sayisi" sap:VirtualizedContainerService.HintSize="486,57" sap2010:WorkflowViewState.IdRef="Sequence_76">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="434,115" sap2010:WorkflowViewState.IdRef="Assign_21">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[in_CocukSayisi]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[Split(in_KisiSayisi, "-")(1)]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Assign_22">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[in_CocukSayisi]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[in_CocukSayisi.Replace("Çocuk","").Trim]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
+                  <Sequence DisplayName="Sequence - Yetiskin Sayisi" sap:VirtualizedContainerService.HintSize="486,57" sap2010:WorkflowViewState.IdRef="Sequence_77">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="434,115" sap2010:WorkflowViewState.IdRef="Assign_23">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[in_YetiskinSayisi]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[Split(in_KisiSayisi, "-")(0)]</InArgument>
+                      </Assign.Value>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Assign_24">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[in_YetiskinSayisi]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[in_YetiskinSayisi.Replace("Yetişkin", "").Trim]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
+                  <Sequence DisplayName="Sequence - Kisi Sayisi Seçme" sap:VirtualizedContainerService.HintSize="486,690" sap2010:WorkflowViewState.IdRef="Sequence_73">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Yolcular ve kabin sınıfı'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,227" sap2010:WorkflowViewState.IdRef="NClick_29" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2fb75513-0db8-4790-ad09-426ea4159bd4" Version="V4">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="skyscanner.com.tr/ucak-bileti" CVScreenId="4763ad3e-9cb8-4b19-93ba-58170fd7ffb0" ContentHash="dkJvbMHRHU-wF4QfwEzVug" DesignTimeRectangle="1368, 267, 220, 30" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='* yetişkin, Ekonomi' parentid='SearchControlsWrapper' tag='SPAN' /&gt;" Guid="1f3c6714-a61c-48e6-888a-693caa858ad6" ImageBase64="" InformativeScreenshot="6f00445d52b6ff607decc89db3d4e0c3.png" Reference="WTQXVpPjm0mFyyzCZ7CMww/m4zeY2JTo0muDMGdq8J4KA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='En Ucuz Uçak Biletleri ve Rezervasyon Teklifleri | Skyscanner' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="1348, 225, 260, 90" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Yolcular ve kabin sınıfı1 yetişkin, Ekonomi' parentid='SearchControlsWrapper' tag='BUTTON' /&gt;" Guid="13753d6b-f639-436b-aafc-2b04fb74e8e8" SearchSteps="Selector" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                      <uix:NClick.VerifyOptions>
+                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionOptions.Retry>
+                          <uix:VerifyExecutionOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionOptions.Timeout>
+                        </uix:VerifyExecutionOptions>
+                      </uix:NClick.VerifyOptions>
+                    </uix:NClick>
+                    <uix:NGetText DisplayName="Get Text - Yetiskin Count" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,190" sap2010:WorkflowViewState.IdRef="NGetText_16" ScopeIdentifier="2fb75513-0db8-4790-ad09-426ea4159bd4" TextString="[str_YetiskinCount]" Version="V4">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="skyscanner.com.tr/ucak-bileti" CVScreenId="b3bb79a0-936b-443d-b446-73a9671bfba6" ContentHash="2ZVe3TBTi0a5k7uL3uI8gg" DesignTimeRectangle="1464, 545, 50, 45" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='adult-nudger' tag='INPUT' type='number' /&gt;" Guid="6b396c52-b33e-4a52-8ed0-356e90b19d14" InformativeScreenshot="ea29b05749cba860eb20b39b6fac2085.png" Reference="WTQXVpPjm0mFyyzCZ7CMww/l501eGsqnU-hhA2Fokz-8w" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.skyscanner.com.tr/ucak-bileti' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="1148, 545, 124, 60" ElementType="Text" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;label' tag='LABEL' innertext='Yetişkinler18 yaş ve üzeri' visibleinnertext='Yetişkinler&amp;#xA;18 yaş ve üzeri' /&gt;" Guid="da70c149-197f-436b-9ed2-299e450eb8a5" SearchSteps="Selector" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                    <uix:NGetText DisplayName="Get Text - cocuk Count" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,181" sap2010:WorkflowViewState.IdRef="NGetText_17" ScopeIdentifier="2fb75513-0db8-4790-ad09-426ea4159bd4" TextString="[str_CocukCount]" Version="V4">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="skyscanner.com.tr/ucak-bileti" CVScreenId="cadc44c2-246b-4df8-98b8-dd3c1a0afeb5" ContentHash="o8i1zP_FDUe7ip8mril1wQ" DesignTimeRectangle="1464, 645, 50, 45" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='children-nudger' tag='INPUT' type='number' /&gt;" Guid="8d3c73cd-633b-432b-8335-f3208aced6b1" InformativeScreenshot="31dfcc6c51a56f3ff24c0475bd528e32.png" Reference="WTQXVpPjm0mFyyzCZ7CMww/sVYBT24xJEeHcS0T2yt06g" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.skyscanner.com.tr/ucak-bileti' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="1148, 645, 118, 60" ElementType="Text" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;label' tag='LABEL' innertext='Çocuklar0-17 yaş arası' visibleinnertext='Çocuklar&amp;#xA;0-17 yaş arası' /&gt;" Guid="eba40359-9168-48fe-8c90-112852eda19a" SearchSteps="Selector" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                  </Sequence>
+                  <Sequence DisplayName="Sequence - Yetiskin Sayisi Arttirma" sap:VirtualizedContainerService.HintSize="486,682" sap2010:WorkflowViewState.IdRef="Sequence_74">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[CInt(str_YetiskinCount) &lt; CInt(in_YetiskinSayisi)]" DisplayName="While" sap:VirtualizedContainerService.HintSize="452,590" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_8">
+                      <ui:InterruptibleWhile.Body>
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,468" sap2010:WorkflowViewState.IdRef="Sequence_78">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Yeiskin Arttirma" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,227" sap2010:WorkflowViewState.IdRef="NClick_30" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2fb75513-0db8-4790-ad09-426ea4159bd4" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="skyscanner.com.tr/ucak-bileti" CVScreenId="6aa6bb23-305b-4ad9-b598-4aa66744893e" ContentHash="RZjUllzZjkOv1CY8NLazbA" CvElementArea="1511, 497, 50, 49" CvTextArea="1524, 510, 22, 21" CvTextArgument="+" CvType="Button" DesignTimeRectangle="1514, 500, 45, 45" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Daha fazla Yetişkinler' parentid='SearchControlsWrapper' tag='BUTTON' /&gt;" Guid="0a56b0b3-2eaf-47c8-84c5-b72c3be13953" InformativeScreenshot="64e18cbcf5e0cbc7ad1323d01acaaa4a.png" Reference="WTQXVpPjm0mFyyzCZ7CMww/qMeoOGe6WUquFOrvY72kEQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='En Ucuz Uçak Biletleri ve Rezervasyon Teklifleri | Skyscanner' /&gt;" SearchSteps="Selector, CV" Version="V5" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                          </uix:NClick>
+                          <uix:NGetText DisplayName="Get Text - Yetiskin Count Kontrol" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,181" sap2010:WorkflowViewState.IdRef="NGetText_18" ScopeIdentifier="2fb75513-0db8-4790-ad09-426ea4159bd4" TextString="[str_YetiskinCount]" Version="V4">
+                            <uix:NGetText.Target>
+                              <uix:TargetAnchorable BrowserURL="skyscanner.com.tr/ucak-bileti" CVScreenId="b3bb79a0-936b-443d-b446-73a9671bfba6" ContentHash="2ZVe3TBTi0a5k7uL3uI8gg" DesignTimeRectangle="1464, 545, 50, 45" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='adult-nudger' tag='INPUT' type='number' /&gt;" Guid="6b396c52-b33e-4a52-8ed0-356e90b19d14" InformativeScreenshot="ea29b05749cba860eb20b39b6fac2085.png" Reference="WTQXVpPjm0mFyyzCZ7CMww/l501eGsqnU-hhA2Fokz-8w" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.skyscanner.com.tr/ucak-bileti' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target DesignTimeRectangle="1148, 545, 124, 60" ElementType="Text" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;label' tag='LABEL' innertext='Yetişkinler18 yaş ve üzeri' visibleinnertext='Yetişkinler&amp;#xA;18 yaş ve üzeri' /&gt;" Guid="da70c149-197f-436b-9ed2-299e450eb8a5" SearchSteps="Selector" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NGetText.Target>
+                          </uix:NGetText>
+                        </Sequence>
+                      </ui:InterruptibleWhile.Body>
+                    </ui:InterruptibleWhile>
+                  </Sequence>
+                  <Sequence DisplayName="Sequence - Cocuk Sayisi Arttirma" sap:VirtualizedContainerService.HintSize="486,673" sap2010:WorkflowViewState.IdRef="Sequence_75">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[CInt(str_CocukCount) &lt; CInt(in_CocukSayisi)]" DisplayName="While" sap:VirtualizedContainerService.HintSize="452,590" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_9">
+                      <ui:InterruptibleWhile.Body>
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,468" sap2010:WorkflowViewState.IdRef="Sequence_79">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Cocuk Sayisi Arttirma" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,227" sap2010:WorkflowViewState.IdRef="NClick_31" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2fb75513-0db8-4790-ad09-426ea4159bd4" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="skyscanner.com.tr/ucak-bileti" CVScreenId="6aa6bb23-305b-4ad9-b598-4aa66744893e" ContentHash="1Xf1sOE7EEyE2_PlJsl0FQ" CvElementArea="1511, 597, 50, 49" CvTextArea="1524, 610, 22, 21" CvTextArgument="+" CvType="Button" DesignTimeRectangle="1514, 600, 45, 45" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Daha fazla Çocuklar' parentid='SearchControlsWrapper' tag='BUTTON' /&gt;" Guid="05cb607d-97ab-40a1-9f61-32bad2ae1867" InformativeScreenshot="d24ae452ad15ae78367ab7532ae92a6a.png" Reference="WTQXVpPjm0mFyyzCZ7CMww/XklGd_CB9UWAnYDk9OXV2A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='En Ucuz Uçak Biletleri ve Rezervasyon Teklifleri | Skyscanner' /&gt;" SearchSteps="Selector, CV" Version="V5" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target CVScreenId="6aa6bb23-305b-4ad9-b598-4aa66744893e" CvTextArea="1146, 605, 85, 21" CvTextArgument="Çocuklar" CvType="Text" DesignTimeRectangle="1148, 600, 118, 30" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Çocuklar' parentid='SearchControlsWrapper' tag='SPAN' /&gt;" Guid="4c671d8c-46cc-4856-8e1c-6a3270d3f1f7" SearchSteps="Selector, CV" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                          </uix:NClick>
+                          <uix:NGetText DisplayName="Get Text - Cocuk Count Alma" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,181" sap2010:WorkflowViewState.IdRef="NGetText_19" ScopeIdentifier="2fb75513-0db8-4790-ad09-426ea4159bd4" TextString="[str_CocukCount]" Version="V4">
+                            <uix:NGetText.Target>
+                              <uix:TargetAnchorable BrowserURL="skyscanner.com.tr/ucak-bileti" CVScreenId="cadc44c2-246b-4df8-98b8-dd3c1a0afeb5" ContentHash="o8i1zP_FDUe7ip8mril1wQ" DesignTimeRectangle="1464, 645, 50, 45" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='children-nudger' tag='INPUT' type='number' /&gt;" Guid="8d3c73cd-633b-432b-8335-f3208aced6b1" InformativeScreenshot="31dfcc6c51a56f3ff24c0475bd528e32.png" Reference="WTQXVpPjm0mFyyzCZ7CMww/sVYBT24xJEeHcS0T2yt06g" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.skyscanner.com.tr/ucak-bileti' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target DesignTimeRectangle="1148, 645, 118, 60" ElementType="Text" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;label' tag='LABEL' innertext='Çocuklar0-17 yaş arası' visibleinnertext='Çocuklar&amp;#xA;0-17 yaş arası' /&gt;" Guid="eba40359-9168-48fe-8c90-112852eda19a" SearchSteps="Selector" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NGetText.Target>
+                          </uix:NGetText>
+                        </Sequence>
+                      </ui:InterruptibleWhile.Body>
+                    </ui:InterruptibleWhile>
+                  </Sequence>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="520,1017" sap2010:WorkflowViewState.IdRef="Sequence_87">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence DisplayName="Sequence - Yetiskin Sayisi" sap:VirtualizedContainerService.HintSize="486,57" sap2010:WorkflowViewState.IdRef="Sequence_82">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="434,115" sap2010:WorkflowViewState.IdRef="Assign_25">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[in_YetiskinSayisi]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[Split(in_KisiSayisi, "-")(0)]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Assign_26">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[in_YetiskinSayisi]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[in_YetiskinSayisi.Replace("Yetişkin", "").Trim]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '1 yetişkin, Ekonomi'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="486,227" sap2010:WorkflowViewState.IdRef="NClick_35" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2fb75513-0db8-4790-ad09-426ea4159bd4" Version="V4">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="skyscanner.com.tr/ucak-bileti" CVScreenId="b88ad0a3-9941-49b8-8f0c-2639b7b67d4e" ContentHash="0jD63XEJ90mj9ohYg_hIig" DesignTimeRectangle="1368, 786, 220, 30" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='* yetişkin, Ekonomi' parentid='SearchControlsWrapper' tag='SPAN' /&gt;" Guid="70893b78-3da5-4009-a26a-f21cbfa30ee2" InformativeScreenshot="74ab8b78a51be990718595a820f3f482.png" Reference="WTQXVpPjm0mFyyzCZ7CMww/mzONuJM4-UGWWyTL-_47OQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='En Ucuz Uçak Biletleri ve Rezervasyon Teklifleri | Skyscanner' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target DesignTimeRectangle="1348, 744, 260, 90" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Yolcular ve kabin sınıfı1 yetişkin, Ekonomi' parentid='SearchControlsWrapper' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Yolcular ve kabin sınıfı1 yetişkin, Ekonomi' parentid='SearchControlsWrapper' tag='BUTTON' type='button' class='SearchControlButton_SearchControlBtn__ODQ1N SearchControlButton_Traveller__ZWNmN' check:innerText='Yolcular ve kabin sınıfı&amp;#xA;1 yetişkin, Ekonomi' /&gt;" Guid="342437c4-f86b-4719-acea-7597b8e07e6e" SearchSteps="Selector, FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                  <Sequence DisplayName="Sequence - Yetiskin Sayisi Arttirma" sap:VirtualizedContainerService.HintSize="486,673" sap2010:WorkflowViewState.IdRef="Sequence_85">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[CInt(str_YetiskinCount) &lt; CInt(in_YetiskinSayisi)]" DisplayName="While" sap:VirtualizedContainerService.HintSize="452,590" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_10">
+                      <ui:InterruptibleWhile.Body>
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,468" sap2010:WorkflowViewState.IdRef="Sequence_84">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'BUTTON'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,227" sap2010:WorkflowViewState.IdRef="NClick_33" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2fb75513-0db8-4790-ad09-426ea4159bd4" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="skyscanner.com.tr/ucak-bileti" CVScreenId="6aa6bb23-305b-4ad9-b598-4aa66744893e" ContentHash="RZjUllzZjkOv1CY8NLazbA" CvElementArea="1511, 497, 50, 49" CvTextArea="1524, 510, 22, 21" CvTextArgument="+" CvType="Button" DesignTimeRectangle="1514, 500, 45, 45" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Daha fazla Yetişkinler' parentid='SearchControlsWrapper' tag='BUTTON' /&gt;" Guid="0a56b0b3-2eaf-47c8-84c5-b72c3be13953" InformativeScreenshot="64e18cbcf5e0cbc7ad1323d01acaaa4a.png" Reference="WTQXVpPjm0mFyyzCZ7CMww/qMeoOGe6WUquFOrvY72kEQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='En Ucuz Uçak Biletleri ve Rezervasyon Teklifleri | Skyscanner' /&gt;" SearchSteps="Selector, CV" Version="V5" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                          </uix:NClick>
+                          <uix:NGetText DisplayName="Get Text 'Input'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,181" sap2010:WorkflowViewState.IdRef="NGetText_21" ScopeIdentifier="2fb75513-0db8-4790-ad09-426ea4159bd4" TextString="[str_YetiskinCount]" Version="V4">
+                            <uix:NGetText.Target>
+                              <uix:TargetAnchorable BrowserURL="skyscanner.com.tr/ucak-bileti" CVScreenId="b3bb79a0-936b-443d-b446-73a9671bfba6" ContentHash="2ZVe3TBTi0a5k7uL3uI8gg" DesignTimeRectangle="1464, 545, 50, 45" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='adult-nudger' tag='INPUT' type='number' /&gt;" Guid="6b396c52-b33e-4a52-8ed0-356e90b19d14" InformativeScreenshot="ea29b05749cba860eb20b39b6fac2085.png" Reference="WTQXVpPjm0mFyyzCZ7CMww/l501eGsqnU-hhA2Fokz-8w" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.skyscanner.com.tr/ucak-bileti' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target DesignTimeRectangle="1148, 545, 124, 60" ElementType="Text" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;label' tag='LABEL' innertext='Yetişkinler18 yaş ve üzeri' visibleinnertext='Yetişkinler&amp;#xA;18 yaş ve üzeri' /&gt;" Guid="da70c149-197f-436b-9ed2-299e450eb8a5" SearchSteps="Selector" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NGetText.Target>
+                          </uix:NGetText>
+                        </Sequence>
+                      </ui:InterruptibleWhile.Body>
+                    </ui:InterruptibleWhile>
+                  </Sequence>
+                </Sequence>
+              </If.Else>
+            </If>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Uygula(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="522,220" sap2010:WorkflowViewState.IdRef="NClick_28" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2fb75513-0db8-4790-ad09-426ea4159bd4" Version="V4">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="skyscanner.com.tr/ucak-bileti" CVScreenId="121ca2f8-6902-4c65-9229-fd506f2434dd" ContentHash="1oWKxB4ZXUePbZH4esohTQ" DesignTimeRectangle="1148, 817, 411, 60" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Uygula' parentid='SearchControlsWrapper' tag='BUTTON' type='button' visibleinnertext='Uygula' /&gt;" Guid="1c23284b-d19e-48b3-b0c9-87c4f1950888" InformativeScreenshot="e9e5ca09fdccc87397116ef166bb5581.png" Reference="WTQXVpPjm0mFyyzCZ7CMww/1J-XbZZ-Xki3IAPqLt-EpQ" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.skyscanner.com.tr/ucak-bileti' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" ContentHash="g3rI-BOAtUOapsKeI9o14Q" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAF8SURBVDhPrZNNSwJRGIWvEONQ0Q9o13+IWrbuJ7iJIBKN/BiNoFW0aaEVQtAqIdq3ioiiwk0ZbVq4V2euxUwLQ52SVifOHa2mL5QaOHA47/O+3LkfQjdkWTecup6Q/cnrKYtgwnSDy48Ipp3+xJ646QrdkHUVJGV/SjvgSr4doCUldENCLFhK9Mx6GqAlJETERCBqYTJrK9EzY+3XAYGYhZGlGvJFF1pMYrvQUqJnxhqZHwcMpSTEbBWHpTZyhRbWTxpK9MxYI/NlgJZ2IKIW9m+esHftYiJrI3/pYjxjK9EzY40MWfb4VjAQszC6cofdKxeZsyZEqAIxU/UUqqiMNTJk/b+QcjBoSIyt3mN65wFrxw1sXTSxee6JnhlrZMiy521AYNHGVM5BsfKCg9tnbJw2cFRqo/vRM2ONDFn2vO9BysFwuuZtYtiEmKtCzJsKpOhVFjYVQ5Y9vj3gGQ/E/ZdFRHj+nWPriIy6D5838SPUk7oD/uMx/ek5vwJQQX6Nc7vGegAAAABJRU5ErkJggg==" InformativeScreenshot="21f6532c4de801a50dba4fa833c41dfa.jpg" Reference="WTQXVpPjm0mFyyzCZ7CMww/Mqlg5ga-lE6B-1euYmfnpw" Selector="&lt;html app='chrome.exe' title='En Ucuz Uçak Biletleri ve Rezervasyon Teklifleri | Skyscanner' /&gt;" Url="https://www.skyscanner.com.tr/ucak-bileti" Version="V2" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="554,166" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Kisi Sayisi bilgileri girildi.&quot;]" />
+  </Sequence>
+</Activity>

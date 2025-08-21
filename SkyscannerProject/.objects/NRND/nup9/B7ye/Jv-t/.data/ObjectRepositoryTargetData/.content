@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="9IXTt03ZWEibcjI-8iDb8g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="skyscanner.com.tr/ucak-bileti" CVScreenId="f70eca4d-af13-452f-b9dd-bcb8ed5e0a42" CvElementArea="454, 709, 31, 31" CvTextArea="462, 716, 13, 15" CvType="Icon" DesignTimeRectangle="459, 712, 25, 25" DesignTimeScaleFactor="1.25" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl parentid='originInput-label' tag='path' type='' class='' aaname='' /&gt;" Guid="09b8fe61-7e05-48b6-9739-e36f4b4aba56" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAYAAABWk2cPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJ0SURBVEhLxZb7TxNBEMf5W40xMUZFeRopBktMJDGIKC3lWmhLAW1EFJrWlEA00eAr/uqDigYhtPT6oMVEru2YWbPr7c5eH1Txm3yTy+3MfNrLzux2wH9Qh/riJNQ0tFarwWZqCzZev4NEco0Zn1NfvrK1VtQQurO7B8HIA7jQPQCnzl7SGtfC81EW24wcoYXiAdzxGATQyPd801A8KKnlJGmh6UwWuq4MkYLNunfADftZUy0rRKBZMwcXe1ykUKvu7HWBaebU8kwS1LIscLlHSIHjeujGLVZTlQSdXXhIEtv1QnTJjmAS0HRmH06f6yJJ7Rpr7qUzemhoLkoSuJdWEmxHGjMRsmYE56BULsOrt+/JGnfk/iKFYnPX2zxYlMdNTM2I915/SAyGQqFI8rgv91+TBgiDfvycIoF24z/kSdVqFcYmDBj3Btgz/zG+6VmSZzdOLgm6uv6cBKn2GkEB/nl0BJZVET/CYwRJvOq1Zy9k6Eo8SYJ0Hvf4oVL5DUPh8+hdH4nTOZZYlaE4vNUgnduBJpLrMvTlxhsSpHoyEBafFxueNz1+Xvz0arxqPJEk6Lft7yTIbmwLeSNNscOglY20vbMrQ1H1jq7Dwx8C6NQypVKZ5HHjHLZLQOvtwEfLcbZjdcMhEJpna4uPY2SNe9If1kM/fNokwX/Lqa0/PSpBUbg71YR2jV9QlQTFcdd99TpJPK77B4fFCLVLgqLwtOnsGyQFWjXWcLo9ECgKh/fwyG1SqFm7b46yO5aTtFAUtseT2FM4c76HFHUyxi7Hk6J/neQI5TJzeXa9rNfH/Aqay+fVdK0aQrlwCODxdCKX7X+hXzA/JvN5cicVAAAAAElFTkSuQmCC" ScopeSelectorArgument="&lt;html app='chrome.exe' title='En Ucuz Uçak Biletleri ve Rezervasyon Teklifleri | Skyscanner' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="f70eca4d-af13-452f-b9dd-bcb8ed5e0a42" CvTextArea="507, 710, 21, 25" CvTextArgument="2" CvType="Text" DesignTimeRectangle="510, 714, 17, 20" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl parentid='SearchControlsWrapper' tag='path' type='' class='' aaname='' /&gt;" Guid="306f62c1-cd78-4e52-983e-8dfc4077888b" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="aee9d501e116f4f2014fa88610cdb098.png" xmlns="">0Nu55ll4gJEmtWcPzkCPdxA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

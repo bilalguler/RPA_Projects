@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Geri",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "QWPqt4k1UUOiZZSd7nWDiw",
+  "Reference": "WTQXVpPjm0mFyyzCZ7CMww/QWPqt4k1UUOiZZSd7nWDiw",
+  "ParentRef": "WTQXVpPjm0mFyyzCZ7CMww/sfw59o-RQU2M0FiWAgX0MQ",
+  "Created": "2025-08-20T13:33:47.5789961Z",
+  "Updated": "2025-08-20T13:33:47.5789961Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

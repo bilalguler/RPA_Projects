@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="-PdCp0XoKEmMFecTfuTe7g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="skyscanner.com.tr/ucak-bileti" CVScreenId="1bc675fa-f3fa-49b6-b336-ebaec7d900f1" CvElementArea="1620, 675, 77, 96" CvTextArea="1640, 714, 35, 17" CvTextArgument="Ara" CvType="Button" DesignTimeRectangle="1623, 679, 72, 90" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Ara' parentid='SearchControlsWrapper' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Ara' parentid='SearchControlsWrapper' tag='BUTTON' type='button' class='BpkButton_bpk-button__ZGRmN BpkButton_bpk-button--large__ZmE2M BpkButton_bpk-button--featured__NjA5N SearchControls_DesktopCTA__ZDUwY' check:innerText='Ara' /&gt;" Guid="5a6b8b24-d7a3-441e-aa6d-3559dfa97782" ScopeSelectorArgument="&lt;html app='chrome.exe' title='En Ucuz Uçak Biletleri ve Rezervasyon Teklifleri | Skyscanner' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="58788151ee0e4d365eb73f14124ed9f9.png" xmlns="">0JUU3ue43gkus9Xiqfsy9CA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -11,12 +11,7 @@
     {
       "Path": "Main.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "dt_ExcelTranslate&Sequence_1",
-        "index&Sequence_1",
-        "str_Translate1&Sequence_1",
-        "str_Translate2&Sequence_1"
-      ],
+      "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null

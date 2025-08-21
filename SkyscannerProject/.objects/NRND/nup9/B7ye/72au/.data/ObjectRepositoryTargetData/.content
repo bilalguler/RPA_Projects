@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="ZJrBcWvhOki8T1QiXPZmMg" Reference="WTQXVpPjm0mFyyzCZ7CMww/72au-QiZmUGQ0ulVPS_xAQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="skyscanner.com.tr/ucak-bileti" CVScreenId="b67df52c-4833-4530-9be3-2f87458fe015" CvTextArea="677, 631, 98, 27" CvType="AnyWordGroup" DesignTimeRectangle="681, 721, 95, 30" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='H2' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H2' type='' class='BpkText_bpk-text__ZjI3M BpkText_bpk-text--heading-4__MDlkY CustomCalendar_MonthName__ZWQzY' /&gt;" Guid="61dac8d9-f542-4a57-b2d7-49823b1b7c94" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='En Ucuz Uçak Biletleri ve Rezervasyon Teklifleri | Skyscanner' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="b67df52c-4833-4530-9be3-2f87458fe015" CvElementArea="853, 552, 154, 49" CvTextArea="875, 567, 112, 16" CvTextArgument="Belirli tarihler" CvType="Button" DesignTimeRectangle="875, 648, 112, 25" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='0' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='0' tag='SPAN' type='' class='CalendarTab_Chip__NTk1N' aaname='Belirli tarihler' check:innerText='Belirli tarihler' /&gt;" Guid="d80096f3-6675-434d-ac78-3876af980925" SearchSteps="Selector, FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="564c18c9981dd7bfda2ccad0322e9ec0.png" xmlns="">040s2_euEf0q4eUSaYs0Y2g</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="XVEkkexTiUWZ85LWMmrqIA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="skyscanner.com.tr/ucak-bileti" CVScreenId="acf42879-4336-4c06-96cf-f6f7c8799417" DesignTimeRectangle="0, 0, 0, 0" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='originInput-input' tag='INPUT' placeholder='Ülke, şehir veya havaalanı' type='text' /&gt;" Guid="cf0e5953-6b0c-402d-bc19-2b50f9c21386" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.skyscanner.com.tr/ucak-bileti' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="0, 0, 0, 0" ElementType="Text" FullSelectorArgument="&lt;webctrl id='originInput-label' tag='LABEL' innertext='Kalkış:' visibleinnertext='Kalkış:' /&gt;" Guid="903341b2-c830-4df6-9851-0f0baf8c7af7" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="4a76c01c937e168a7811e8202cbb9ace.png" xmlns="">0CHtkxeYdtUG05tdfrDe1xg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

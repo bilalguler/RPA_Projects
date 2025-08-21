@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Ocak 2025",
+  "Type": "Element",
+  "TaxonomyType": "Dropdown",
+  "Id": "7LQq1vWmi0e6RqyEg4ke5g",
+  "Reference": "WTQXVpPjm0mFyyzCZ7CMww/7LQq1vWmi0e6RqyEg4ke5g",
+  "ParentRef": "WTQXVpPjm0mFyyzCZ7CMww/B7yeLhTJN0iQPAMOzmmtmA",
+  "Created": "2025-01-14T19:59:16.8991848Z",
+  "Updated": "2025-01-14T19:59:16.8991848Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

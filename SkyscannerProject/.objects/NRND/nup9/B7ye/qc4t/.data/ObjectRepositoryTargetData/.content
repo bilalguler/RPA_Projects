@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="ckgQhJ8FhkGExtAmlL0n2w" Reference="WTQXVpPjm0mFyyzCZ7CMww/qc4tqc-73UOXgEgzq67GHg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="skyscanner.com.tr/ucak-bileti" CVScreenId="cfebfc4d-9441-4771-b97c-ea5f5bf86ffe" DesignTimeRectangle="694, 623, 364, 30" DesignTimeScaleFactor="1.25" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='destinationInput-input' tag='INPUT' type='text' class='AutoSuggest_input__NjA0Z' placeholder='Ülke, şehir veya havaalanı' aaname='Nereye' /&gt;" Guid="67c14078-f4d5-4c39-9095-fbf97193646f" ImageBase64="" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='En Ucuz Uçak Biletleri ve Rezervasyon Teklifleri | Skyscanner' /&gt;" SearchSteps="FuzzySelector" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="dafa5844-def3-4be4-a8d3-cca64e98018a" CvElementArea="655, 578, 423, 95" CvType="InputBox" DesignTimeRectangle="694, 600, 58, 21" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='destinationInput-label' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='destinationInput-label' tag='SPAN' type='' class='BpkText_bpk-text__ZjI3M BpkText_bpk-text--body-default__ODg2M DestinationSearchControlGroup_InputLabel__YmNjM' aaname='Nereye' check:innerText='Nereye' /&gt;" Guid="e6db8a1a-8334-46da-b937-d83bd279f851" SearchSteps="Selector, FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="2891c0e8cc43b6dfdb68f4be7878e640.png" xmlns="">0KIuXC-sYmU6H9sf2A1FgEA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

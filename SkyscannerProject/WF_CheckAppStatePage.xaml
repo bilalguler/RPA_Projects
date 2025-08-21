@@ -1,0 +1,192 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="WF_CheckAppStatePage" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="1019.2,1024" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome İstanbul kalkışlı ucuz yurt içi uçuşla" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1019.2,1000.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_9" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="33aa49de-1b24-476f-b1eb-476975581008" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="985.6,760.8" sap2010:WorkflowViewState.IdRef="Sequence_71">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NCheckState DisplayName="Check App State 'Yeni Fiyat Uyarısı oluş…'" sap:VirtualizedContainerService.HintSize="952,699.2" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="33aa49de-1b24-476f-b1eb-476975581008" Timeout="3" Version="V4">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,456" sap2010:WorkflowViewState.IdRef="Sequence_72">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SVG(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,225.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="33aa49de-1b24-476f-b1eb-476975581008" Version="V4">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="skyscanner.com.tr/tasima/ucak-bileti/ista/cov/250815" CVScreenId="8fc73077-206a-4140-978e-2522c3532739" ContentHash="f-fgZvAH0Ea61Vs08YfSeg" DesignTimeRectangle="1220, 218, 30, 30" DesignTimeScaleFactor="1.25" ElementType="Icon" FullSelectorArgument="&lt;webctrl parentid='login-modal' tag='svg' /&gt;" Guid="ac90f4f5-7ffb-4ce5-aeaf-e111c1f2f9e8" InformativeScreenshot="0e987fab5be2e9a58d4c29000ba5379f.png" Reference="WTQXVpPjm0mFyyzCZ7CMww/mMaseRRtUEWVfa20m7pTVA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='İstanbul kalkışlı ucuz yurt içi uçuşlar' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Pop-Up çıktı kapatıldı.&quot;]" />
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,230.4" sap2010:WorkflowViewState.IdRef="Sequence_73">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Pop-Up çıkmadı.&quot;]" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="skyscanner.com.tr/tasima/ucak-bileti/ista/cov/250815" CVScreenId="641f4e68-84a7-45a4-ba44-b4693a15e527" ContentHash="-Yy1JWJEQUeVi39qtLjYPA" DesignTimeRectangle="700, 349, 520, 50" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='login-modal' tag='H2' aaname='Yeni fiyat uyarısı oluşturun' visibleinnertext='Yeni fiyat uyarısı oluşturun' /&gt;" Guid="cbc1b1f4-4e7e-4939-87db-9012319c1b62" ImageBase64="" InformativeScreenshot="5c00636b210eff78796422edea3617bb.png" Reference="WTQXVpPjm0mFyyzCZ7CMww/TOwC4sAOIkWKuYzLMUcUHw" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.skyscanner.com.tr/tasima/ucak-bileti/ista/cov/250815/?adultsv2=4&amp;amp;cabinclass=economy&amp;amp;childrenv2=&amp;amp;inboundaltsenabled=false&amp;amp;outboundaltsenabled=false&amp;amp;preferdirects=false&amp;amp;ref=home&amp;amp;rtn=0&amp;amp;referrerID=16313f01-0a9b-4512-9e8d-1a872ebfc85e' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="641f4e68-84a7-45a4-ba44-b4693a15e527" DesignTimeRectangle="700, 264, 293, 48" ElementType="Icon" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;svg&amp;gt;path' parentid='login-modal' tag='path' parentclass='bpk-logo_bpk-logo__OTU4O bpk-logo_bpk-logo__inline__MTY1N LoginIntro_login-intro__logo-light__ZjNlZ' /&gt;" Guid="21a0bc15-588b-41e0-a0df-4d7aff687f87" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" ContentHash="e-wmwZVE5EuGfIXa66NksA" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAF8SURBVDhPrZNNSwJRGIWvEONQ0Q9o13+IWrbuJ7iJIBKN/BiNoFW0aaEVQtAqIdq3ioiiwk0ZbVq4V2euxUwLQ52SVifOHa2mL5QaOHA47/O+3LkfQjdkWTecup6Q/cnrKYtgwnSDy48Ipp3+xJ646QrdkHUVJGV/SjvgSr4doCUldENCLFhK9Mx6GqAlJETERCBqYTJrK9EzY+3XAYGYhZGlGvJFF1pMYrvQUqJnxhqZHwcMpSTEbBWHpTZyhRbWTxpK9MxYI/NlgJZ2IKIW9m+esHftYiJrI3/pYjxjK9EzY40MWfb4VjAQszC6cofdKxeZsyZEqAIxU/UUqqiMNTJk/b+QcjBoSIyt3mN65wFrxw1sXTSxee6JnhlrZMiy521AYNHGVM5BsfKCg9tnbJw2cFRqo/vRM2ONDFn2vO9BysFwuuZtYtiEmKtCzJsKpOhVFjYVQ5Y9vj3gGQ/E/ZdFRHj+nWPriIy6D5838SPUk7oD/uMx/ek5vwJQQX6Nc7vGegAAAABJRU5ErkJggg==" InformativeScreenshot="343e787ad083a1aa1b9a66e41c5e752c.jpg" Reference="WTQXVpPjm0mFyyzCZ7CMww/FkSDPJmNH0axxWW4N61Ewg" Selector="&lt;html app='chrome.exe' title='İstanbul kalkışlı ucuz yurt içi uçuşlar' /&gt;" Url="https://www.skyscanner.com.tr/tasima/ucak-bileti/ista/cov/250815/?adultsv2=3&amp;cabinclass=economy&amp;childrenv2=&amp;inboundaltsenabled=false&amp;outboundaltsenabled=false&amp;preferdirects=false&amp;ref=home&amp;rtn=0&amp;referrerID=f4d813c8-15ae-4d5e-b189-bffb978e1613" Version="V2" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

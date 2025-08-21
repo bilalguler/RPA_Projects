@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Bp5ChSrVjUGR3p3c_wx0pw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="skyscanner.com.tr/ucak-bileti" CVScreenId="120a8aa3-7305-4bfc-b5ac-c243049fdf00" DesignTimeRectangle="383, 691, 25, 25" DesignTimeScaleFactor="1.25" ElementType="RadioButton" FullSelectorArgument="&lt;webctrl id='fsc-trip-type-selector-one-way' tag='INPUT' aria-label='Tek yön' /&gt;" Guid="b8b3ed58-2d7f-4bd2-9b27-91e301671703" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.skyscanner.com.tr/*' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="120a8aa3-7305-4bfc-b5ac-c243049fdf00" DesignTimeRectangle="383, 691, 102, 25" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' visibleinnertext='Tek yön' innertext='Tek yön' /&gt;" Guid="30d5b60c-7a02-452a-9943-7d0bb72e07aa" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="0b7729c1db5eeaf94b2da1db28dc4b6b.png" xmlns="">0J5nmauN5aEquws1jgQ9ztA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Check</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

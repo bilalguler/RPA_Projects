@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Chrome En Ucuz Uçak Biletleri ve Rezervasyon Teklifleri  Skyscanner",
+  "Type": "App",
+  "Id": "crQjpTiLUECKN-2cTDG4pg",
+  "Reference": "WTQXVpPjm0mFyyzCZ7CMww/crQjpTiLUECKN-2cTDG4pg",
+  "Created": "2025-08-03T09:54:17.5581246Z",
+  "Updated": "2025-08-03T09:54:17.5581246Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

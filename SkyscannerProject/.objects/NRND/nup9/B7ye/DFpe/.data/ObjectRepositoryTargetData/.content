@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="y7BVipZeYUuie2aQjo3nhQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="skyscanner.com.tr/ucak-bileti" CVScreenId="2142d523-0557-4176-a96a-62673ca59405" CvTextArea="1277, 631, 15, 17" CvTextArgument="4" CvType="Text" DesignTimeRectangle="1263, 619, 45, 45" DesignTimeScaleFactor="1.25" ElementType="Button" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl aria-label='*. Kalkış tarihi olarak seç' tag='BUTTON' type='button' class='CustomCalendar_day__ZDM0Z' aaname='{0}' check:innerText='4' /&gt;&quot;, str_UcusGun)]" Guid="1c690696-1fbe-4649-b1a0-535c5ace8bf6" ScopeSelectorArgument="&lt;html app='chrome.exe' title='En Ucuz Uçak Biletleri ve Rezervasyon Teklifleri | Skyscanner' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="8021a556fba3a95a93f662560374c39c.png" xmlns="">0Cu6TTdGapUO2w_ttczuFwg</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData Name="str_UcusGun" />
+    </scg:List>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
